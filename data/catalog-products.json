@@ -1,0 +1,2121 @@
+[
+  {
+    "id": "prod_tomatoes",
+    "sku": "MM-TOMATOES",
+    "slug": "tomatoes",
+    "name": "Tomatoes",
+    "status": "active",
+    "shortDescription": "Fresh vibrant tomatoes bursting with natural sweetness and rich flavour.",
+    "description": "Fresh, vibrant tomatoes bursting with natural sweetness and rich flavour. Sourced from premium local growers, our tomatoes are hand-selected for quality and ripeness. Perfect for salads, cooking, sauces, and fresh meals. Packed with vitamins and antioxidants, these versatile fruits bring authentic taste to your kitchen.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "tomatoes"
+    ],
+    "price": null,
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-tomatoes.webp",
+        "alt": "Fresh tomatoes from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-tomatoes.webp",
+      "alt": "Fresh tomatoes from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Tomatoes",
+    "seoDescription": "Fresh, vibrant tomatoes bursting with natural sweetness and rich flavour. Shop tomatoes from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-22T17:32:53+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_avocados",
+    "sku": "MM-AVOCADOS",
+    "slug": "avocados",
+    "name": "Avocados",
+    "status": "active",
+    "shortDescription": "Creamy, nutrient-rich avocados sourced fresh from premium local farms.",
+    "description": "Creamy, nutrient-rich avocados sourced fresh from premium local farms. Perfect for salads, spreads, or enjoying on their own.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "avocados"
+    ],
+    "price": {
+      "amount": 15,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-avocados.webp",
+        "alt": "Fresh avocados from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-avocados.webp",
+      "alt": "Fresh avocados from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Avocados",
+    "seoDescription": "Creamy, nutrient-rich avocados sourced fresh from premium local farms. Shop avocados from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:47:00+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_cherry_tomatoes",
+    "sku": "MM-CHERRYTOMATOES",
+    "slug": "cherry-tomatoes",
+    "name": "Cherry Tomatoes",
+    "status": "active",
+    "shortDescription": "Fresh tomatoes sourced from premium local farms.",
+    "description": "400g Fresh, tomatoes sourced from premium local farms. Bursting with natural sweetness and rich flavour, perfect for salads, cooking, or fresh consumption.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [
+      "col_featured_produce"
+    ],
+    "tags": [
+      "vegetables",
+      "cherry-tomatoes"
+    ],
+    "price": {
+      "amount": 34.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "400 g",
+    "weightGrams": 400,
+    "featured": true,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-cherry-tomatoes.webp",
+        "alt": "Fresh cherry tomatoes from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-cherry-tomatoes.webp",
+      "alt": "Fresh cherry tomatoes from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Cherry Tomatoes",
+    "seoDescription": "400g Fresh, tomatoes sourced from premium local farms. Shop cherry tomatoes from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:40:52+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_iceberg_lettuce",
+    "sku": "MM-ICEBERGLETTUCE",
+    "slug": "iceberg-lettuce",
+    "name": "Iceberg Lettuce",
+    "status": "active",
+    "shortDescription": "Crisp, iceberg lettuce.",
+    "description": "Crisp, iceberg lettuce. Perfect for salads, sandwiches, and wraps. Our premium produce is fresh, locally sourced, and delivers that satisfying crunch you're looking for. Store in the refrigerator to maintain freshness.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [
+      "col_featured_produce"
+    ],
+    "tags": [
+      "vegetables",
+      "iceberg-lettuce"
+    ],
+    "price": {
+      "amount": 19.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": true,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-iceberg-lettuce.webp",
+        "alt": "Fresh iceberg lettuce from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-iceberg-lettuce.webp",
+      "alt": "Fresh iceberg lettuce from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Iceberg Lettuce",
+    "seoDescription": "Crisp, iceberg lettuce. Shop iceberg lettuce from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:38:52+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_cos_lettuce",
+    "sku": "MM-COSLETTUCE",
+    "slug": "cos-lettuce",
+    "name": "Cos Lettuce",
+    "status": "active",
+    "shortDescription": "Refreshing cos lettuce with elongated leaves and a tender heart.",
+    "description": "Refreshing cos lettuce with elongated leaves and a tender heart. Perfect for salads, wraps, and Caesar preparations. Fresh from our premium selection.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "cos-lettuce"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-cos-lettuce.webp",
+        "alt": "Fresh cos lettuce from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-cos-lettuce.webp",
+      "alt": "Fresh cos lettuce from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Cos Lettuce",
+    "seoDescription": "Refreshing cos lettuce with elongated leaves and a tender heart. Shop cos lettuce from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:36:38+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_baby_spinach",
+    "sku": "MM-BABYSPINACH",
+    "slug": "baby-spinach",
+    "name": "Baby Spinach",
+    "status": "active",
+    "shortDescription": "Nutrient-rich baby spinach leaves perfect for fresh salads, smoothies, and light sautés.",
+    "description": "200g nutrient-rich baby spinach leaves perfect for fresh salads, smoothies, and light sautés.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [
+      "col_featured_produce"
+    ],
+    "tags": [
+      "vegetables",
+      "baby-spinach"
+    ],
+    "price": {
+      "amount": 34.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "200 g",
+    "weightGrams": 200,
+    "featured": true,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-baby-spinach.webp",
+        "alt": "Fresh baby spinach from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-baby-spinach.webp",
+      "alt": "Fresh baby spinach from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Baby Spinach",
+    "seoDescription": "200g nutrient-rich baby spinach leaves perfect for fresh salads, smoothies, and light sautés. Shop baby spinach from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:34:17+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_spinach",
+    "sku": "MM-SPINACH",
+    "slug": "spinach",
+    "name": "Spinach",
+    "status": "active",
+    "shortDescription": "Fresh 350g bundle, spinach packed with nutrients and natural goodness.",
+    "description": "Fresh 350g bundle, spinach packed with nutrients and natural goodness. Perfect for salads, smoothies, cooking, and everyday meals.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "spinach"
+    ],
+    "price": {
+      "amount": 24.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "350 g",
+    "weightGrams": 350,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-spinach.webp",
+        "alt": "Fresh spinach from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-spinach.webp",
+      "alt": "Fresh spinach from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Spinach",
+    "seoDescription": "Fresh 350g bundle, spinach packed with nutrients and natural goodness. Shop spinach from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:32:03+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_cabbage",
+    "sku": "MM-CABBAGE",
+    "slug": "cabbage",
+    "name": "Cabbage",
+    "status": "active",
+    "shortDescription": "Fresh crisp cabbage packed with nutrients and versatility.",
+    "description": "Fresh, crisp cabbage packed with nutrients and versatility. Perfect for salads, slaws, stir-fries, and traditional dishes. Our premium cabbage is hand-selected for quality and firmness, delivering vibrant colour and excellent flavour.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "cabbage"
+    ],
+    "price": {
+      "amount": 22.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-cabbage.webp",
+        "alt": "Fresh cabbage from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-cabbage.webp",
+      "alt": "Fresh cabbage from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Cabbage",
+    "seoDescription": "Fresh, crisp cabbage packed with nutrients and versatility. Shop cabbage from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:29:14+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_beetroot",
+    "sku": "MM-BEETROOT",
+    "slug": "beetroot",
+    "name": "Beetroot",
+    "status": "active",
+    "shortDescription": "Fresh beetroot packed with natural sweetness and earthy flavour.",
+    "description": "2Kg Fresh, beetroot packed with natural sweetness and earthy flavour. Rich in nutrients and antioxidants, these firm roots are perfect for roasting, juicing, or adding to salads. Sourced locally for quality and freshness. Store in a cool place.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "beetroot"
+    ],
+    "price": {
+      "amount": 44.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "2 kg",
+    "weightGrams": 2000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-beetroot.webp",
+        "alt": "Fresh beetroot from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-beetroot.webp",
+      "alt": "Fresh beetroot from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Beetroot",
+    "seoDescription": "2Kg Fresh, beetroot packed with natural sweetness and earthy flavour. Shop beetroot from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:27:35+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_butternut",
+    "sku": "MM-BUTTERNUT",
+    "slug": "butternut",
+    "name": "Butternut",
+    "status": "active",
+    "shortDescription": "Our premium butternuts are perfect for roasting, mashing, or adding to soups and curries.",
+    "description": "3Kg our premium butternuts are perfect for roasting, mashing, or adding to soups and curries. Rich in vitamins and fibre.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "butternut"
+    ],
+    "price": {
+      "amount": 44.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "3 kg",
+    "weightGrams": 3000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-butternut.webp",
+        "alt": "Fresh butternut from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-butternut.webp",
+      "alt": "Fresh butternut from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Butternut",
+    "seoDescription": "3Kg our premium butternuts are perfect for roasting, mashing, or adding to soups and curries. Shop butternut from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:25:51+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_sweetcorn",
+    "sku": "MM-SWEETCORN",
+    "slug": "sweetcorn",
+    "name": "Sweetcorn",
+    "status": "active",
+    "shortDescription": "Fresh sweetcorn bursting with natural sweetness.",
+    "description": "Fresh, sweetcorn bursting with natural sweetness. Our premium sweetcorn delivers vibrant flavor whether grilled, boiled, or roasted. Available fresh from our local suppliers.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "sweetcorn"
+    ],
+    "price": {
+      "amount": 34.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-sweetcorn.webp",
+        "alt": "Fresh sweetcorn from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-sweetcorn.webp",
+      "alt": "Fresh sweetcorn from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Sweetcorn",
+    "seoDescription": "Fresh, sweetcorn bursting with natural sweetness. Shop sweetcorn from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:22:34+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_cauliflower",
+    "sku": "MM-CAULIFLOWER",
+    "slug": "cauliflower",
+    "name": "Cauliflower",
+    "status": "active",
+    "shortDescription": "Fresh cauliflower sourced for quality and taste.",
+    "description": "500g Fresh, cauliflower sourced for quality and taste. Perfect for roasting, steaming, or adding to your favourite curries and stir-fries. Rich in vitamins and fibre, this versatile vegetable brings nutrition and flavour to every meal.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "cauliflower"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "500 g",
+    "weightGrams": 500,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-cauliflower.webp",
+        "alt": "Fresh cauliflower from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-cauliflower.webp",
+      "alt": "Fresh cauliflower from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Cauliflower",
+    "seoDescription": "500g Fresh, cauliflower sourced for quality and taste. Shop cauliflower from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:18:28+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_red_onion",
+    "sku": "MM-REDONION",
+    "slug": "red-onion",
+    "name": "Red Onion",
+    "status": "active",
+    "shortDescription": "Rich, deep red onions.",
+    "description": "1Kg Rich, deep red onions. Perfect for raw salads, grilling, or caramelising to bring out their subtle sweetness. These vibrant onions add colour and depth to any dish while offering excellent storage longevity.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "red-onion"
+    ],
+    "price": {
+      "amount": 39.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "1 kg",
+    "weightGrams": 1000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-red-onion.webp",
+        "alt": "Fresh red onion from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-red-onion.webp",
+      "alt": "Fresh red onion from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Red Onion",
+    "seoDescription": "1Kg Rich, deep red onions. Shop red onion from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:13:53+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_brown_onion",
+    "sku": "MM-BROWNONION",
+    "slug": "brown-onion",
+    "name": "Brown Onion",
+    "status": "active",
+    "shortDescription": "Brown onions.",
+    "description": "2Kg Brown onions. Their papery golden-brown skin protects the firm, making them ideal for soups, stews, curries, and caramelising.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "brown-onion"
+    ],
+    "price": {
+      "amount": 44.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "2 kg",
+    "weightGrams": 2000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-brown-onion.webp",
+        "alt": "Fresh brown onion from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-brown-onion.webp",
+      "alt": "Fresh brown onion from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Brown Onion",
+    "seoDescription": "2Kg Brown onions. Shop brown onion from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T11:03:17+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_sweet_potatoes",
+    "sku": "MM-SWEETPOTATOES",
+    "slug": "sweet-potatoes",
+    "name": "Sweet Potatoes",
+    "status": "active",
+    "shortDescription": "Nutrient-rich sweet potatoes with a naturally sweet flavour and creamy texture.",
+    "description": "2Kg Nutrient-rich sweet potatoes with a naturally sweet flavour and creamy texture. Perfect for roasting, mashing, or adding to curries and stews. Rich in vitamins A and C, fibre, and antioxidants. Our premium selection ensures firm, unblemished tubers that store well.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "sweet-potatoes"
+    ],
+    "price": {
+      "amount": 44.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "2 kg",
+    "weightGrams": 2000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-sweet-potatoes.webp",
+        "alt": "Fresh sweet potatoes from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-sweet-potatoes.webp",
+      "alt": "Fresh sweet potatoes from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Sweet Potatoes",
+    "seoDescription": "2Kg Nutrient-rich sweet potatoes with a naturally sweet flavour and creamy texture. Shop sweet potatoes from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:58:16+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_green_beans",
+    "sku": "MM-GREENBEANS",
+    "slug": "green-beans",
+    "name": "Green Beans",
+    "status": "active",
+    "shortDescription": "Fresh crisp green beans.",
+    "description": "500g Fresh, crisp green beans. Best enjoyed fresh store in the refrigerator and use within a few days for optimal taste and texture.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "green-beans"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "500 g",
+    "weightGrams": 500,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-green-beans.webp",
+        "alt": "Fresh green beans from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-green-beans.webp",
+      "alt": "Fresh green beans from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Green Beans",
+    "seoDescription": "500g Fresh, crisp green beans. Shop green beans from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:54:57+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_baby_potatoes",
+    "sku": "MM-BABYPOTATOES",
+    "slug": "baby-potatoes",
+    "name": "Baby Potatoes",
+    "status": "active",
+    "shortDescription": "Tender, baby potatoes perfect for roasting, boiling, or mashing.",
+    "description": "Tender, baby potatoes perfect for roasting, boiling, or mashing. Fresh from our premium selection, delivering quality produce straight to your table.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "baby-potatoes"
+    ],
+    "price": {
+      "amount": 34.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "2 kg",
+    "weightGrams": 2000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-baby-potatoes.webp",
+        "alt": "Fresh baby potatoes from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-baby-potatoes.webp",
+      "alt": "Fresh baby potatoes from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Baby Potatoes",
+    "seoDescription": "Tender, baby potatoes perfect for roasting, boiling, or mashing. Shop baby potatoes from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:51:45+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_potatoes",
+    "sku": "MM-POTATOES",
+    "slug": "potatoes",
+    "name": "Potatoes",
+    "status": "active",
+    "shortDescription": "Fresh quality potatoes.",
+    "description": "Fresh, quality potatoes. Perfect for roasting, mashing, boiling, or frying. Versatile and reliable, our potatoes deliver consistent taste and texture for all your favourite dishes.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "potatoes"
+    ],
+    "price": {
+      "amount": 33.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": 2000,
+    "featured": false,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-potatoes.webp",
+        "alt": "Fresh potatoes from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-potatoes.webp",
+      "alt": "Fresh potatoes from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "variants": [
+      {
+        "id": "var_potatoes_2-kg",
+        "slug": "2-kg",
+        "name": "2 kg",
+        "price": {
+          "amount": 33.99,
+          "currency": "ZAR"
+        },
+        "availability": "in_stock",
+        "packSize": "2 kg"
+      },
+      {
+        "id": "var_potatoes_10-kg",
+        "slug": "10-kg",
+        "name": "10 kg",
+        "price": {
+          "amount": 150,
+          "currency": "ZAR"
+        },
+        "availability": "in_stock",
+        "packSize": "10 kg"
+      }
+    ],
+    "seoTitle": "Potatoes",
+    "seoDescription": "Fresh, quality potatoes. Shop potatoes from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:45:42+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_carrots",
+    "sku": "MM-CARROTS",
+    "slug": "carrots",
+    "name": "Carrots",
+    "status": "active",
+    "shortDescription": "Fresh carrots packed with natural sweetness and nutrition.",
+    "description": "Fresh, carrots packed with natural sweetness and nutrition. Our premium carrots are hand-selected for quality and crispness. Available in convenient 1kg and 500g sizes to suit your household needs. Rich in beta-carotene and vitamins.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [
+      "col_featured_produce"
+    ],
+    "tags": [
+      "vegetables",
+      "carrots"
+    ],
+    "price": {
+      "amount": 9.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": 500,
+    "featured": true,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-carrots.webp",
+        "alt": "Fresh carrots from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-carrots.webp",
+      "alt": "Fresh carrots from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "variants": [
+      {
+        "id": "var_carrots_500-g",
+        "slug": "500-g",
+        "name": "500 g",
+        "price": {
+          "amount": 9.99,
+          "currency": "ZAR"
+        },
+        "availability": "in_stock",
+        "packSize": "500 g"
+      },
+      {
+        "id": "var_carrots_1-kg",
+        "slug": "1-kg",
+        "name": "1 kg",
+        "price": {
+          "amount": 17.99,
+          "currency": "ZAR"
+        },
+        "availability": "in_stock",
+        "packSize": "1 kg"
+      }
+    ],
+    "seoTitle": "Carrots",
+    "seoDescription": "Fresh, carrots packed with natural sweetness and nutrition. Shop carrots from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:42:31+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_broccoli",
+    "sku": "MM-BROCCOLI",
+    "slug": "broccoli",
+    "name": "Broccoli",
+    "status": "active",
+    "shortDescription": "Fresh broccoli packed with nutrients and natural goodness.",
+    "description": "330g Fresh, broccoli packed with nutrients and natural goodness. Our premium broccoli is hand-selected for quality and crispness. Rich in vitamins C and K, fibre, and antioxidants, it's ideal for steaming, roasting, or adding to your favourite stir-fries.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "broccoli"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "330 g",
+    "weightGrams": 330,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-broccoli.webp",
+        "alt": "Fresh broccoli from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-broccoli.webp",
+      "alt": "Fresh broccoli from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Broccoli",
+    "seoDescription": "330g Fresh, broccoli packed with nutrients and natural goodness. Shop broccoli from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:38:03+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_bell_pepper",
+    "sku": "MM-BELLPEPPER",
+    "slug": "bell-pepper",
+    "name": "Bell Pepper",
+    "status": "active",
+    "shortDescription": "Crisp bell peppers.",
+    "description": "Crisp bell peppers. Perfect for salads, stir-fries, roasting, or fresh snacking. Rich in vitamin C and antioxidants, these premium peppers are hand-selected for quality and flavour. Available in red, yellow, and green varieties.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [],
+    "tags": [
+      "vegetables",
+      "bell-pepper"
+    ],
+    "price": {
+      "amount": 15.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-bell-pepper.webp",
+        "alt": "Fresh bell pepper, red, from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      },
+      {
+        "src": "/images/products/fresh-bell-pepper-green.webp",
+        "alt": "Fresh bell pepper, green, from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      },
+      {
+        "src": "/images/products/fresh-bell-pepper-yellow.webp",
+        "alt": "Fresh bell pepper, yellow, from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-bell-pepper.webp",
+      "alt": "Fresh bell pepper, red, from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "variants": [
+      {
+        "id": "var_bell-pepper_red",
+        "slug": "red",
+        "name": "Red",
+        "price": {
+          "amount": 18.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock",
+        "image": {
+          "src": "/images/products/fresh-bell-pepper.webp",
+          "alt": "Fresh bell pepper, red, from M & M Premium Produce",
+          "width": 1200,
+          "height": 1286
+        }
+      },
+      {
+        "id": "var_bell-pepper_green",
+        "slug": "green",
+        "name": "Green",
+        "price": {
+          "amount": 15.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock",
+        "image": {
+          "src": "/images/products/fresh-bell-pepper-green.webp",
+          "alt": "Fresh bell pepper, green, from M & M Premium Produce",
+          "width": 1200,
+          "height": 1286
+        }
+      },
+      {
+        "id": "var_bell-pepper_yellow",
+        "slug": "yellow",
+        "name": "Yellow",
+        "price": {
+          "amount": 18.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock",
+        "image": {
+          "src": "/images/products/fresh-bell-pepper-yellow.webp",
+          "alt": "Fresh bell pepper, yellow, from M & M Premium Produce",
+          "width": 1200,
+          "height": 1286
+        }
+      }
+    ],
+    "seoTitle": "Bell Pepper",
+    "seoDescription": "Crisp bell peppers. Shop bell pepper from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:33:58+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_cucumber",
+    "sku": "MM-CUCUMBER",
+    "slug": "cucumber",
+    "name": "Cucumber",
+    "status": "active",
+    "shortDescription": "Fresh crisp cucumbers.",
+    "description": "Fresh, crisp cucumbers. Grown locally to ensure quality and flavor. These hydrating vegetables are ideal for refreshing meals and healthy snacking. Available fresh at M & M Premium Produce.",
+    "categoryId": "cat_vegetables",
+    "collectionIds": [
+      "col_featured_produce"
+    ],
+    "tags": [
+      "vegetables",
+      "cucumber"
+    ],
+    "price": {
+      "amount": 19.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": true,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-cucumber.webp",
+        "alt": "Fresh cucumber from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-cucumber.webp",
+      "alt": "Fresh cucumber from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Cucumber",
+    "seoDescription": "Fresh, crisp cucumbers. Shop cucumber from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-06-01T10:21:33+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Vegetables",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_pears",
+    "sku": "MM-PEARS",
+    "slug": "pears",
+    "name": "Pears",
+    "status": "active",
+    "shortDescription": "Fresh crisp pears packed with natural sweetness and juicy flavour.",
+    "description": "1.5 Kg Fresh, crisp pears packed with natural sweetness and juicy flavour. Our premium selection offers perfectly ripened fruit ideal for snacking, salads, or desserts. Rich in fibre and vitamins, these pears deliver wholesome nutrition in every bite. Choose quality — choose M & M Premium Produce.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "pears"
+    ],
+    "price": {
+      "amount": 39.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "1.5 kg",
+    "weightGrams": 1500,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-pears.webp",
+        "alt": "Fresh pears from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-pears.webp",
+      "alt": "Fresh pears from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Pears",
+    "seoDescription": "1.5 Kg Fresh, crisp pears packed with natural sweetness and juicy flavour. Shop pears from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:41:09+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_dragon_fruit",
+    "sku": "MM-DRAGONFRUIT",
+    "slug": "dragon-fruit",
+    "name": "Dragon Fruit",
+    "status": "active",
+    "shortDescription": "This tropical delicacy offers a mild, subtly sweet flavour and refreshing texture perfect for fresh eating, smoothie bowls, or desserts.",
+    "description": "This tropical delicacy offers a mild, subtly sweet flavour and refreshing texture perfect for fresh eating, smoothie bowls, or desserts. Rich in vitamin C, fibre, and antioxidants. Select fruit that yields slightly to gentle pressure. Store in the refrigerator for up to two weeks.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "dragon-fruit"
+    ],
+    "price": {
+      "amount": 39.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-dragon-fruit.webp",
+        "alt": "Fresh dragon fruit from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-dragon-fruit.webp",
+      "alt": "Fresh dragon fruit from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Dragon Fruit",
+    "seoDescription": "This tropical delicacy offers a mild, subtly sweet flavour and refreshing texture perfect for fresh eating, smoothie bowls, or desserts. Shop dragon fruit from ",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:32:43+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_grapes",
+    "sku": "MM-GRAPES",
+    "slug": "grapes",
+    "name": "Grapes",
+    "status": "active",
+    "shortDescription": "Fresh juicy grapes bursting with natural sweetness.",
+    "description": "Fresh, juicy grapes bursting with natural sweetness. Perfect for snacking straight from the bunch or adding to your favourite dishes. Rich in antioxidants and vitamins, these premium grapes deliver crisp texture and vibrant flavour in every bite.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "grapes"
+    ],
+    "price": {
+      "amount": 49.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-grapes.webp",
+        "alt": "Fresh grapes, black, from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      },
+      {
+        "src": "/images/products/fresh-grapes-red.webp",
+        "alt": "Fresh grapes, red, from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      },
+      {
+        "src": "/images/products/fresh-grapes-white.webp",
+        "alt": "Fresh grapes, white, from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-grapes.webp",
+      "alt": "Fresh grapes, black, from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "variants": [
+      {
+        "id": "var_grapes_black",
+        "slug": "black",
+        "name": "Black",
+        "price": {
+          "amount": 49.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock",
+        "image": {
+          "src": "/images/products/fresh-grapes.webp",
+          "alt": "Fresh grapes, black, from M & M Premium Produce",
+          "width": 1200,
+          "height": 1286
+        }
+      },
+      {
+        "id": "var_grapes_red",
+        "slug": "red",
+        "name": "Red",
+        "price": {
+          "amount": 49.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock",
+        "image": {
+          "src": "/images/products/fresh-grapes-red.webp",
+          "alt": "Fresh grapes, red, from M & M Premium Produce",
+          "width": 1200,
+          "height": 1286
+        }
+      },
+      {
+        "id": "var_grapes_white",
+        "slug": "white",
+        "name": "White",
+        "price": {
+          "amount": 49.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock",
+        "image": {
+          "src": "/images/products/fresh-grapes-white.webp",
+          "alt": "Fresh grapes, white, from M & M Premium Produce",
+          "width": 1200,
+          "height": 1286
+        }
+      },
+      {
+        "id": "var_grapes_cotton-candy",
+        "slug": "cotton-candy",
+        "name": "Cotton candy",
+        "price": {
+          "amount": 64.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock"
+      }
+    ],
+    "seoTitle": "Grapes",
+    "seoDescription": "Fresh, juicy grapes bursting with natural sweetness. Shop grapes from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:29:45+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_watermelon",
+    "sku": "MM-WATERMELON",
+    "slug": "watermelon",
+    "name": "Watermelon",
+    "status": "active",
+    "shortDescription": "Refreshing and juicy watermelon, perfect for hot summer days.",
+    "description": "Refreshing and juicy watermelon, perfect for hot summer days. Packed with natural sweetness and hydration, this vibrant fruit is ideal for slicing fresh, blending into smoothies, or enjoying at your next gathering. Rich in vitamins and minerals, our watermelons are hand-selected for quality and ripeness.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "watermelon"
+    ],
+    "price": {
+      "amount": 99.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-watermelon.webp",
+        "alt": "Fresh watermelon from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-watermelon.webp",
+      "alt": "Fresh watermelon from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Watermelon",
+    "seoDescription": "Refreshing and juicy watermelon, perfect for hot summer days. Shop watermelon from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:16:08+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_blueberries",
+    "sku": "MM-BLUEBERRIES",
+    "slug": "blueberries",
+    "name": "Blueberries",
+    "status": "active",
+    "shortDescription": "Fresh blueberries bursting with natural sweetness.",
+    "description": "Fresh, blueberries bursting with natural sweetness. Perfect for breakfast bowls, baking, or enjoying straight from the punnet. Rich in antioxidants and packed with flavour, these premium berries are hand-selected for quality and ripeness. Enjoy them fresh or freeze for later use.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "blueberries"
+    ],
+    "price": {
+      "amount": 99.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-blueberries.webp",
+        "alt": "Fresh blueberries from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-blueberries.webp",
+      "alt": "Fresh blueberries from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Blueberries",
+    "seoDescription": "Fresh, blueberries bursting with natural sweetness. Shop blueberries from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:14:43+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_guavas",
+    "sku": "MM-GUAVAS",
+    "slug": "guavas",
+    "name": "Guavas",
+    "status": "active",
+    "shortDescription": "Fresh guavas bursting with tropical flavour.",
+    "description": "Fresh, guavas bursting with tropical flavour. Rich in vitamin C and fibre, these nutrient-dense fruits are perfect for eating fresh, blending into smoothies, or making jam. Sourced locally to ensure peak ripeness and quality.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "guavas"
+    ],
+    "price": {
+      "amount": 99.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-guavas.webp",
+        "alt": "Fresh guavas from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-guavas.webp",
+      "alt": "Fresh guavas from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Guavas",
+    "seoDescription": "Fresh, guavas bursting with tropical flavour. Shop guavas from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:12:23+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_granadillas",
+    "sku": "MM-GRANADILLAS",
+    "slug": "granadillas",
+    "name": "Granadillas",
+    "status": "active",
+    "shortDescription": "Pack of 6 delicious granadillas bursting with sweet, tangy flavour.",
+    "description": "Pack of 6 delicious granadillas bursting with sweet, tangy flavour. These exotic passion fruits feature a smooth. Perfect for eating fresh, adding to desserts, or blending into smoothies and juices. Rich in vitamin C and fibre, granadillas make a nutritious tropical treat. Pack of 6 fresh, premium quality fruits ready to enjoy.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "granadillas"
+    ],
+    "price": {
+      "amount": 59.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "pack of 6",
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-granadillas.webp",
+        "alt": "Fresh granadillas from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-granadillas.webp",
+      "alt": "Fresh granadillas from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Granadillas",
+    "seoDescription": "Pack of 6 delicious granadillas bursting with sweet, tangy flavour. Shop granadillas from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:10:55+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_grapefruit",
+    "sku": "MM-GRAPEFRUIT",
+    "slug": "grapefruit",
+    "name": "Grapefruit",
+    "status": "active",
+    "shortDescription": "Enjoy a half-dozen of nature's finest citrus with our Grapefruit Pack of 6.",
+    "description": "Enjoy a half-dozen of nature's finest citrus with our Grapefruit Pack of 6. Each fruit is carefully selected for sweetness and juiciness, delivering bright, refreshing flavour in every bite. Packed with vitamin C and fibre, grapefruits make an excellent addition to your daily nutrition. Perfect for breakfast, smoothies, or snacking throughout the week. Premium quality, farm-fresh goodness delivered to your door.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "grapefruit"
+    ],
+    "price": {
+      "amount": 49.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "pack of 6",
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-grapefruit.webp",
+        "alt": "Fresh grapefruit from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-grapefruit.webp",
+      "alt": "Fresh grapefruit from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Grapefruit",
+    "seoDescription": "Enjoy a half-dozen of nature's finest citrus with our Grapefruit Pack of 6. Shop grapefruit from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:07:50+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_melon",
+    "sku": "MM-MELON",
+    "slug": "melon",
+    "name": "Melon",
+    "status": "active",
+    "shortDescription": "Our Hand-selected melons with peak ripeness, each cantaloupe delivers juicy, refreshing flavor perfect for breakfast, desserts, or fresh fruit platters.",
+    "description": "Our Hand-selected melons with peak ripeness, each cantaloupe delivers juicy, refreshing flavor perfect for breakfast, desserts, or fresh fruit platters. Rich in vitamins A and C, naturally hydrating, and ideal for warm South African days. Choose quality, choose freshness.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "melon"
+    ],
+    "price": {
+      "amount": 49.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-melon.webp",
+        "alt": "Fresh melon from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-melon.webp",
+      "alt": "Fresh melon from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Melon",
+    "seoDescription": "Our Hand-selected melons with peak ripeness, each cantaloupe delivers juicy, refreshing flavor perfect for breakfast, desserts, or fresh fruit platters. Shop me",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:05:23+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_oranges",
+    "sku": "MM-ORANGES",
+    "slug": "oranges",
+    "name": "Oranges",
+    "status": "active",
+    "shortDescription": "Fresh vibrant oranges bursting with natural sweetness and vitamin C.",
+    "description": "Fresh, vibrant oranges bursting with natural sweetness and vitamin C. Hand-selected for quality and ripeness, these citrus fruits deliver bright, juicy flavor perfect for fresh juice, snacking, or adding to your favorite recipes. Rich in nutrients and full of zest, our premium oranges bring sunshine to your table.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "oranges"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-oranges.webp",
+        "alt": "Fresh oranges from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-oranges.webp",
+      "alt": "Fresh oranges from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Oranges",
+    "seoDescription": "Fresh, vibrant oranges bursting with natural sweetness and vitamin C. Shop oranges from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:02:23+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_paw_paw",
+    "sku": "MM-PAWPAW",
+    "slug": "paw-paw",
+    "name": "Paw Paw",
+    "status": "active",
+    "shortDescription": "Ripe and creamy paw paw, bursting with natural sweetness.",
+    "description": "Ripe and creamy paw paw, bursting with natural sweetness. Rich in vitamin C and papain enzyme, this tropical fruit supports digestion and boosts immunity. Perfect for fresh eating, smoothies, or desserts. Select fruit that yields slightly to gentle pressure for optimal ripeness and flavour.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "paw-paw"
+    ],
+    "price": {
+      "amount": 34.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-paw-paw.webp",
+        "alt": "Fresh paw paw from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-paw-paw.webp",
+      "alt": "Fresh paw paw from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Paw Paw",
+    "seoDescription": "Ripe and creamy paw paw, bursting with natural sweetness. Shop paw paw from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T14:00:16+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_tangerines",
+    "sku": "MM-TANGERINES",
+    "slug": "tangerines",
+    "name": "Tangerines",
+    "status": "active",
+    "shortDescription": "Vibrant tangerines with a naturally sweet, refreshing taste.",
+    "description": "2kg Vibrant tangerines with a naturally sweet, refreshing taste. Easy to peel and seedless, these citrus gems are ideal for snacking straight from the fruit bowl or squeezing into fresh juice. Loaded with vitamin C and antioxidants, they support your immune system while delivering authentic citrus flavour. Sourced from premium growers and picked at peak ripeness for maximum taste and nutrition.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "tangerines"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "packSize": "2 kg",
+    "weightGrams": 2000,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-tangerines.webp",
+        "alt": "Fresh tangerines from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-tangerines.webp",
+      "alt": "Fresh tangerines from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Tangerines",
+    "seoDescription": "2kg Vibrant tangerines with a naturally sweet, refreshing taste. Shop tangerines from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T13:57:14+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_lemons",
+    "sku": "MM-LEMONS",
+    "slug": "lemons",
+    "name": "Lemons",
+    "status": "active",
+    "shortDescription": "Fresh vibrant lemons bursting with natural citrus flavour.",
+    "description": "Fresh, vibrant lemons bursting with natural citrus flavour. Perfect for cooking, baking, beverages, or adding a zesty kick to your favourite dishes. Rich in vitamin C and versatile in the kitchen, these quality lemons bring brightness to every meal. Hand-selected for peak ripeness and flavour.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "lemons"
+    ],
+    "price": {
+      "amount": 29.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-lemons.webp",
+        "alt": "Fresh lemons from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-lemons.webp",
+      "alt": "Fresh lemons from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Lemons",
+    "seoDescription": "Fresh, vibrant lemons bursting with natural citrus flavour. Shop lemons from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T13:53:01+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_queen_pineapple",
+    "sku": "MM-QUEENPINEAPPLE",
+    "slug": "queen-pineapple",
+    "name": "Queen Pineapple",
+    "status": "active",
+    "shortDescription": "Golden, sweet pineapple bursting with tropical flavour.",
+    "description": "Golden, sweet pineapple bursting with tropical flavour. Hand-selected for peak ripeness and quality. Perfect for fresh eating, smoothies, or grilling. Rich in vitamin C and natural enzymes. A vibrant addition to any fruit bowl or kitchen.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "queen-pineapple"
+    ],
+    "price": {
+      "amount": 23.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-queen-pineapple.webp",
+        "alt": "Fresh queen pineapple from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-queen-pineapple.webp",
+      "alt": "Fresh queen pineapple from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Queen Pineapple",
+    "seoDescription": "Golden, sweet pineapple bursting with tropical flavour. Shop queen pineapple from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-04-27T13:31:19+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_strawberries",
+    "sku": "MM-STRAWBERRIES",
+    "slug": "strawberries",
+    "name": "Strawberries",
+    "status": "active",
+    "shortDescription": "Bright red, glossy berries with a delicate sweetness and refreshing taste.",
+    "description": "Bright red, glossy berries with a delicate sweetness and refreshing taste. Packed with vitamin C and natural goodness, perfect for breakfast, baking, or enjoying fresh. Keep refrigerated and consume within a few days for best results.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "strawberries"
+    ],
+    "price": {
+      "amount": 49.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-strawberries.webp",
+        "alt": "Fresh strawberries from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-strawberries.webp",
+      "alt": "Fresh strawberries from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Strawberries",
+    "seoDescription": "Bright red, glossy berries with a delicate sweetness and refreshing taste. Shop strawberries from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-03-26T22:43:57+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_kiwis",
+    "sku": "MM-KIWIS",
+    "slug": "kiwis",
+    "name": "Kiwis",
+    "status": "active",
+    "shortDescription": "Vibrant green kiwis bursting with natural sweetness and tangy flavour.",
+    "description": "Vibrant green kiwis bursting with natural sweetness and tangy flavour. Rich in vitamin C and antioxidants, these nutrient-dense fruits offer a refreshing taste perfect for breakfast, smoothies, or desserts. Hand-selected for premium quality and optimal ripeness, each kiwi delivers a smooth, creamy texture with tiny edible seeds. A delicious and wholesome addition to any fruit bowl.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "kiwis"
+    ],
+    "price": {
+      "amount": 20,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-kiwis.webp",
+        "alt": "Fresh kiwis from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-kiwis.webp",
+      "alt": "Fresh kiwis from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Kiwis",
+    "seoDescription": "Vibrant green kiwis bursting with natural sweetness and tangy flavour. Shop kiwis from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-03-26T22:40:19+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_bananas",
+    "sku": "MM-BANANAS",
+    "slug": "bananas",
+    "name": "Bananas",
+    "status": "active",
+    "shortDescription": "Golden-yellow bananas bursting with natural sweetness and creamy texture.",
+    "description": "Golden-yellow bananas bursting with natural sweetness and creamy texture. Hand-selected for peak ripeness, our premium bananas are packed with potassium and essential nutrients. Perfect for fresh eating, smoothies, or baking. Store at room temperature and enjoy within days for optimal flavour and freshness.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [],
+    "tags": [
+      "fruit",
+      "bananas"
+    ],
+    "price": {
+      "amount": 49.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": false,
+    "availability": "out_of_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-bananas.webp",
+        "alt": "Fresh bananas from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-bananas.webp",
+      "alt": "Fresh bananas from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "seoTitle": "Bananas",
+    "seoDescription": "Golden-yellow bananas bursting with natural sweetness and creamy texture. Shop bananas from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-03-26T22:31:09+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  },
+  {
+    "id": "prod_apples",
+    "sku": "MM-APPLES",
+    "slug": "apples",
+    "name": "Apples",
+    "status": "active",
+    "shortDescription": "Crisp, juicy apples bursting with natural sweetness.",
+    "description": "Crisp, juicy apples bursting with natural sweetness. Hand-selected for premium quality and exceptional flavour, each apple delivers a satisfying crunch and refreshing taste. Perfect for fresh eating, baking, or juicing. Rich in fibre and nutrients.",
+    "categoryId": "cat_fruit",
+    "collectionIds": [
+      "col_featured_produce"
+    ],
+    "tags": [
+      "fruit",
+      "apples"
+    ],
+    "price": {
+      "amount": 39.99,
+      "currency": "ZAR"
+    },
+    "compareAtPrice": null,
+    "weightGrams": null,
+    "featured": true,
+    "availability": "in_stock",
+    "stockQuantity": null,
+    "images": [
+      {
+        "src": "/images/products/fresh-apples.webp",
+        "alt": "Fresh apples from M & M Premium Produce",
+        "width": 1200,
+        "height": 1286
+      }
+    ],
+    "primaryImage": {
+      "src": "/images/products/fresh-apples.webp",
+      "alt": "Fresh apples from M & M Premium Produce",
+      "width": 1200,
+      "height": 1286
+    },
+    "variants": [
+      {
+        "id": "var_apples_granny-smith",
+        "slug": "granny-smith",
+        "name": "Granny Smith",
+        "price": {
+          "amount": 39.99,
+          "currency": "ZAR"
+        },
+        "availability": "in_stock"
+      },
+      {
+        "id": "var_apples_fuji",
+        "slug": "fuji",
+        "name": "Fuji",
+        "price": {
+          "amount": 39.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock"
+      },
+      {
+        "id": "var_apples_crisp-pink",
+        "slug": "crisp-pink",
+        "name": "Crisp Pink",
+        "price": {
+          "amount": 39.99,
+          "currency": "ZAR"
+        },
+        "availability": "out_of_stock"
+      }
+    ],
+    "seoTitle": "Apples",
+    "seoDescription": "Crisp, juicy apples bursting with natural sweetness. Shop apples from M & M Premium Produce.",
+    "indexable": true,
+    "isSample": false,
+    "createdAt": "2026-03-26T22:27:22+02:00",
+    "updatedAt": "2026-08-18T20:52:47+02:00",
+    "productType": "Fruit",
+    "gtin": null,
+    "mpn": null
+  }
+]
