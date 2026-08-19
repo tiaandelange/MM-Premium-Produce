@@ -29,6 +29,14 @@ ALTER TABLE order_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE payments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE deliveries ENABLE ROW LEVEL SECURITY;
 
+ALTER TABLE articles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE article_translations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE article_products ENABLE ROW LEVEL SECURITY;
+ALTER TABLE article_categories ENABLE ROW LEVEL SECURITY;
+ALTER TABLE recipes ENABLE ROW LEVEL SECURITY;
+ALTER TABLE recipe_translations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE recipe_products ENABLE ROW LEVEL SECURITY;
+
 REVOKE ALL ON TABLE customers, orders, order_items, payments, deliveries, delivery_rules FROM PUBLIC;
 REVOKE INSERT, UPDATE, DELETE ON TABLE admin_users FROM PUBLIC;
 
@@ -120,5 +128,41 @@ CREATE POLICY delivery_rules_public_read ON delivery_rules
   USING (published = true);
 
 CREATE POLICY media_public_read ON media_assets
+  FOR SELECT TO PUBLIC
+  USING (true);
+
+DROP POLICY IF EXISTS articles_public_read ON articles;
+DROP POLICY IF EXISTS article_translations_public_read ON article_translations;
+DROP POLICY IF EXISTS article_products_public_read ON article_products;
+DROP POLICY IF EXISTS article_categories_public_read ON article_categories;
+DROP POLICY IF EXISTS recipes_public_read ON recipes;
+DROP POLICY IF EXISTS recipe_translations_public_read ON recipe_translations;
+DROP POLICY IF EXISTS recipe_products_public_read ON recipe_products;
+
+CREATE POLICY articles_public_read ON articles
+  FOR SELECT TO PUBLIC
+  USING (status = 'active');
+
+CREATE POLICY article_translations_public_read ON article_translations
+  FOR SELECT TO PUBLIC
+  USING (status = 'published');
+
+CREATE POLICY article_products_public_read ON article_products
+  FOR SELECT TO PUBLIC
+  USING (true);
+
+CREATE POLICY article_categories_public_read ON article_categories
+  FOR SELECT TO PUBLIC
+  USING (true);
+
+CREATE POLICY recipes_public_read ON recipes
+  FOR SELECT TO PUBLIC
+  USING (status = 'active');
+
+CREATE POLICY recipe_translations_public_read ON recipe_translations
+  FOR SELECT TO PUBLIC
+  USING (status = 'published');
+
+CREATE POLICY recipe_products_public_read ON recipe_products
   FOR SELECT TO PUBLIC
   USING (true);

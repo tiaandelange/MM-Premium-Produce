@@ -45,6 +45,7 @@ export async function proxy(request: NextRequest) {
   if (
     pathname.startsWith("/admin") ||
     pathname.startsWith("/api") ||
+    pathname.startsWith("/feeds") ||
     pathname.startsWith("/_next") ||
     pathname === "/sitemap.xml" ||
     pathname === "/robots.txt" ||

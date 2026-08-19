@@ -25,6 +25,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   const site = getSiteConfig();
+  const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
   return {
     metadataBase: new URL(site.siteUrl),
     title: {
@@ -34,6 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: site.defaultDescription,
     applicationName: site.businessName,
     robots: buildRobots(true),
+    verification: googleVerification ? { google: googleVerification } : undefined,
     openGraph: {
       type: "website",
       locale: "en_ZA",

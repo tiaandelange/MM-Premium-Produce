@@ -11,9 +11,9 @@ export const categories: Category[] = [
     ],
     slug: "vegetables",
     name: "Vegetables",
-    shortDescription: "Leafy greens, roots, onions and everyday cooking vegetables.",
+    shortDescription: "Leafy greens, roots, onions and everyday cooking vegetables, listed as individual products.",
     description:
-      "Shop fresh vegetables from M & M Premium Produce, including lettuce, spinach, onions, potatoes, carrots and more. Each item has its own product page with pack size and price where those details are listed for sale.",
+      "This range is for weekly cooking vegetables — potatoes, carrots, onions, spinach, lettuce, cucumber and similar staples. Open any item for pack size, price and availability. Fruit is listed separately in the fruit shop.",
     image: {
       src: "/images/categories/vegetables.webp",
       alt: "Fresh peppers, broccoli, carrots, potatoes, Brussels sprouts and sweet potato from M & M Premium Produce",
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     },
     seoTitle: "Fresh Vegetables",
     seoDescription:
-      "Browse fresh vegetables from M & M Premium Produce, including leafy greens, carrots, tomatoes, onions and potatoes. Each item has its own product page.",
+      "Shop fresh vegetables from M & M Premium Produce: potatoes, carrots, spinach, lettuce, onions and everyday cooking veg. Each item has its own page with pack size and price.",
     featured: true,
     indexable: true,
     isSample: false,
@@ -38,9 +38,9 @@ export const categories: Category[] = [
     ],
     slug: "fruit",
     name: "Fruit",
-    shortDescription: "Everyday fresh fruit, from apples and grapes to citrus and berries.",
+    shortDescription: "Everyday fruit listed as individual products, from apples to seasonal citrus and berries.",
     description:
-      "Shop fresh fruit from M & M Premium Produce. Apples, citrus, grapes, berries and other fruit are listed as individual products so each item can be opened, shared and found on its own page.",
+      "Each fruit has its own page so you can check pack size, price and whether it is in stock. Availability changes with the season. Vegetables are listed in the vegetable shop.",
     image: {
       src: "/images/categories/fruits.webp",
       alt: "Fresh pineapple, papaya, citrus, grapes, kiwi and avocado from M & M Premium Produce",
@@ -49,7 +49,7 @@ export const categories: Category[] = [
     },
     seoTitle: "Fresh Fruit",
     seoDescription:
-      "Browse fresh fruit from M & M Premium Produce, including apples, citrus, grapes and berries. Each fruit has its own product page.",
+      "Shop fresh fruit from M & M Premium Produce. Apples are listed with variety options; other fruit appears when it is in the current catalogue.",
     featured: true,
     indexable: true,
     isSample: false,

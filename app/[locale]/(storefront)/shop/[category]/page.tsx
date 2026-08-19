@@ -12,6 +12,9 @@ import { redirectIfTranslatedSlugExists } from "@/lib/i18n/entity-redirect";
 import { getRequestPathname } from "@/lib/i18n/request";
 import { buildBreadcrumbStructuredData, buildItemListStructuredData } from "@/lib/seo/structured-data";
 import { getCatalog } from "@/services/catalog";
+import { getEditorial } from "@/services/editorial";
+import { TrackItemList } from "@/components/analytics/track-event";
+import { analyticsItemFromProduct } from "@/lib/analytics/items";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -66,9 +69,10 @@ export default async function CategoryPage({
 
   const messages = getMessages(locale);
   const paths = createPaths(locale);
-  const [products, categories] = await Promise.all([
+  const [products, categories, relatedGuides] = await Promise.all([
     catalog.listProducts({ categoryId: category.id }),
     catalog.listCategories(),
+    (await getEditorial(locale)).listGuidesForCategory(category.id),
   ]);
   const relatedCategories = categories.filter((item) => item.id !== category.id);
   const breadcrumbItems = [
@@ -87,7 +91,7 @@ export default async function CategoryPage({
         )}
       />
       <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={category.name} description={category.shortDescription} />
+      <PageHeader title={category.seoTitle ?? category.name} description={category.shortDescription} />
       <div className="relative aspect-[21/9] max-h-80 overflow-hidden rounded-card border border-line bg-sand">
         <CatalogMedia image={category.image} priority sizes="100vw" />
       </div>
@@ -97,13 +101,41 @@ export default async function CategoryPage({
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              listId={category.id}
+              listName={category.name}
+            />
           ))}
         </div>
+        <TrackItemList
+          listId={category.id}
+          listName={category.name}
+          items={products.map((product) => analyticsItemFromProduct(product))}
+        />
       </section>
       <section className="max-w-3xl">
         <h2 className="text-section-title">{messages.aboutThisRange}</h2>
         <p className="mt-4 text-muted">{category.description}</p>
+        <p className="mt-4">
+          <Link href={paths.shop}>{messages.openFullShop}</Link>
+          {" · "}
+          <Link href={paths.guides}>{messages.guides}</Link>
+          {" · "}
+          <Link href={paths.delivery}>{messages.delivery}</Link>
+        </p>
+        {relatedGuides.length ? (
+          <p className="mt-4 text-muted">
+            {messages.relatedGuides}:{" "}
+            {relatedGuides.map((guide, index) => (
+              <span key={guide.id}>
+                {index ? " · " : null}
+                <Link href={paths.guide(guide.slug)}>{guide.title}</Link>
+              </span>
+            ))}
+          </p>
+        ) : null}
       </section>
       {relatedCategories.length ? (
         <section>

@@ -16,7 +16,10 @@ import { followStoredRedirect } from "@/lib/seo/redirects";
 import { packQuantityLabel, priceUnitLabel, resolvePriceUnit } from "@/lib/catalog/price-unit";
 import { redirectIfTranslatedSlugExists } from "@/lib/i18n/entity-redirect";
 import { buildBreadcrumbStructuredData, buildProductStructuredData } from "@/lib/seo/structured-data";
+import { TrackViewItem } from "@/components/analytics/track-event";
+import { analyticsItemFromProduct, analyticsValue } from "@/lib/analytics/items";
 import { getCatalog } from "@/services/catalog";
+import { getEditorial } from "@/services/editorial";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -70,9 +73,11 @@ export default async function ProductPage({
   if (!product) notFound();
   const messages = getMessages(locale);
   const paths = createPaths(locale);
-  const [category, related] = await Promise.all([
+  const [category, related, guides, recipes] = await Promise.all([
     catalog.getCategoryById(product.categoryId),
     catalog.listRelatedProducts(product, 3),
+    (await getEditorial(locale)).listGuidesForProduct(product.id),
+    (await getEditorial(locale)).listRecipesForProduct(product.id),
   ]);
   const breadcrumbItems = [
     { name: messages.home, path: paths.home },
@@ -82,10 +87,16 @@ export default async function ProductPage({
   ];
   const sellingUnit = resolvePriceUnit({ unit: product.unit, packSize: product.packSize, productId: product.id });
   const packLabel = packQuantityLabel(product);
+  const viewItem = analyticsItemFromProduct(product, product.variants?.[0]);
 
   return (
     <div className="site-container space-y-12 py-12">
       <JsonLd data={buildProductStructuredData(product)} />
+      <TrackViewItem
+        items={[viewItem]}
+        value={analyticsValue([viewItem])}
+        currency={product.price?.currency ?? "ZAR"}
+      />
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
       <Breadcrumbs items={breadcrumbItems} />
       <article className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
@@ -113,8 +124,18 @@ export default async function ProductPage({
               <Link href={paths.category(category.slug)}>
                 {category.name}
               </Link>
+              {" · "}
+              <Link href={paths.shop}>{messages.shop}</Link>
+              {" · "}
+              <Link href={paths.delivery}>{messages.deliveryInformation}</Link>
             </p>
-          ) : null}
+          ) : (
+            <p>
+              <Link href={paths.shop}>{messages.shop}</Link>
+              {" · "}
+              <Link href={paths.delivery}>{messages.deliveryInformation}</Link>
+            </p>
+          )}
           <CartNotice locale={locale} />
           <AddToCartForm product={product} />
         </div>
@@ -127,30 +148,54 @@ export default async function ProductPage({
       product.guidance?.selection ||
       product.guidance?.typicalUses ||
       product.guidance?.seasonality ||
-      product.guidance?.origin ? (
+      product.guidance?.origin ||
+      guides.length ||
+      recipes.length ? (
         <section className="max-w-3xl space-y-4">
           <h2 className="text-section-title">{messages.howToUse}</h2>
-          {product.guidance.origin ? (
+          {product.guidance?.origin ? (
             <p className="text-muted">
               <strong>{messages.origin}:</strong> {product.guidance.origin}
             </p>
           ) : null}
-          {product.guidance.seasonality ? (
+          {product.guidance?.seasonality ? (
             <p className="text-muted">
               <strong>{messages.seasonality}:</strong> {product.guidance.seasonality}
             </p>
           ) : null}
-          {product.guidance.selection ? (
+          {product.guidance?.selection ? (
             <p className="text-muted">
               <strong>{messages.selection}:</strong> {product.guidance.selection}
             </p>
           ) : null}
-          {product.guidance.storage ? (
+          {product.guidance?.storage ? (
             <p className="text-muted">
               <strong>{messages.storage}:</strong> {product.guidance.storage}
             </p>
           ) : null}
-          {product.guidance.typicalUses ? (
+          {guides.length ? (
+            <p className="text-muted">
+              {messages.relatedGuides}:{" "}
+              {guides.map((guide, index) => (
+                <span key={guide.id}>
+                  {index ? " · " : null}
+                  <Link href={paths.guide(guide.slug)}>{guide.title}</Link>
+                </span>
+              ))}
+            </p>
+          ) : null}
+          {recipes.length ? (
+            <p className="text-muted">
+              {messages.relatedRecipes}:{" "}
+              {recipes.map((recipe, index) => (
+                <span key={recipe.id}>
+                  {index ? " · " : null}
+                  <Link href={paths.recipe(recipe.slug)}>{recipe.title}</Link>
+                </span>
+              ))}
+            </p>
+          ) : null}
+          {product.guidance?.typicalUses ? (
             <p className="text-muted">
               <strong>{messages.typicalUses}:</strong> {product.guidance.typicalUses}
             </p>

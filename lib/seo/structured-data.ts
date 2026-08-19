@@ -1,23 +1,25 @@
 import { confirmedValue, getSiteConfig } from "@/config/site";
 import { buildCanonicalUrl } from "@/lib/seo/canonical";
 import { createPaths } from "@/lib/i18n/paths";
+import { hasSellablePrice, merchantAvailability } from "@/lib/commerce/offer";
 import type { AppLocale } from "@/lib/i18n/config";
 import type { BreadcrumbItem } from "@/lib/seo/breadcrumbs";
 import type { AvailabilityStatus, Bundle, Product } from "@/types/catalog";
+import type { PublicArticle, PublicRecipe } from "@/types/content";
 
 type JsonLd = Record<string, unknown>;
 
 function availabilityUrl(status: AvailabilityStatus): string | undefined {
-  switch (status) {
+  const merchant = merchantAvailability(status);
+  switch (merchant) {
     case "in_stock":
       return "https://schema.org/InStock";
     case "out_of_stock":
       return "https://schema.org/OutOfStock";
     case "preorder":
       return "https://schema.org/PreOrder";
-    case "discontinued":
-      return "https://schema.org/Discontinued";
     default:
+      if (status === "discontinued") return "https://schema.org/Discontinued";
       return undefined;
   }
 }
@@ -36,6 +38,10 @@ export function buildOrganizationStructuredData(locale: AppLocale = "en"): JsonL
     name: site.businessName,
     url: buildCanonicalUrl(paths.home),
     logo: buildCanonicalUrl(site.logoPath),
+    areaServed: {
+      "@type": "Country",
+      name: "South Africa",
+    },
   };
 
   if (email) data.email = email;
@@ -73,7 +79,7 @@ function buildOffer(
   status: AvailabilityStatus,
   url: string,
 ): JsonLd | undefined {
-  if (!price || price.amount <= 0) return undefined;
+  if (!hasSellablePrice(price)) return undefined;
 
   const offer: JsonLd = {
     "@type": "Offer",
@@ -127,6 +133,7 @@ export function buildProductStructuredData(product: Product): JsonLd {
         return variantData;
       }),
     };
+    if (product.productType) data.category = product.productType;
     return data;
   }
 
@@ -143,6 +150,7 @@ export function buildProductStructuredData(product: Product): JsonLd {
 
   if (product.gtin) data.gtin = product.gtin;
   if (product.mpn) data.mpn = product.mpn;
+  if (product.productType) data.category = product.productType;
 
   const offer = buildOffer(product.price, product.availability, url);
   if (offer) data.offers = offer;
@@ -202,6 +210,59 @@ export function buildItemListStructuredData(
       position: index + 1,
       name: item.name,
       url: buildCanonicalUrl(item.path),
+    })),
+  };
+}
+
+export function buildArticleStructuredData(article: PublicArticle): JsonLd {
+  const paths = createPaths(article.locale);
+  const site = getSiteConfig();
+  const url = buildCanonicalUrl(paths.guide(article.slug));
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.lede,
+    url,
+    image: buildCanonicalUrl(article.image.src),
+    inLanguage: article.locale === "af" ? "af-ZA" : "en-ZA",
+    author: {
+      "@type": "Organization",
+      name: site.businessName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: site.businessName,
+      logo: {
+        "@type": "ImageObject",
+        url: buildCanonicalUrl(site.logoPath),
+      },
+    },
+  };
+}
+
+export function buildRecipeStructuredData(recipe: PublicRecipe): JsonLd {
+  const paths = createPaths(recipe.locale);
+  const site = getSiteConfig();
+  const url = buildCanonicalUrl(paths.recipe(recipe.slug));
+  return {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: recipe.title,
+    description: recipe.lede,
+    url,
+    image: buildCanonicalUrl(recipe.image.src),
+    inLanguage: recipe.locale === "af" ? "af-ZA" : "en-ZA",
+    author: {
+      "@type": "Organization",
+      name: site.businessName,
+    },
+    recipeIngredient: recipe.ingredients.map((item) =>
+      item.quantity ? `${item.quantity} ${item.name}` : item.name,
+    ),
+    recipeInstructions: recipe.steps.map((text) => ({
+      "@type": "HowToStep",
+      text,
     })),
   };
 }

@@ -1,5 +1,8 @@
 import { PriceDisplay } from "@/components/commerce/price-display";
 import { PlaceOrderButton } from "@/components/commerce/place-order-button";
+import { CheckoutAnalytics } from "@/components/analytics/checkout-analytics";
+import { TrackBeginCheckout } from "@/components/analytics/track-event";
+import { analyticsItemsFromCart, analyticsValue } from "@/lib/analytics/items";
 import { PageHeader } from "@/components/layout/page-header";
 import { requireLocale } from "@/lib/i18n/locale";
 import { getMessages } from "@/lib/i18n/messages";
@@ -76,6 +79,8 @@ export default async function CheckoutPage({
   const error = resolveCommerceNotice(locale, typeof query.error === "string" ? query.error : null);
   const provinces = saProvinceOptions(locale);
   const idempotencyKey = crypto.randomUUID();
+  const checkoutItems = analyticsItemsFromCart(cart);
+  const checkoutValue = analyticsValue(checkoutItems);
 
   if (!cart.items.length) {
     return (
@@ -94,7 +99,8 @@ export default async function CheckoutPage({
       <div className="space-y-8">
         <PageHeader title={messages.checkout} />
         {error ? <p className="text-sm text-danger">{error}</p> : null}
-        <form action="/api/checkout" method="post" className="space-y-8">
+        <TrackBeginCheckout items={checkoutItems} value={checkoutValue} currency={cart.currency} />
+        <CheckoutAnalytics items={checkoutItems} value={checkoutValue} currency={cart.currency}>
           <input type="hidden" name="locale" value={locale} />
           <input type="hidden" name="idempotencyKey" value={idempotencyKey} />
           <section className="space-y-4">
@@ -157,7 +163,7 @@ export default async function CheckoutPage({
             </label>
           </section>
           <PlaceOrderButton label={messages.placeOrder} pendingLabel={messages.placingOrder} />
-        </form>
+        </CheckoutAnalytics>
       </div>
       <aside className="card-surface h-fit space-y-4 p-5">
         <h2 className="font-heading text-card-title text-ink">{messages.orderSummary}</h2>

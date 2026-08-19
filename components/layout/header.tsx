@@ -12,6 +12,7 @@ import { getRequestPathname } from "@/lib/i18n/request";
 import { getThemePreference } from "@/lib/theme-server";
 import { getCatalog } from "@/services/catalog";
 import { getHydratedCart } from "@/services/cart";
+import { analyticsItemsFromCart } from "@/lib/analytics/items";
 
 export async function SiteHeader({ locale }: { locale: AppLocale }) {
   const theme = await getThemePreference();
@@ -53,6 +54,9 @@ export async function SiteHeader({ locale }: { locale: AppLocale }) {
       countLabel={interpolate(messages.itemsInCart, { count: String(cart.itemCount) })}
       count={cart.itemCount}
       closeLabel={messages.close}
+      cartItems={analyticsItemsFromCart(cart)}
+      cartValue={cart.subtotal?.amount}
+      cartCurrency={cart.currency}
     >
       <CartContents cart={cart} locale={locale} />
     </CartDrawer>

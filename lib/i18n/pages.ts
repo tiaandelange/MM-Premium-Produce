@@ -28,12 +28,14 @@ export type PageCopy = {
   sections: Array<{ heading: string; body: string[] }>;
 };
 
-export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | "contact" | "faq" | "shop" | "bundles", PageCopy>> = {
+type PageKey = "home" | "about" | "delivery" | "contact" | "faq" | "shop" | "bundles" | "guides" | "recipes";
+
+export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
   en: {
     home: {
-      title: "Fresh Fruit & Vegetables | M & M Premium Produce",
+      title: "M & M Premium Produce | Personally Handpicked Fruit & Vegetables",
       description:
-        "Shop personally handpicked fresh fruit and vegetables from M & M Premium Produce. Quality does matter.",
+        "Personally handpicked fruit and vegetables from M & M Premium Produce. Shop the catalogue, then open vegetables, fruit or a named product. We deliver across South Africa.",
       h1: "Premium Fresh Fruit, Vegetables & Produce",
       heroLines: [
         { text: "Premium Fresh", tone: "primary" },
@@ -41,7 +43,7 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         { text: "& Produce", tone: "primary" },
       ],
       intro:
-        "Personally handpicked fruit, vegetables and produce. Shop the catalogue, or start with a produce box.",
+        "Personally handpicked fruit and vegetables. Open the full catalogue, or start with vegetables.",
       approach: {
         eyebrow: "Our approach",
         heading: "Personally Handpicked.",
@@ -79,23 +81,24 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         {
           heading: "Shop fresh produce online",
           body: [
-            "Move from the fresh produce shop into vegetables or fruit, then open a specific item. Delivery areas will be published on the delivery page once they are confirmed.",
+            "Open the full catalogue, or go straight into vegetables or fruit, then choose a named product. We deliver across South Africa; areas, time slots and fees are listed on the delivery page when they are published.",
+            "Guides on storing staples and using leftovers sit in the produce guides. They are written to be useful in the kitchen, not as a content farm.",
           ],
         },
       ],
     },
     shop: {
-      title: "Fresh Produce Shop",
+      title: "All Fresh Produce",
       description:
-        "Shop fresh fruit and vegetables from M & M Premium Produce. Browse categories and open any product from a crawlable catalogue page.",
-      h1: "Fresh Produce Shop",
+        "The full M & M Premium Produce catalogue: every fruit and vegetable currently listed, each on its own page. Use Vegetables or Fruit when you want one aisle.",
+      h1: "All produce",
       intro:
-        "Browse fruit and vegetables from this catalogue page. Category links are the indexable way to filter the range.",
+        "This is the complete catalogue index — not a second vegetables page. Open Vegetables or Fruit to shop one aisle, or stay here to scan every listed item.",
       sections: [
         {
           heading: "All products",
           body: [
-            "Every product below is linked with a standard URL. Sorting and availability filters, when added, will stay on this same canonical shop page.",
+            "Every product below has its own URL. Vegetables and fruit each have a separate aisle page so those searches do not compete with this catalogue index.",
           ],
         },
       ],
@@ -134,23 +137,23 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         {
           heading: "What you can shop for",
           body: [
-            "Browse the fresh produce shop, vegetables or fruit. Produce boxes will appear under bundles when a box is confirmed. Delivery information will be published on the delivery page once it is confirmed.",
+            "Browse the full catalogue, vegetables or fruit. Produce boxes will appear under bundles when a box is confirmed. Delivery is nationwide; areas, time slots and fees are published on the delivery page when they are confirmed.",
           ],
         },
       ],
     },
     delivery: {
-      title: "Delivery Information",
+      title: "Nationwide Produce Delivery",
       description:
-        "Delivery areas, times and fees for M & M Premium Produce will be published here once they are confirmed.",
-      h1: "Delivery information",
+        "M & M Premium Produce delivers fresh produce across South Africa. Specific areas, time slots, fees and collection options will be listed here when they are published.",
+      h1: "Nationwide delivery",
       intro:
-        "This page will hold delivery areas, times and any collection options. Those details are not public yet.",
+        "We deliver across South Africa. Suburbs, time slots, fees and collection options are not published yet — this page is where they will appear.",
       sections: [
         {
           heading: "Current status",
           body: [
-            "Delivery areas and time slots have not been confirmed, so they are not shown here. When they are available, this page will be the canonical place to read them.",
+            "Nationwide delivery is confirmed. We have not published a suburb list, time slots, fees or collection options, so those details are not shown here. Shop fruit and vegetables in the meantime.",
           ],
         },
       ],
@@ -180,13 +183,13 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         {
           heading: "What can I shop for?",
           body: [
-            "The shop is organised into fresh fruit, fresh vegetables and produce boxes. Each product has its own page.",
+            "The catalogue is organised into vegetables, fruit and the full shop index. Produce boxes will appear when a box is listed for sale. Each product has its own page.",
           ],
         },
         {
           heading: "Do you deliver?",
           body: [
-            "Delivery areas and times have not been confirmed yet. They will be published on the delivery page when they are available.",
+            "Yes — nationwide across South Africa. Areas, time slots and fees are not published yet. The delivery page is the place for those details when they are confirmed.",
           ],
         },
         {
@@ -195,14 +198,52 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
             "Prices are shown in South African rand where a selling price is listed. If a product has no selling price yet, the page says so instead of inventing a figure. Availability is taken from the current catalogue.",
           ],
         },
+        {
+          heading: "How should I store what I buy?",
+          body: [
+            "Short storage notes sit on some product pages. Longer household guides for potatoes, onions, spinach, lettuce, carrots, apples and leftovers are in the produce guides.",
+          ],
+        },
+      ],
+    },
+    guides: {
+      title: "Produce Guides",
+      description:
+        "Household guides for storing and choosing fresh produce from the M & M Premium Produce shop. Written to be useful in the kitchen.",
+      h1: "Produce guides",
+      intro:
+        "These pages cover storage, choosing between similar packs, and using leftovers. They are not a magazine, a farm tour, or medical advice.",
+      sections: [
+        {
+          heading: "What is here",
+          body: [
+            "Each guide links to the shop products it is about. If you only need the pack in front of you, open the product page instead.",
+          ],
+        },
+      ],
+    },
+    recipes: {
+      title: "Household Recipes",
+      description:
+        "A small set of household recipes that use produce from the M & M Premium Produce shop. Cook by doneness, not invented timers.",
+      h1: "Household recipes",
+      intro:
+        "Two weekday methods only: roast potatoes with onion, and a pan of carrots and onions. This is not a recipe magazine.",
+      sections: [
+        {
+          heading: "What is here",
+          body: [
+            "Ingredients and steps are written for a home kitchen. There are no fabricated ratings, nutrition panels or cook times.",
+          ],
+        },
       ],
     },
   },
   af: {
     home: {
-      title: "Vars vrugte en groente | M & M Premium Produce",
+      title: "M & M Premium Produce | Persoonlik uitgesoekte vrugte en groente",
       description:
-        "Koop persoonlik uitgesoekte vars vrugte en groente by M & M Premium Produce. Kwaliteit maak saak.",
+        "Persoonlik uitgesoekte vrugte en groente by M & M Premium Produce. Blaai die katalogus, of begin by groente of vrugte. Ons lewer regoor Suid-Afrika.",
       h1: "Vars Vrugte, Groente & Produkte",
       heroLines: [
         { text: "Vars Vrugte,", tone: "primary" },
@@ -210,7 +251,7 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         { text: "& Produkte", tone: "primary" },
       ],
       intro:
-        "Persoonlik uitgesoekte vrugte, groente en produkte. Koop in die katalogus, of begin met ’n produkboks.",
+        "Persoonlik uitgesoekte vrugte en groente. Maak die volle katalogus oop, of begin by groente.",
       approach: {
         eyebrow: "Ons benadering",
         heading: "Persoonlik Uitgesoek.",
@@ -248,23 +289,24 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         {
           heading: "Koop vars produkte aanlyn",
           body: [
-            "Begin by die winkel, kies groente of vrugte, en maak dan ’n spesifieke item oop. Afleweringsareas word op die afleweringsblad gepubliseer sodra dit bevestig is.",
+            "Maak die volle katalogus oop, of gaan direk na groente of vrugte, en kies dan ’n genoemde produk. Ons lewer regoor Suid-Afrika; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit gepubliseer is.",
+            "Gidse oor die berg van stapels en die gebruik van oorskiet sit by die produk-gidse. Hulle is vir die kombuis geskryf, nie as ’n inhoudsplaas nie.",
           ],
         },
       ],
     },
     shop: {
-      title: "Varsproduk-winkel",
+      title: "Hele katalogus",
       description:
-        "Koop vars vrugte en groente by M & M Premium Produce. Blaai kategorieë en maak enige produk vanaf ’n deursoekbare katalogusblad oop.",
-      h1: "Varsproduk-winkel",
+        "Die volle M & M Premium Produce-katalogus: elke vrug en groente wat tans gelys is, elkeen op sy eie blad. Gebruik Groente of Vrugte as jy een gang wil hê.",
+      h1: "Alle produkte",
       intro:
-        "Blaai vrugte en groente vanaf hierdie katalogusblad. Kategorie-skakels is die indekseerbare manier om die reeks te filter.",
+        "Hierdie is die volledige katalogusindeks — nie ’n tweede groenteblad nie. Maak Groente of Vrugte oop vir een gang, of bly hier om elke gelyste item te sien.",
       sections: [
         {
           heading: "Alle produkte",
           body: [
-            "Elke produk hieronder het ’n standaard-URL. Sortering en beskikbaarheidsfilters, wanneer dit bykom, bly op hierdie selfde kanonieke winkelblad.",
+            "Elke produk hieronder het sy eie URL. Groente en vrugte het elk ’n aparte gangblad sodat daardie soektogte nie met hierdie katalogusindeks kompeteer nie.",
           ],
         },
       ],
@@ -303,23 +345,23 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         {
           heading: "Waarvoor jy kan koop",
           body: [
-            "Blaai die varsproduk-winkel, groente of vrugte. Produkbokse verskyn onder bokse wanneer ’n boks bevestig is. Afleweringsinligting word op die afleweringsblad gepubliseer sodra dit bevestig is.",
+            "Blaai die volle katalogus, groente of vrugte. Produkbokse verskyn onder bokse wanneer ’n boks bevestig is. Aflewering is landswyd; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit bevestig is.",
           ],
         },
       ],
     },
     delivery: {
-      title: "Afleweringsinligting",
+      title: "Landswye aflewering",
       description:
-        "Afleweringsareas, tye en fooie vir M & M Premium Produce word hier gepubliseer sodra dit bevestig is.",
-      h1: "Afleweringsinligting",
+        "M & M Premium Produce lewer vars produkte regoor Suid-Afrika. Spesifieke areas, tydgleuwe, fooie en afhaalopsies word hier gelys wanneer dit gepubliseer is.",
+      h1: "Landswye aflewering",
       intro:
-        "Hierdie blad sal afleweringsareas, tye en enige afhaalopsies hou. Daardie besonderhede is nog nie openbaar nie.",
+        "Ons lewer regoor Suid-Afrika. Voorstede, tydgleuwe, fooie en afhaalopsies is nog nie gepubliseer nie — hierdie blad is waar dit sal verskyn.",
       sections: [
         {
           heading: "Huidige status",
           body: [
-            "Afleweringsareas en tydgleuwe is nog nie bevestig nie, daarom word dit nie hier gewys nie. Wanneer dit beskikbaar is, is hierdie blad die kanonieke plek om dit te lees.",
+            "Landswye aflewering is bevestig. Ons het nog nie ’n voorstedelys, tydgleuwe, fooie of afhaalopsies gepubliseer nie, daarom word dit nie hier gewys nie. Koop intussen vrugte en groente.",
           ],
         },
       ],
@@ -349,19 +391,57 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         {
           heading: "Waarvoor kan ek koop?",
           body: [
-            "Die winkel is ingedeel in vars vrugte, vars groente en produkbokse. Elke produk het sy eie blad.",
+            "Die katalogus is ingedeel in groente, vrugte en die volle winkelindeks. Produkbokse verskyn wanneer ’n boks te koop gelys is. Elke produk het sy eie blad.",
           ],
         },
         {
           heading: "Lewer julle af?",
           body: [
-            "Afleweringsareas en tye is nog nie bevestig nie. Dit word op die afleweringsblad gepubliseer wanneer dit beskikbaar is.",
+            "Ja — landswyd in Suid-Afrika. Areas, tydgleuwe en fooie is nog nie gepubliseer nie. Die afleweringsblad is die plek vir daardie besonderhede wanneer dit bevestig is.",
           ],
         },
         {
           heading: "Hoe word pryse gewys?",
           body: [
             "Pryse word in Suid-Afrikaanse rand gewys waar ’n verkoopprys gelys is. As ’n produk nog nie ’n verkoopprys het nie, sê die blad so — ons maak nie ’n syfer op nie. Beskikbaarheid kom uit die huidige katalogus.",
+          ],
+        },
+        {
+          heading: "Hoe berg ek wat ek koop?",
+          body: [
+            "Kort bergingsnotas sit op sommige produkbladsye. Langer huishoudelike gidse vir aartappels, uie, spinasie, slaai, wortels, appels en oorskiet is by die produk-gidse.",
+          ],
+        },
+      ],
+    },
+    guides: {
+      title: "Produk-gidse",
+      description:
+        "Huishoudelike gidse vir die berg en kies van vars produkte uit die M & M Premium Produce-winkel. Geskryf om in die kombuis nuttig te wees.",
+      h1: "Produk-gidse",
+      intro:
+        "Hierdie bladsye dek berging, die keuse tussen soortgelyke pakke, en die gebruik van oorskiet. Dit is nie ’n tydskrif, ’n plaastoer of mediese raad nie.",
+      sections: [
+        {
+          heading: "Wat is hier",
+          body: [
+            "Elke gids skakel na die winkelprodukte waaroor dit gaan. As jy net die pak voor jou nodig het, maak liewer die produkblad oop.",
+          ],
+        },
+      ],
+    },
+    recipes: {
+      title: "Huishoudelike resepte",
+      description:
+        "’n Klein stel huishoudelike resepte wat produkte uit die M & M Premium Produce-winkel gebruik. Kook tot gaar, nie volgens verdigte timers nie.",
+      h1: "Huishoudelike resepte",
+      intro:
+        "Net twee weeksdae-metodes: gebraaide aartappels met ui, en ’n pan wortels en uie. Dit is nie ’n resepte-tydskrif nie.",
+      sections: [
+        {
+          heading: "Wat is hier",
+          body: [
+            "Bestanddele en stappe is vir ’n huiskombuis geskryf. Daar is geen verdigte graderings, voedingstabelle of kooktye nie.",
           ],
         },
       ],

@@ -13,7 +13,10 @@
     "db:report": "tsx scripts/build-migration-report.ts",
     "db:import": "tsx --env-file=.env.local scripts/import-catalog.ts",
     "db:rls": "tsx --env-file=.env.local scripts/apply-rls.ts",
-    "db:i18n": "tsx --env-file=.env.local scripts/seed-i18n.ts"
+    "db:i18n": "tsx --env-file=.env.local scripts/seed-i18n.ts",
+    "db:editorial": "tsx --env-file=.env.local scripts/seed-editorial.ts",
+    "seo:phase4b": "tsx --env-file=.env.local scripts/apply-phase4b-seo.ts",
+    "seo:monthly": "tsx scripts/seo/monthly-growth.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

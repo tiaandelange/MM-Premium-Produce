@@ -48,6 +48,7 @@ export default async function FaqPage({ params }: PageProps<"/[locale]/faq">) {
               ))}
               <p className="mt-3">
                 <Link href={paths.shop}>{messages.shop}</Link> ·{" "}
+                <Link href={paths.guides}>{messages.guides}</Link> ·{" "}
                 <Link href={paths.delivery}>{messages.delivery}</Link>
               </p>
             </div>

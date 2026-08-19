@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { categories } from "@/data/categories";
 import { pageCopy } from "@/lib/i18n/pages";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
@@ -9,6 +10,11 @@ export function HomeHero({ locale }: { locale: AppLocale }) {
   const copy = pageCopy[locale].home;
   const paths = createPaths(locale);
   const lines = copy.heroLines;
+  const vegetables = categories.find((category) => category.id === "cat_vegetables");
+  const vegetablesSlug =
+    vegetables?.alternates.find((item) => item.locale === locale && item.status === "published")?.slug ??
+    vegetables?.slug ??
+    "vegetables";
 
   return (
     <section className="hero" aria-labelledby="home-hero-heading">
@@ -48,8 +54,8 @@ export function HomeHero({ locale }: { locale: AppLocale }) {
             <Link href={paths.shop} className="btn-hero-primary">
               {messages.shopFreshProduce}
             </Link>
-            <Link href={paths.bundles} className="btn-hero-secondary">
-              {messages.browseProduceBoxes}
+            <Link href={paths.category(vegetablesSlug)} className="btn-hero-secondary">
+              {messages.shopVegetables}
             </Link>
           </div>
         </div>

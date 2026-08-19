@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useFormStatus } from "react-dom";
 import { QuantitySelector } from "@/components/commerce/quantity-selector";
 import { canPurchase } from "@/lib/commerce/availability";
+import { analyticsEvents } from "@/lib/analytics/events";
+import { trackEvent } from "@/lib/analytics/client";
+import { analyticsItemFromProduct } from "@/lib/analytics/items";
 import { getMessages } from "@/lib/i18n/messages";
 import type { Product } from "@/types/catalog";
 
@@ -35,7 +38,21 @@ export function AddToCart({ product }: { product: Product }) {
   }
 
   return (
-    <form action="/api/cart" method="post" className="space-y-4">
+    <form
+      action="/api/cart"
+      method="post"
+      className="space-y-4"
+      onSubmit={(event) => {
+        const form = event.currentTarget;
+        const quantity = Number(new FormData(form).get("quantity") || 1);
+        const item = analyticsItemFromProduct(product, selected, Number.isFinite(quantity) ? quantity : 1);
+        trackEvent(analyticsEvents.addToCart, {
+          currency: item.price !== undefined ? (selected?.price ?? product.price)?.currency ?? "ZAR" : "ZAR",
+          value: (item.price ?? 0) * (item.quantity ?? 1),
+          items: [item],
+        });
+      }}
+    >
       <input type="hidden" name="intent" value="add" />
       <input type="hidden" name="locale" value={product.locale} />
       <input type="hidden" name="productId" value={product.id} />

@@ -1,6 +1,7 @@
 import { isAppLocale, type AppLocale } from "@/lib/i18n/config";
 import { createPaths, segmentToRouteKey } from "@/lib/i18n/paths";
 import { getCatalog } from "@/services/catalog";
+import { getEditorial } from "@/services/editorial";
 
 function publishedSlug(
   alternates: Array<{ locale: AppLocale; slug: string; status: string }>,
@@ -61,6 +62,28 @@ export async function resolveLanguageHrefs(pathname: string, current: AppLocale)
     };
   }
 
+  if (key === "guides" && slug) {
+    const editorial = await getEditorial(current);
+    const guide = await editorial.getGuideBySlug(slug);
+    const enSlug = publishedSlug(guide?.alternates ?? [], "en");
+    const afSlug = publishedSlug(guide?.alternates ?? [], "af");
+    return {
+      en: enSlug ? en.guide(enSlug) : en.guides,
+      af: afSlug ? af.guide(afSlug) : af.guides,
+    };
+  }
+
+  if (key === "recipes" && slug) {
+    const editorial = await getEditorial(current);
+    const recipe = await editorial.getRecipeBySlug(slug);
+    const enSlug = publishedSlug(recipe?.alternates ?? [], "en");
+    const afSlug = publishedSlug(recipe?.alternates ?? [], "af");
+    return {
+      en: enSlug ? en.recipe(enSlug) : en.recipes,
+      af: afSlug ? af.recipe(afSlug) : af.recipes,
+    };
+  }
+
   const pathFor = (locale: AppLocale) => {
     const paths = createPaths(locale);
     switch (key) {
@@ -76,6 +99,10 @@ export async function resolveLanguageHrefs(pathname: string, current: AppLocale)
         return paths.contact;
       case "faq":
         return paths.faq;
+      case "guides":
+        return paths.guides;
+      case "recipes":
+        return paths.recipes;
       case "cart":
         return paths.cart;
       case "checkout":

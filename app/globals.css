@@ -1193,6 +1193,41 @@ details.mobile-nav > summary::-webkit-details-marker {
   color: var(--foreground);
 }
 
+.consent-banner {
+  position: fixed;
+  z-index: 40;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 28rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--foreground);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.16);
+}
+
+.consent-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.cookie-settings {
+  position: fixed;
+  z-index: 30;
+  left: 1rem;
+  bottom: 0.75rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -11,6 +11,8 @@ import { createPaths } from "@/lib/i18n/paths";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { buildItemListStructuredData, buildOrganizationStructuredData } from "@/lib/seo/structured-data";
 import { getCatalog } from "@/services/catalog";
+import { TrackItemList } from "@/components/analytics/track-event";
+import { analyticsItemFromProduct } from "@/lib/analytics/items";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -45,6 +47,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   ]);
   const vegetables = categories.find((category) => category.id === "cat_vegetables");
   const fruit = categories.find((category) => category.id === "cat_fruit");
+  const featuredInStock = products.filter((product) => product.availability === "in_stock");
+  const featured = featuredInStock.length ? featuredInStock : products;
 
   return (
     <>
@@ -82,10 +86,20 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <div className="site-container">
           <h2 className="text-section-title">{messages.featuredProduce}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {featured.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                listId="featured"
+                listName={messages.featuredProduce}
+              />
             ))}
           </div>
+          <TrackItemList
+            listId="featured"
+            listName={messages.featuredProduce}
+            items={featured.map((product) => analyticsItemFromProduct(product))}
+          />
         </div>
       </section>
 
@@ -147,7 +161,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
               , <Link href={paths.category(fruit.slug)}>{fruit.name.toLowerCase()}</Link>
             </>
           ) : null}
-          . <Link href={paths.delivery}>{messages.delivery}</Link>.{" "}
+          . <Link href={paths.guides}>{messages.guides}</Link>.{" "}
+          <Link href={paths.delivery}>{messages.delivery}</Link>.{" "}
           <Link href={paths.contact}>{messages.contact}</Link>.
         </p>
       </section>

@@ -96,12 +96,12 @@ async function main() {
       status: "published",
       name: "Vrugte",
       slug: "vrugte",
-      shortIntroduction: "Daaglikse vars vrugte, van appels en druiwe tot sitrus en bessies.",
+      shortIntroduction: "Daaglikse vrugte as afsonderlike produkte, van appels tot seisoenale sitrus en bessies.",
       longContent:
-        "Koop vars vrugte by M & M Premium Produce. Appels, sitrus, druiwe, bessies en ander vrugte word as afsonderlike produkte gelys sodat elke item sy eie blad het.",
+        "Elke vrug het sy eie blad vir pakgrootte, prys en of dit in voorraad is. Beskikbaarheid verander met die seisoen. Groente staan in die groentewinkel.",
       seoTitle: "Vars vrugte",
       seoDescription:
-        "Blaai vars vrugte by M & M Premium Produce, insluitend appels, sitrus, druiwe en bessies. Elke vrug het sy eie produkblad.",
+        "Koop vars vrugte by M & M Premium Produce. Appels het variëteite; ander vrugte verskyn wanneer dit in die katalogus is.",
       imageAlt: "Vars vrugte van M & M Premium Produce",
       indexable: true,
       publishedSlug: "vrugte",
@@ -112,12 +112,12 @@ async function main() {
       status: "published",
       name: "Groente",
       slug: "groente",
-      shortIntroduction: "Blaargroente, wortelgewasse, uie en alledaagse kookgroente.",
+      shortIntroduction: "Blaargroente, wortelgewasse, uie en alledaagse kookgroente, elk as ’n eie produk.",
       longContent:
-        "Koop vars groente by M & M Premium Produce, insluitend slaai, spinasie, uie, aartappels, wortels en meer. Elke item het sy eie produkblad met verpakkingsgrootte en prys waar dit te koop gelys is.",
+        "Hierdie reeks is vir weeklikse kookgroente — aartappels, wortels, uie, spinasie, slaai, komkommer en soortgelyke stapels. Maak enige item oop vir pakgrootte, prys en beskikbaarheid. Vrugte staan apart in die vrugtewinkel.",
       seoTitle: "Vars groente",
       seoDescription:
-        "Blaai vars groente by M & M Premium Produce, insluitend blaargroente, wortels, tamaties, uie en aartappels. Elke item het sy eie produkblad.",
+        "Koop vars groente by M & M Premium Produce: aartappels, wortels, spinasie, slaai, uie en alledaagse kookgroente. Elke item het sy eie blad met pakgrootte en prys.",
       imageAlt: "Vars groente van M & M Premium Produce",
       indexable: true,
       publishedSlug: "groente",

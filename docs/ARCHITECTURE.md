@@ -20,7 +20,7 @@ File-backed seed data in `data/` remains an import source only. Runtime requests
 
 - `lib/seo/metadata.ts` — titles, descriptions, OG, Twitter, robots, canonical override
 - `lib/seo/canonical.ts` — self-referencing canonicals from `NEXT_PUBLIC_SITE_URL`
-- `lib/seo/structured-data.ts` — Organization, Product, Offer (only when data exists), BreadcrumbList
+- `lib/seo/structured-data.ts` — Organization, Product, Offer (only when data exists), BreadcrumbList, Article, Recipe (no fabricated ratings/nutrition/times)
 - `lib/seo/indexation.ts` — environment gate + entity `indexable`
 - `lib/catalog/quality.ts` — minimum content required before a published page can be indexable
 - `app/sitemap.ts` — canonical public URLs only (published + indexable)
@@ -35,9 +35,9 @@ When a published slug changes, `services/catalog/admin.ts` writes the old path i
 
 Admin users live in `admin_users`. Sessions are signed JWTs in an httpOnly cookie. Server Components and Server Actions verify the session; `proxy.ts` is a perimeter only.
 
-## Future content
+## Editorial content
 
-`types/content.ts` and `plannedContentPaths` reserve recipes/guides. Do not generate those routes until there is genuine content.
+Guides live at `/en/guides` and `/af/gidse`. Recipes live at `/en/recipes` and `/af/resepte`. Copy is seeded from `data/editorial/` into `articles` / `recipes` tables. `services/editorial` reads the database with a file fallback. Only published + indexable translations enter the sitemap and hreflang.
 
 Checkout tables (`customers`, `orders`, `order_items`, `payments`, `deliveries`) are live. Cart cookies store product/variant IDs and quantity only. Prices, delivery fees and totals are computed on the server from the catalogue at checkout.
 

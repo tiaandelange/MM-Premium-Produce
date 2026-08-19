@@ -11,6 +11,8 @@ const adminNav = [
   { href: paths.adminMedia, label: "Media" },
   { href: paths.adminOrders, label: "Orders" },
   { href: paths.adminDelivery, label: "Delivery" },
+  { href: paths.adminGuides, label: "Guides" },
+  { href: paths.adminRecipes, label: "Recipes" },
 ] as const;
 
 export function AdminNav({ email }: { email?: string }) {

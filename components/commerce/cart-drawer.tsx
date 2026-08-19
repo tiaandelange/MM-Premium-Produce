@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { CartIcon } from "@/components/layout/icons";
+import { analyticsEvents } from "@/lib/analytics/events";
+import { trackEvent } from "@/lib/analytics/client";
+import type { AnalyticsItem } from "@/lib/analytics/items";
 
 export function CartDrawer({
   label,
@@ -10,17 +13,30 @@ export function CartDrawer({
   count,
   closeLabel,
   children,
+  cartItems,
+  cartValue,
+  cartCurrency,
 }: {
   label: string;
   countLabel: string;
   count: number;
   closeLabel: string;
   children: React.ReactNode;
+  cartItems?: AnalyticsItem[];
+  cartValue?: number;
+  cartCurrency?: string;
 }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (!open) return;
+    if (cartItems?.length) {
+      trackEvent(analyticsEvents.viewCart, {
+        currency: cartCurrency ?? "ZAR",
+        value: cartValue,
+        items: cartItems,
+      });
+    }
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     function onKeyDown(event: KeyboardEvent) {
@@ -31,7 +47,7 @@ export function CartDrawer({
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [open]);
+  }, [open, cartItems, cartValue, cartCurrency]);
 
   return (
     <>

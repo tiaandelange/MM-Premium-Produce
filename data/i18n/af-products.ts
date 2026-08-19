@@ -7,6 +7,9 @@ export const afProductCopy: Record<
     description: string;
     seoTitle?: string;
     seoDescription?: string;
+    storageGuidance?: string;
+    selectionGuidance?: string;
+    typicalUses?: string;
   }
 > = {
   prod_apples: {
@@ -15,8 +18,9 @@ export const afProductCopy: Record<
     shortDescription: "Knapperige, sapperige appels met natuurlike soetheid.",
     description:
       "Knapperige, sapperige appels met natuurlike soetheid. Uitgesoek vir gehalte en geur, met ’n bevredigende byt. Geskik om vars te eet, te bak of te pers.",
-    seoTitle: "Vars appels",
-    seoDescription: "Koop vars appels by M & M Premium Produce. Uitgesoek vir knapperigheid, soetheid en gehalte.",
+    seoTitle: "Appels Granny Smith, Fuji en Crisp Pink",
+    seoDescription:
+      "Vars appels by M & M Premium Produce: Granny Smith, Fuji en Crisp Pink. Verkoop per kilogram.",
   },
   prod_avocados: {
     name: "Avokado's",
@@ -37,8 +41,8 @@ export const afProductCopy: Record<
     slug: "babaspinasie",
     shortDescription: "Voedingsryke babaspinasieblare vir vars slaaie, smoothie’s en ligte sautés.",
     description: "200g voedingsryke babaspinasieblare vir vars slaaie, smoothie’s en ligte sautés.",
-    seoTitle: "Babaspinasie",
-    seoDescription: "Koop babaspinasie by M & M Premium Produce. 200g vars blare vir slaaie en kook.",
+    seoTitle: "Babaspinasie 200 g",
+    seoDescription: "200 g babaspinasie by M & M Premium Produce. Sagte blare vir slaaie en ligte kook.",
   },
   prod_bananas: {
     name: "Piesangs",
@@ -81,6 +85,8 @@ export const afProductCopy: Record<
     shortDescription: "Bruin-uie.",
     description:
       "2kg bruin-uie. Die goue skil beskerm die ferm bol, ideaal vir sop, bredies, kerrie en karamelisering.",
+    seoTitle: "Bruinui 2 kg",
+    seoDescription: "2 kg bruin-uie by M & M Premium Produce. Daaglikse kook-uie; prys per kilogram.",
   },
   prod_butternut: {
     name: "Bottelpampoen",
@@ -101,6 +107,9 @@ export const afProductCopy: Record<
     shortDescription: "Vars wortels met natuurlike soetheid.",
     description:
       "Vars wortels, uitgesoek vir knapperigheid. Beskikbaar in 1kg- en 500g-pakkies volgens huishoudelike behoefte.",
+    seoTitle: "Wortels 500 g en 1 kg",
+    seoDescription:
+      "Vars wortels in 500 g- en 1 kg-pakkies by M & M Premium Produce. Persoonlik uitgesoek; prys per kilogram.",
   },
   prod_cauliflower: {
     name: "Blomkool",
@@ -115,6 +124,8 @@ export const afProductCopy: Record<
     shortDescription: "Vars tamaties van plaaslike plase.",
     description:
       "400g vars tamaties van plaaslike plase. Natuurlike soetheid vir slaaie, kook of om vars te eet.",
+    seoTitle: "Kerrietamaties 400 g",
+    seoDescription: "400 g kerrietamaties by M & M Premium Produce. Vir slaaie, oond en knabbel.",
   },
   prod_cos_lettuce: {
     name: "Cos-slaai",
@@ -122,6 +133,8 @@ export const afProductCopy: Record<
     shortDescription: "Verfrissende cos-slaai met lang blare en ’n sagte hart.",
     description:
       "Verfrissende cos-slaai met lang blare en ’n sagte hart. Geskik vir slaaie, wraps en Caesar-bereidings.",
+    seoTitle: "Cos-slaai",
+    seoDescription: "Cos-slaai per kop by M & M Premium Produce. Vir slaaie, wraps en Caesar-geregte.",
   },
   prod_cucumber: {
     name: "Komkommer",
@@ -129,6 +142,8 @@ export const afProductCopy: Record<
     shortDescription: "Vars, knapperige komkommers.",
     description:
       "Vars, knapperige komkommers, plaaslik gekweek. Geskik vir verfrissende etes en gesonde knabbelgoed.",
+    seoTitle: "Komkommer",
+    seoDescription: "Vars komkommer per stuk by M & M Premium Produce. Knapperig vir slaaie en knabbel.",
   },
   prod_dragon_fruit: {
     name: "Drakevrug",
@@ -180,6 +195,8 @@ export const afProductCopy: Record<
     shortDescription: "Knapperige ysbergslaai.",
     description:
       "Knapperige ysbergslaai vir slaaie, toebroodjies en wraps. Berg in die yskas om varsheid te hou.",
+    seoTitle: "Ysbergslaai",
+    seoDescription: "Ysbergslaai per kop by M & M Premium Produce. Knapperige blare vir slaaie en wraps.",
   },
   prod_kiwis: {
     name: "Kiwi's",
@@ -229,6 +246,9 @@ export const afProductCopy: Record<
     shortDescription: "Vars gehalte-aartappels.",
     description:
       "Vars gehalte-aartappels om te braai, stamped, kook of braai. Betroubare smaak en tekstuur vir alledaagse etes.",
+    seoTitle: "Aartappels 2 kg en 10 kg",
+    seoDescription:
+      "Vars aartappels in 2 kg- en 10 kg-pakkies by M & M Premium Produce. Persoonlik uitgesoek; prys per kilogram.",
   },
   prod_queen_pineapple: {
     name: "Queen-pynappel",
@@ -243,12 +263,16 @@ export const afProductCopy: Record<
     shortDescription: "Dieprooi uie.",
     description:
       "1kg dieprooi uie. Geskik vir rou slaaie, om te braai of te karameliseer vir ’n sagter soetheid.",
+    seoTitle: "Rooi-ui 1 kg",
+    seoDescription: "1 kg rooi-uie by M & M Premium Produce. Vir slaaie, braai en kook.",
   },
   prod_spinach: {
     name: "Spinasie",
     slug: "spinasie",
     shortDescription: "Vars 350g-bondel spinasie.",
     description: "Vars 350g-bondel spinasie vir slaaie, smoothie’s, kook en alledaagse etes.",
+    seoTitle: "Spinasie 350 g-bondel",
+    seoDescription: "350 g-bondel spinasie by M & M Premium Produce. Uitgesoek vir varsheid en toestand.",
   },
   prod_strawberries: {
     name: "Aarbeie",

@@ -10,6 +10,8 @@ import { createPaths } from "@/lib/i18n/paths";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbStructuredData, buildItemListStructuredData } from "@/lib/seo/structured-data";
 import { getCatalog } from "@/services/catalog";
+import { TrackItemList } from "@/components/analytics/track-event";
+import { analyticsItemFromProduct } from "@/lib/analytics/items";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -69,10 +71,20 @@ export default async function ShopPage({ params }: PageProps<"/[locale]/shop">) 
         <p className="mt-2 max-w-3xl text-muted">{copy.sections[0].body[0]}</p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              listId="shop"
+              listName={copy.h1}
+            />
           ))}
         </div>
       </section>
+      <TrackItemList
+        listId="shop"
+        listName={copy.h1}
+        items={products.map((product) => analyticsItemFromProduct(product))}
+      />
     </div>
   );
 }

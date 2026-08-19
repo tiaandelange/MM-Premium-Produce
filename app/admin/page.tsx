@@ -42,6 +42,16 @@ const sections = [
     title: "Delivery",
     body: "Publish delivery areas, fees, minimums and windows. Unpublished rules stay hidden on the storefront.",
   },
+  {
+    href: paths.adminGuides,
+    title: "Guides",
+    body: "Informational produce guides: status, slugs, indexation and related catalogue links.",
+  },
+  {
+    href: paths.adminRecipes,
+    title: "Recipes",
+    body: "Household recipes only. No fabricated ratings, nutrition or times.",
+  },
 ];
 
 export default async function AdminHomePage() {

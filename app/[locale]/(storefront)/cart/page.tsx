@@ -6,6 +6,8 @@ import { createPaths } from "@/lib/i18n/paths";
 import { resolveCommerceNotice } from "@/lib/commerce/errors";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { getHydratedCart } from "@/services/cart";
+import { TrackViewCart } from "@/components/analytics/track-event";
+import { analyticsItemsFromCart, analyticsValue } from "@/lib/analytics/items";
 
 export const dynamic = "force-dynamic";
 
@@ -46,6 +48,11 @@ export default async function CartPage({
   return (
     <div className="site-container space-y-8 py-12">
       <PageHeader title={messages.yourCart} />
+      <TrackViewCart
+        items={analyticsItemsFromCart(cart)}
+        value={analyticsValue(analyticsItemsFromCart(cart))}
+        currency={cart.currency}
+      />
       {added ? <p className="text-sm text-leaf">{messages.addedToCart}</p> : null}
       {error ? <p className="text-sm text-danger">{error}</p> : null}
       <CartContents cart={cart} locale={locale} />

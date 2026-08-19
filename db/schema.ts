@@ -617,6 +617,125 @@ export const deliveries = pgTable(
   (table) => [index("deliveries_order_idx").on(table.orderId)],
 );
 
+export const articles = pgTable(
+  "articles",
+  {
+    id: text("id").primaryKey(),
+    kind: text("kind").notNull().default("guide"),
+    status: entityStatusEnum("status").notNull().default("draft"),
+    imageSrc: text("image_src"),
+    imageAlt: text("image_alt"),
+    imageWidth: integer("image_width"),
+    imageHeight: integer("image_height"),
+    ...timestamps,
+  },
+  (table) => [index("articles_status_idx").on(table.status)],
+);
+
+export const articleTranslations = pgTable(
+  "article_translations",
+  {
+    articleId: text("article_id")
+      .notNull()
+      .references(() => articles.id, { onDelete: "cascade" }),
+    locale: localeEnum("locale").notNull(),
+    status: translationStatusEnum("status").notNull().default("draft"),
+    slug: text("slug").notNull(),
+    title: text("title").notNull(),
+    lede: text("lede").notNull().default(""),
+    bodyJson: text("body_json").notNull().default("[]"),
+    seoTitle: text("seo_title"),
+    seoDescription: text("seo_description"),
+    imageAlt: text("image_alt"),
+    indexable: boolean("indexable").notNull().default(false),
+    publishedSlug: text("published_slug"),
+    ...timestamps,
+  },
+  (table) => [
+    primaryKey({ columns: [table.articleId, table.locale] }),
+    uniqueIndex("article_translations_locale_slug_idx").on(table.locale, table.slug),
+  ],
+);
+
+export const articleProducts = pgTable(
+  "article_products",
+  {
+    articleId: text("article_id")
+      .notNull()
+      .references(() => articles.id, { onDelete: "cascade" }),
+    productId: text("product_id")
+      .notNull()
+      .references(() => products.id, { onDelete: "cascade" }),
+  },
+  (table) => [primaryKey({ columns: [table.articleId, table.productId] })],
+);
+
+export const articleCategories = pgTable(
+  "article_categories",
+  {
+    articleId: text("article_id")
+      .notNull()
+      .references(() => articles.id, { onDelete: "cascade" }),
+    categoryId: text("category_id")
+      .notNull()
+      .references(() => categories.id, { onDelete: "cascade" }),
+  },
+  (table) => [primaryKey({ columns: [table.articleId, table.categoryId] })],
+);
+
+export const recipes = pgTable(
+  "recipes",
+  {
+    id: text("id").primaryKey(),
+    status: entityStatusEnum("status").notNull().default("draft"),
+    imageSrc: text("image_src"),
+    imageAlt: text("image_alt"),
+    imageWidth: integer("image_width"),
+    imageHeight: integer("image_height"),
+    ...timestamps,
+  },
+  (table) => [index("recipes_status_idx").on(table.status)],
+);
+
+export const recipeTranslations = pgTable(
+  "recipe_translations",
+  {
+    recipeId: text("recipe_id")
+      .notNull()
+      .references(() => recipes.id, { onDelete: "cascade" }),
+    locale: localeEnum("locale").notNull(),
+    status: translationStatusEnum("status").notNull().default("draft"),
+    slug: text("slug").notNull(),
+    title: text("title").notNull(),
+    lede: text("lede").notNull().default(""),
+    ingredientsJson: text("ingredients_json").notNull().default("[]"),
+    stepsJson: text("steps_json").notNull().default("[]"),
+    seoTitle: text("seo_title"),
+    seoDescription: text("seo_description"),
+    imageAlt: text("image_alt"),
+    indexable: boolean("indexable").notNull().default(false),
+    publishedSlug: text("published_slug"),
+    ...timestamps,
+  },
+  (table) => [
+    primaryKey({ columns: [table.recipeId, table.locale] }),
+    uniqueIndex("recipe_translations_locale_slug_idx").on(table.locale, table.slug),
+  ],
+);
+
+export const recipeProducts = pgTable(
+  "recipe_products",
+  {
+    recipeId: text("recipe_id")
+      .notNull()
+      .references(() => recipes.id, { onDelete: "cascade" }),
+    productId: text("product_id")
+      .notNull()
+      .references(() => products.id, { onDelete: "cascade" }),
+  },
+  (table) => [primaryKey({ columns: [table.recipeId, table.productId] })],
+);
+
 export const schema = {
   adminUsers,
   mediaAssets,
@@ -642,4 +761,11 @@ export const schema = {
   orderItems,
   payments,
   deliveries,
+  articles,
+  articleTranslations,
+  articleProducts,
+  articleCategories,
+  recipes,
+  recipeTranslations,
+  recipeProducts,
 };

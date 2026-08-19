@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { PriceDisplay } from "@/components/commerce/price-display";
+import { SelectItemLink } from "@/components/commerce/select-item-link";
+import { analyticsItemFromProduct } from "@/lib/analytics/items";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
 import { packQuantityLabel, resolvePriceUnit } from "@/lib/catalog/price-unit";
@@ -9,9 +10,13 @@ import type { Product } from "@/types/catalog";
 export function ProductCard({
   product,
   headingLevel = "h3",
+  listId,
+  listName,
 }: {
   product: Product;
   headingLevel?: "h2" | "h3";
+  listId?: string;
+  listName?: string;
 }) {
   const Heading = headingLevel;
   const paths = createPaths(product.locale);
@@ -21,7 +26,12 @@ export function ProductCard({
 
   return (
     <article className="product-card">
-      <Link href={paths.product(product.slug)} className="block text-ink hover:text-ink">
+      <SelectItemLink
+        href={paths.product(product.slug)}
+        item={analyticsItemFromProduct(product)}
+        listId={listId}
+        listName={listName}
+      >
         <div className="product-card-media">
           <CatalogMedia image={product.primaryImage} className="object-cover" />
           {soldOut ? <span className="product-card-badge">{messages.soldOut}</span> : null}
@@ -36,7 +46,7 @@ export function ProductCard({
             unit={resolvePriceUnit({ unit: product.unit, packSize: product.packSize, productId: product.id })}
           />
         </div>
-      </Link>
+      </SelectItemLink>
     </article>
   );
 }

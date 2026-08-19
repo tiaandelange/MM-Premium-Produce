@@ -22,6 +22,8 @@ export async function SiteFooter({ locale }: { locale: AppLocale }) {
     { href: paths.about, label: messages.about },
     { href: paths.delivery, label: messages.delivery },
     { href: paths.faq, label: messages.faq },
+    { href: paths.guides, label: messages.guides },
+    { href: paths.recipes, label: messages.recipes },
     { href: paths.contact, label: messages.contact },
   ].filter((item): item is { href: typeof paths.shop; label: string } => Boolean(item));
 

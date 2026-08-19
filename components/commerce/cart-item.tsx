@@ -4,6 +4,9 @@ import { PriceDisplay } from "@/components/commerce/price-display";
 import { QuantitySelector } from "@/components/commerce/quantity-selector";
 import { createPaths } from "@/lib/i18n/paths";
 import { commerceErrorText } from "@/lib/commerce/errors";
+import { analyticsEvents } from "@/lib/analytics/events";
+import { trackEvent } from "@/lib/analytics/client";
+import { analyticsItemFromCartLine } from "@/lib/analytics/items";
 import { getMessages } from "@/lib/i18n/messages";
 import { formatMoney } from "@/lib/utils/format";
 import type { AppLocale } from "@/lib/i18n/config";
@@ -45,7 +48,17 @@ export function CartItem({ item, locale }: { item: HydratedCartLine; locale: App
               {messages.update}
             </button>
           </form>
-                <form action="/api/cart" method="post">
+                <form
+                  action="/api/cart"
+                  method="post"
+                  onSubmit={() => {
+                    trackEvent(analyticsEvents.removeFromCart, {
+                      currency: item.unitPrice?.currency ?? "ZAR",
+                      value: item.lineTotal?.amount,
+                      items: [analyticsItemFromCartLine(item)],
+                    });
+                  }}
+                >
                   <input type="hidden" name="intent" value="remove" />
             <input type="hidden" name="locale" value={locale} />
             <input type="hidden" name="productId" value={item.productId} />

@@ -1,0 +1,65 @@
+{
+  "asOf": "2026-08-19",
+  "origin": "https://mm-premium-produce.vercel.app",
+  "sources": {
+    "googleSearchConsole": "not_connected",
+    "ga4": "not_connected",
+    "merchantCenter": "not_connected",
+    "neon": "connected",
+    "productionCrawl": "connected"
+  },
+  "robots": "User-Agent: *\\nDisallow: /",
+  "indexingEnabled": false,
+  "expectedIndexable": {
+    "enProducts": 40,
+    "afProducts": 40,
+    "enCategories": 2,
+    "afCategories": 2,
+    "enGuides": 7,
+    "afGuides": 7,
+    "enRecipes": 2,
+    "afRecipes": 2,
+    "note": "Plus home, shop, bundles index, about, delivery, faq, contact, guides index, recipes index per locale. Google has not been given a sitemap while robots disallow all."
+  },
+  "productionHttp": {
+    "/robots.txt": 200,
+    "/sitemap.xml": 500,
+    "/en": 500,
+    "/af": 500,
+    "/en/shop": 500,
+    "/en/shop/vegetables": 500,
+    "/en/shop/fruit": 500,
+    "/en/products/potatoes": 500,
+    "/en/guides": 404,
+    "/en/cart": 200,
+    "/en/checkout": 500,
+    "/products/patatos": "301 then 500 at /en/products/patatos",
+    "/collections/fruits": 404
+  },
+  "database": {
+    "activeProducts": 40,
+    "inStock": 18,
+    "outOfStock": 22,
+    "publishedIndexableProductTranslations": { "en": 40, "af": 40 },
+    "guideTranslations": { "en": 7, "af": 7 },
+    "recipeTranslations": { "en": 2, "af": 2 },
+    "storedRedirects": 14,
+    "orders": 4,
+    "paidOrders": 0,
+    "enOrders": 4,
+    "afOrders": 0,
+    "paidRevenueZar": 0,
+    "topOrderedProductId": "prod_baby_spinach",
+    "topOrderedUnits": 4
+  },
+  "search": {
+    "clicks": null,
+    "impressions": null,
+    "ctr": null,
+    "averagePosition": null,
+    "indexedPages": null,
+    "topQueries": [],
+    "nearWins": [],
+    "ctrOpportunities": []
+  }
+}

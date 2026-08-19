@@ -6,6 +6,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { canViewOrder } from "@/lib/commerce/order-access";
 import { formatMoney } from "@/lib/utils/format";
 import { getOrderById } from "@/services/orders";
+import { PurchaseEvent } from "@/components/analytics/purchase-event";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -46,6 +47,7 @@ export default async function OrderConfirmationPage({
   return (
     <div className="site-container max-w-3xl space-y-8 py-12">
       <PageHeader title={messages.orderConfirmed} description={`${messages.orderNumber}: ${order.number}`} />
+      <PurchaseEvent order={order} />
       <p className="text-muted">{order.paymentInstruction || messages.paymentNotConfigured}</p>
       <section className="rounded-card border border-line bg-surface p-4 text-sm">
         <h2 className="font-heading text-card-title text-ink">{messages.contactDetails}</h2>

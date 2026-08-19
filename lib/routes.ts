@@ -28,6 +28,8 @@ export const paths = {
   adminOrders: "/admin/orders",
   adminOrder: (id: string) => `/admin/orders/${id}` as Route,
   adminDelivery: "/admin/delivery",
+  adminGuides: "/admin/guides",
+  adminRecipes: "/admin/recipes",
 } as const;
 
 export type PublicNavItem = {
@@ -57,6 +59,8 @@ export function storefrontNav(locale: "en" | "af"): { primary: PublicNavItem[]; 
       { href: localized.about, label: locale === "af" ? "Oor ons" : "About" },
       { href: localized.delivery, label: locale === "af" ? "Aflewering" : "Delivery" },
       { href: localized.faq, label: locale === "af" ? "Gereelde vrae" : "FAQ" },
+      { href: localized.guides, label: locale === "af" ? "Gidse" : "Guides" },
+      { href: localized.recipes, label: locale === "af" ? "Resepte" : "Recipes" },
       { href: localized.contact, label: locale === "af" ? "Kontak" : "Contact" },
     ],
   };
@@ -70,11 +74,7 @@ export const footerNav = storefrontNav("en").footer;
  * genuine content to publish.
  */
 export const plannedContentPaths = [
-  "/en/recipes",
-  "/en/recipes/[slug]",
-  "/en/guides",
   "/en/seasonal-produce",
-  "/en/storage-guides",
   "/en/how-to-select-produce",
 ] as const;
 
@@ -93,4 +93,6 @@ export const noindexPathPrefixes = [
   "/af/afrekening",
   "/en/order-confirmation",
   "/af/bestelling-bevestig",
+  "/feeds",
+  "/api/consent",
 ] as const;

@@ -2,21 +2,27 @@ import type { AvailabilityStatus, CatalogImage, Money } from "@/types/catalog";
 import type { AppLocale } from "@/lib/i18n/config";
 import type { CommerceErrorKey } from "@/lib/commerce/status";
 
-export type MerchantFeedProduct = {
+export type MerchantFeedRow = {
   id: string;
   title: string;
   description: string;
   link: string;
   image_link: string;
-  availability: "in_stock" | "out_of_stock" | "preorder" | "backorder";
+  additional_image_link: string;
+  availability: "in_stock" | "out_of_stock" | "preorder";
   price: string;
   condition: "new";
   brand: string;
-  gtin?: string;
-  mpn?: string;
-  google_product_category?: string;
-  product_type?: string;
+  gtin: string;
+  mpn: string;
+  identifier_exists: "yes" | "no";
+  google_product_category: string;
+  product_type: string;
+  item_group_id: string;
 };
+
+/** @deprecated Use MerchantFeedRow */
+export type MerchantFeedProduct = MerchantFeedRow;
 
 export type CartLineType = "product" | "bundle";
 
