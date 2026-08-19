@@ -10,6 +10,11 @@ export type ApproachCopy = {
   heading: string;
   headingAccent: string;
   body: string;
+  delivery: {
+    eyebrow: string;
+    title: string;
+    body: string;
+  };
   points: Array<{ title: string; body: string }>;
 };
 
@@ -41,7 +46,12 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         eyebrow: "Our approach",
         heading: "Personally Handpicked.",
         headingAccent: "Quality Comes First.",
-        body: "We select fresh fruit, fresh vegetables and everyday fresh produce with care, focusing on quality and freshness — the carefully selected produce we would be happy to take home ourselves.",
+        body: "We carefully select the fruit, vegetables and fresh produce we offer, with quality and freshness at the centre of every choice.",
+        delivery: {
+          eyebrow: "Delivery",
+          title: "Nationwide Delivery",
+          body: "Fresh produce delivered across South Africa.",
+        },
         points: [
           {
             title: "Carefully Selected",
@@ -49,11 +59,11 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
           },
           {
             title: "Fresh Produce",
-            body: "A growing range of fruit, vegetables and everyday fresh-produce essentials.",
+            body: "Fruit, vegetables and everyday fresh produce essentials.",
           },
           {
             title: "Personal Approach",
-            body: "A hands-on business built around good produce and personal service.",
+            body: "A hands-on business focused on quality and personal service.",
           },
         ],
       },
@@ -203,21 +213,26 @@ export const pageCopy: Record<AppLocale, Record<"home" | "about" | "delivery" | 
         "Persoonlik uitgesoekte vrugte, groente en produkte. Koop in die katalogus, of begin met ’n produkboks.",
       approach: {
         eyebrow: "Ons benadering",
-        heading: "Persoonlik uitgesoek.",
-        headingAccent: "Kwaliteit kom eerste.",
-        body: "Ons kies vars vrugte, vars groente en alledaagse vars produkte met sorg, met kwaliteit en varsheid voorop — die uitgesoekte produkte wat ons self graag huis toe sou neem.",
+        heading: "Persoonlik Uitgesoek.",
+        headingAccent: "Kwaliteit Kom Eerste.",
+        body: "Ons kies die vrugte, groente en vars produkte wat ons bied met sorg, met kwaliteit en varsheid in die middel van elke keuse.",
+        delivery: {
+          eyebrow: "Aflewering",
+          title: "Landswye Aflewering",
+          body: "Vars produkte word regoor Suid-Afrika afgelewer.",
+        },
         points: [
           {
-            title: "Sorgvuldig uitgesoek",
-            body: "Produkte gekies vir gehalte en toestand.",
+            title: "Sorgvuldig Uitgesoek",
+            body: "Produkte gekies met aandag aan kwaliteit en toestand.",
           },
           {
-            title: "Vars produkte",
-            body: "’n Groeiende reeks vrugte, groente en alledaagse varsprodukte.",
+            title: "Vars Produkte",
+            body: "Vrugte, groente en alledaagse varsprodukte.",
           },
           {
-            title: "Persoonlike benadering",
-            body: "’n Hands-on besigheid gebou rondom goeie produkte en persoonlike diens.",
+            title: "Persoonlike Benadering",
+            body: "’n Besigheid wat self die werk doen, gerig op kwaliteit en persoonlike diens.",
           },
         ],
       },

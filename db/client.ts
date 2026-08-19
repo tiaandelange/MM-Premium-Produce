@@ -14,7 +14,12 @@ export function getDatabaseUrl(): string {
 
 export function getDb() {
   if (cached) return cached;
-  cached = drizzle(neon(getDatabaseUrl()), { schema });
+  cached = drizzle(
+    neon(getDatabaseUrl(), {
+      fetchOptions: { cache: "no-store" },
+    }),
+    { schema },
+  );
   return cached;
 }
 

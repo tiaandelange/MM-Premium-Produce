@@ -21,36 +21,37 @@ const heading = Fraunces({
   variable: "--font-fraunces",
 });
 
-const site = getSiteConfig();
-
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(site.siteUrl),
-  title: {
-    default: site.defaultTitle,
-    template: `%s | ${site.businessName}`,
-  },
-  description: site.defaultDescription,
-  applicationName: site.businessName,
-  robots: buildRobots(true),
-  openGraph: {
-    type: "website",
-    locale: "en_ZA",
-    siteName: site.businessName,
-    title: site.defaultTitle,
+export async function generateMetadata(): Promise<Metadata> {
+  const site = getSiteConfig();
+  return {
+    metadataBase: new URL(site.siteUrl),
+    title: {
+      default: site.defaultTitle,
+      template: `%s | ${site.businessName}`,
+    },
     description: site.defaultDescription,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: site.defaultTitle,
-    description: site.defaultDescription,
-  },
-  icons: {
-    icon: "/brand/favicon.png",
-    apple: "/brand/mm-premium-produce-logo.png",
-  },
-};
+    applicationName: site.businessName,
+    robots: buildRobots(true),
+    openGraph: {
+      type: "website",
+      locale: "en_ZA",
+      siteName: site.businessName,
+      title: site.defaultTitle,
+      description: site.defaultDescription,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: site.defaultTitle,
+      description: site.defaultDescription,
+    },
+    icons: {
+      icon: "/brand/favicon.png",
+      apple: "/brand/mm-premium-produce-logo.png",
+    },
+  };
+}
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const theme = await getThemePreference();

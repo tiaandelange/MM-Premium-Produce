@@ -62,7 +62,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <HomeHero locale={locale} />
       <HomeApproach locale={locale} />
 
-      <section className="site-container py-16 lg:py-20">
+      <section className="site-container home-catalogue">
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
             <h2 className="text-section-title">{messages.shopByCategory}</h2>
