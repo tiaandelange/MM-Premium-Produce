@@ -1,28 +1,29 @@
-export function NewsletterSignup() {
+import type { AppLocale } from "@/lib/i18n/config";
+import { getMessages } from "@/lib/i18n/messages";
+
+export function NewsletterSignup({ locale }: { locale: AppLocale }) {
+  const messages = getMessages(locale);
   return (
-    <section className="bg-sand py-16">
+    <section className="py-16">
       <div className="site-container max-w-2xl">
-        <h2 className="text-section-title">Email updates</h2>
-        <p className="mt-3 text-muted">
-          A mailing list is not connected yet, so this form cannot send messages. When
-          email updates are live, this will be the place to hear about seasonal produce.
-        </p>
+        <h2 className="text-section-title">{messages.emailUpdates}</h2>
+        <p className="mt-3 text-muted">{messages.newsletterNote}</p>
         <fieldset disabled className="mt-6 border-0 p-0">
-          <legend className="sr-only">Email signup is not available yet</legend>
+          <legend className="sr-only">{messages.emailUpdates}</legend>
           <div className="flex flex-col gap-3 sm:flex-row">
             <label className="sr-only" htmlFor="newsletter-email">
-              Email address
+              {messages.emailAddress}
             </label>
             <input
               id="newsletter-email"
               name="email"
               type="email"
               disabled
-              placeholder="Email address"
+              placeholder={messages.emailAddress}
               autoComplete="email"
-              className="min-h-11 flex-1 rounded-sm border border-line bg-canvas px-3 text-ink"
+              className="field-control flex-1"
             />
-            <span className="btn-disabled">Sign up — coming later</span>
+            <span className="btn-disabled">{messages.signUpLater}</span>
           </div>
         </fieldset>
       </div>

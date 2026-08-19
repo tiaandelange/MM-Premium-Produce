@@ -3,6 +3,8 @@ import type { Collection } from "@/types/catalog";
 export const collections: Collection[] = [
   {
     id: "col_featured_produce",
+    locale: "en",
+    translationStatus: "published",
     slug: "featured-produce",
     name: "Featured produce",
     description:
@@ -16,10 +18,10 @@ export const collections: Collection[] = [
       "prod_cucumber",
     ],
     image: {
-      src: "/images/categories/fresh-vegetables.webp",
-      alt: "Featured fresh produce from M & M Premium Produce",
-      width: 1400,
-      height: 1400,
+      src: "/images/categories/vegetables.webp",
+      alt: "Featured fresh vegetables from M & M Premium Produce",
+      width: 1600,
+      height: 1067,
     },
     featured: true,
     indexable: false,

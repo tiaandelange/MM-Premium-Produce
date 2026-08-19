@@ -1,0 +1,124 @@
+import { CatalogMedia } from "@/components/commerce/catalog-media";
+import { ProductCard } from "@/components/commerce/product-card";
+import { PageHeader } from "@/components/layout/page-header";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { JsonLd } from "@/components/seo/json-ld";
+import { requireLocale } from "@/lib/i18n/locale";
+import { getMessages, interpolate } from "@/lib/i18n/messages";
+import { createPaths } from "@/lib/i18n/paths";
+import { buildMetadata, fallbackSeoDescription } from "@/lib/seo/metadata";
+import { followStoredRedirect } from "@/lib/seo/redirects";
+import { redirectIfTranslatedSlugExists } from "@/lib/i18n/entity-redirect";
+import { getRequestPathname } from "@/lib/i18n/request";
+import { buildBreadcrumbStructuredData, buildItemListStructuredData } from "@/lib/seo/structured-data";
+import { getCatalog } from "@/services/catalog";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
+async function followRedirect(): Promise<never> {
+  return followStoredRedirect(await getRequestPathname());
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/shop/[category]">) {
+  const { locale: localeParam, category: slug } = await params;
+  const locale = requireLocale(localeParam);
+  const catalog = await getCatalog(locale);
+  const category = await catalog.getCategoryBySlug(slug);
+  if (!category) {
+    await redirectIfTranslatedSlugExists(locale, "category", slug);
+    notFound();
+  }
+  const enSlug = category.alternates.find((item) => item.locale === "en" && item.status === "published")?.slug;
+  const afSlug = category.alternates.find((item) => item.locale === "af" && item.status === "published")?.slug;
+  const paths = createPaths(locale);
+  return buildMetadata({
+    title: category.seoTitle ?? category.name,
+    description: category.seoDescription ?? fallbackSeoDescription(category.name, "category", locale),
+    path: paths.category(category.slug),
+    locale,
+    enPath: enSlug ? createPaths("en").category(enSlug) : undefined,
+    afPath: afSlug ? createPaths("af").category(afSlug) : undefined,
+    indexable: category.indexable,
+    ogImage: category.ogImage?.src ?? category.image.src,
+    ogTitle: category.ogTitle,
+    ogDescription: category.ogDescription,
+    canonicalPath: category.canonicalOverride,
+  });
+}
+
+export default async function CategoryPage({
+  params,
+}: PageProps<"/[locale]/shop/[category]">) {
+  const { locale: localeParam, category: slug } = await params;
+  const locale = requireLocale(localeParam);
+  const catalog = await getCatalog(locale);
+  const category = await catalog.getCategoryBySlug(slug);
+  if (!category) {
+    await redirectIfTranslatedSlugExists(locale, "category", slug);
+    await followRedirect();
+  }
+  if (!category) notFound();
+
+  const messages = getMessages(locale);
+  const paths = createPaths(locale);
+  const [products, categories] = await Promise.all([
+    catalog.listProducts({ categoryId: category.id }),
+    catalog.listCategories(),
+  ]);
+  const relatedCategories = categories.filter((item) => item.id !== category.id);
+  const breadcrumbItems = [
+    { name: messages.home, path: paths.home },
+    { name: messages.shop, path: paths.shop },
+    { name: category.name, path: paths.category(category.slug) },
+  ];
+
+  return (
+    <div className="site-container space-y-10 py-12">
+      <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
+      <JsonLd
+        data={buildItemListStructuredData(
+          category.name,
+          products.map((product) => ({ name: product.name, path: paths.product(product.slug) })),
+        )}
+      />
+      <Breadcrumbs items={breadcrumbItems} />
+      <PageHeader title={category.name} description={category.shortDescription} />
+      <div className="relative aspect-[21/9] max-h-80 overflow-hidden rounded-card border border-line bg-sand">
+        <CatalogMedia image={category.image} priority sizes="100vw" />
+      </div>
+      <section>
+        <h2 className="text-section-title">
+          {interpolate(messages.shopCategory, { name: category.name.toLowerCase() })}
+        </h2>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+      <section className="max-w-3xl">
+        <h2 className="text-section-title">{messages.aboutThisRange}</h2>
+        <p className="mt-4 text-muted">{category.description}</p>
+      </section>
+      {relatedCategories.length ? (
+        <section>
+          <h2 className="text-section-title">{messages.relatedCategories}</h2>
+          <ul className="mt-4 flex flex-wrap gap-3">
+            {relatedCategories.map((item) => (
+              <li key={item.id}>
+                <Link href={paths.category(item.slug)} className="btn-secondary">
+                  {interpolate(messages.shopCategory, { name: item.name.toLowerCase() })}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+    </div>
+  );
+}

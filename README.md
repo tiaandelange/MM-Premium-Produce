@@ -13,11 +13,17 @@ SEO-first ecommerce storefront skeleton. Phase 1 establishes catalogue architect
 ## Local development
 
 ```bash
+cp .env.example .env.local
+# set DATABASE_URL, AUTH_SECRET, ADMIN_EMAIL and ADMIN_PASSWORD
 npm install
+npm run db:push
+npm run db:rls
+npm run db:report
+npm run db:import
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). Admin is at `/admin`.
 
 Copy `.env.example` to `.env.local` if you need to override the site URL.
 

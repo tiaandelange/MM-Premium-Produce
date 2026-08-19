@@ -1,6 +1,7 @@
 import { confirmedValue, getSiteConfig } from "@/config/site";
 import { buildCanonicalUrl } from "@/lib/seo/canonical";
-import { paths } from "@/lib/routes";
+import { createPaths } from "@/lib/i18n/paths";
+import type { AppLocale } from "@/lib/i18n/config";
 import type { BreadcrumbItem } from "@/lib/seo/breadcrumbs";
 import type { AvailabilityStatus, Bundle, Product } from "@/types/catalog";
 
@@ -21,12 +22,13 @@ function availabilityUrl(status: AvailabilityStatus): string | undefined {
   }
 }
 
-export function buildOrganizationStructuredData(): JsonLd {
+export function buildOrganizationStructuredData(locale: AppLocale = "en"): JsonLd {
   const site = getSiteConfig();
   const email = confirmedValue(site.email);
   const phone = confirmedValue(site.phone);
   const sameAs = confirmedValue(site.socialProfiles);
   const address = confirmedValue(site.address);
+  const paths = createPaths(locale);
 
   const data: JsonLd = {
     "@context": "https://schema.org",
@@ -85,11 +87,13 @@ function buildOffer(
   if (availability) {
     offer.availability = availability;
   }
+  // shippingDetails and returnPolicy stay omitted until those business rules are confirmed.
 
   return offer;
 }
 
 export function buildProductStructuredData(product: Product): JsonLd {
+  const paths = createPaths(product.locale);
   const url = buildCanonicalUrl(paths.product(product.slug));
   const site = getSiteConfig();
   const brand = {
@@ -114,7 +118,7 @@ export function buildProductStructuredData(product: Product): JsonLd {
         const variantData: JsonLd = {
           "@type": "Product",
           name: `${product.name} — ${variant.name}`,
-          sku: variant.id,
+          sku: variant.sku || variant.id,
           url: variantUrl,
           image: variant.image ? [buildCanonicalUrl(variant.image.src)] : images,
         };
@@ -151,6 +155,7 @@ export function buildBundleStructuredData(
   componentNames: string[],
   componentUrls: string[],
 ): JsonLd {
+  const paths = createPaths(bundle.locale);
   const url = buildCanonicalUrl(paths.bundle(bundle.slug));
   const site = getSiteConfig();
   const description = [bundle.shortDescription, componentNames.length ? `Includes: ${componentNames.join(", ")}.` : ""]

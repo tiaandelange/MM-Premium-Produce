@@ -21,17 +21,40 @@ export type CatalogImage = {
 
 export type ProductVariant = {
   id: string;
+  sku?: string;
   slug: string;
   name: string;
   price: Money | null;
+  compareAtPrice?: Money | null;
   availability: AvailabilityStatus;
   packSize?: string;
   image?: CatalogImage;
+  stockQuantity?: number | null;
+};
+
+export type LocaleCode = "en" | "af";
+export type TranslationStatus = "draft" | "ready" | "published";
+
+export type LocaleAlternate = {
+  locale: LocaleCode;
+  slug: string;
+  status: TranslationStatus;
+};
+
+export type ProductGuidance = {
+  storage?: string;
+  selection?: string;
+  typicalUses?: string;
+  seasonality?: string;
+  origin?: string;
 };
 
 export type Product = {
   id: string;
   sku: string;
+  locale: LocaleCode;
+  translationStatus: TranslationStatus;
+  alternates: LocaleAlternate[];
   slug: string;
   name: string;
   status: EntityStatus;
@@ -54,6 +77,10 @@ export type Product = {
   variants?: ProductVariant[];
   seoTitle?: string;
   seoDescription?: string;
+  canonicalOverride?: string | null;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: CatalogImage;
   indexable: boolean;
   isSample: boolean;
   createdAt: string;
@@ -62,10 +89,14 @@ export type Product = {
   productType?: string;
   gtin?: string | null;
   mpn?: string | null;
+  guidance?: ProductGuidance;
 };
 
 export type Category = {
   id: string;
+  locale: LocaleCode;
+  translationStatus: TranslationStatus;
+  alternates: LocaleAlternate[];
   slug: string;
   name: string;
   shortDescription: string;
@@ -73,6 +104,10 @@ export type Category = {
   image: CatalogImage;
   seoTitle?: string;
   seoDescription?: string;
+  canonicalOverride?: string | null;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: CatalogImage;
   featured: boolean;
   indexable: boolean;
   isSample: boolean;
@@ -82,6 +117,8 @@ export type Category = {
 
 export type Collection = {
   id: string;
+  locale: LocaleCode;
+  translationStatus: TranslationStatus;
   slug: string;
   name: string;
   description: string;
@@ -96,14 +133,19 @@ export type Collection = {
 
 export type BundleItem = {
   productId: string;
+  variantId?: string;
   quantity: number;
 };
 
 export type Bundle = {
   id: string;
   sku: string;
+  locale: LocaleCode;
+  translationStatus: TranslationStatus;
+  alternates: LocaleAlternate[];
   slug: string;
   name: string;
+  status: EntityStatus;
   shortDescription: string;
   description: string;
   items: BundleItem[];
@@ -115,6 +157,10 @@ export type Bundle = {
   primaryImage: CatalogImage;
   seoTitle?: string;
   seoDescription?: string;
+  canonicalOverride?: string | null;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: CatalogImage;
   indexable: boolean;
   isSample: boolean;
   createdAt: string;

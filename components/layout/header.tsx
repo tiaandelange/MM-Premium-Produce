@@ -1,20 +1,103 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/brand/wordmark";
-import { primaryNav } from "@/lib/routes";
+import { HeaderUtilities, UtilityPanel } from "@/components/layout/header-utilities";
+import { MenuIcon } from "@/components/layout/icons";
+import { CartDrawer } from "@/components/commerce/cart-drawer";
+import { CartContents } from "@/components/commerce/cart-contents";
+import type { AppLocale } from "@/lib/i18n/config";
+import { getMessages, interpolate } from "@/lib/i18n/messages";
+import { createPaths } from "@/lib/i18n/paths";
+import { resolveLanguageHrefs } from "@/lib/i18n/switch";
+import { getRequestPathname } from "@/lib/i18n/request";
+import { getThemePreference } from "@/lib/theme-server";
+import { getCatalog } from "@/services/catalog";
+import { getHydratedCart } from "@/services/cart";
 
-export function SiteHeader() {
+export async function SiteHeader({ locale }: { locale: AppLocale }) {
+  const theme = await getThemePreference();
+  const messages = getMessages(locale);
+  const paths = createPaths(locale);
+  const pathname = await getRequestPathname();
+  const alternates = await resolveLanguageHrefs(pathname, locale);
+  const catalog = await getCatalog(locale);
+  const [categories, cart] = await Promise.all([catalog.listCategories(), getHydratedCart(locale)]);
+  const fruit = categories.find((category) => category.id === "cat_fruit");
+  const vegetables = categories.find((category) => category.id === "cat_vegetables");
+
+  const nav = [
+    { href: paths.shop, label: messages.shop },
+    fruit ? { href: paths.category(fruit.slug), label: fruit.name } : null,
+    vegetables ? { href: paths.category(vegetables.slug), label: vegetables.name } : null,
+    { href: paths.bundles, label: messages.produceBoxes },
+    { href: paths.about, label: messages.ourStory },
+  ].filter((item): item is { href: typeof paths.shop; label: string } => Boolean(item));
+
+  const utilityProps = {
+    locale,
+    enHref: alternates.en,
+    afHref: alternates.af,
+    theme,
+    preferencesLabel: messages.preferences,
+    languageLabel: messages.language,
+    appearanceLabel: messages.appearance,
+    themeLabels: {
+      light: messages.themeLight,
+      dark: messages.themeDark,
+      system: messages.themeSystem,
+    },
+  };
+
+  const cartControl = (
+    <CartDrawer
+      label={messages.cart}
+      countLabel={interpolate(messages.itemsInCart, { count: String(cart.itemCount) })}
+      count={cart.itemCount}
+      closeLabel={messages.close}
+    >
+      <CartContents cart={cart} locale={locale} />
+    </CartDrawer>
+  );
+
   return (
-    <header className="border-b border-line bg-surface">
-      <div className="site-container flex min-w-0 items-center justify-between gap-4 py-3 sm:py-4">
-        <Link href="/" className="min-w-0 text-ink hover:text-ink">
+    <header className="site-header">
+      <div className="site-header-inner">
+        <details className="mobile-nav lg:hidden">
+          <summary className="btn-icon" aria-label={messages.menu}>
+            <MenuIcon />
+          </summary>
+          <div className="mobile-nav-panel">
+            <nav aria-label="Primary mobile">
+              <ul>
+                {nav.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href={paths.delivery}>{messages.delivery}</Link>
+                </li>
+                <li>
+                  <Link href={paths.contact}>{messages.contact}</Link>
+                </li>
+              </ul>
+            </nav>
+            <div className="mobile-nav-utilities">
+              <UtilityPanel {...utilityProps} />
+            </div>
+          </div>
+        </details>
+
+        <Link href={paths.home} className="site-logo text-ink hover:text-ink">
           <Wordmark compact />
         </Link>
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-6">
-            {primaryNav.map((item) => (
+        <nav aria-label="Primary" className="site-nav">
+          <ul>
+            {nav.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-sm font-medium text-ink hover:text-leaf">
+                <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
                   {item.label}
                 </Link>
               </li>
@@ -22,28 +105,12 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <details className="mobile-nav relative lg:hidden">
-          <summary className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm border border-line bg-canvas px-3 text-sm font-medium text-ink">
-            Menu
-          </summary>
-          <nav
-            aria-label="Primary mobile"
-            className="absolute right-0 z-20 mt-2 w-56 rounded-card border border-line bg-surface p-3 shadow-sm"
-          >
-            <ul className="flex flex-col gap-1">
-              {primaryNav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="block rounded-sm px-3 py-2 text-ink hover:bg-sand"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </details>
+        <div className="site-header-actions">
+          {cartControl}
+          <div className="hidden lg:block">
+            <HeaderUtilities {...utilityProps} />
+          </div>
+        </div>
       </div>
     </header>
   );

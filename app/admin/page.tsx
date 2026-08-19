@@ -1,3 +1,4 @@
+import { requireAdmin } from "@/lib/auth/guards";
 import { paths } from "@/lib/routes";
 import Link from "next/link";
 
@@ -9,12 +10,12 @@ const sections = [
   {
     href: paths.adminProducts,
     title: "Products",
-    body: "SEO fields, slugs, pricing, availability and indexation for individual produce.",
+    body: "SEO fields, slugs, pricing, availability, variants, images and indexation.",
   },
   {
     href: paths.adminCategories,
     title: "Categories",
-    body: "Taxonomy landing pages with introductory copy and category SEO.",
+    body: "Organic landing pages with introductions, supporting copy and category SEO.",
   },
   {
     href: paths.adminCollections,
@@ -26,17 +27,32 @@ const sections = [
     title: "Bundles",
     body: "Purchasable produce boxes with component products and quantities.",
   },
+  {
+    href: paths.adminMedia,
+    title: "Media",
+    body: "Optimized production images, alt text, dimensions and original asset references.",
+  },
+  {
+    href: paths.adminOrders,
+    title: "Orders",
+    body: "Order snapshots, payment, fulfilment and delivery status.",
+  },
+  {
+    href: paths.adminDelivery,
+    title: "Delivery",
+    body: "Publish delivery areas, fees, minimums and windows. Unpublished rules stay hidden on the storefront.",
+  },
 ];
 
-export default function AdminHomePage() {
+export default async function AdminHomePage() {
+  await requireAdmin();
   return (
     <div className="space-y-8">
       <header>
-        <h1 className="text-page-title">Catalogue administration</h1>
+        <h1 className="text-page-title">Catalogue and SEO CMS</h1>
         <p className="mt-4 max-w-3xl text-muted">
-          This is the information architecture for the future admin system. It reads the
-          same catalogue service as the storefront. CRUD persistence, image uploads,
-          inventory, orders and authentication belong to a later phase.
+          This administration system writes to PostgreSQL. The storefront, metadata,
+          JSON-LD, sitemap and future merchant feed all read the same catalogue service.
         </p>
       </header>
       <ul className="grid gap-4 md:grid-cols-2">
@@ -44,7 +60,7 @@ export default function AdminHomePage() {
           <li key={section.href} className="card-surface p-5">
             <h2 className="font-heading text-card-title">{section.title}</h2>
             <p className="mt-2 text-sm text-muted">{section.body}</p>
-            <Link href={section.href} className="mt-4 inline-block text-sm font-medium">
+            <Link href={section.href as typeof paths.admin} className="mt-4 inline-block text-sm font-medium">
               Open {section.title.toLowerCase()}
             </Link>
           </li>

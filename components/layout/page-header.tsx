@@ -9,11 +9,7 @@ export function PageHeader({
 }) {
   return (
     <header className="max-w-3xl">
-      {eyebrow ? (
-        <p className="text-label font-semibold uppercase tracking-[0.18em] text-leaf">
-          {eyebrow}
-        </p>
-      ) : null}
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h1 className="mt-3 text-page-title">{title}</h1>
       {description ? <p className="mt-4 text-lg text-muted">{description}</p> : null}
     </header>

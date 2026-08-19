@@ -1,3 +1,4 @@
+import type { AppLocale } from "@/lib/i18n/config";
 import type { Bundle, Category, Collection, Product } from "@/types/catalog";
 
 export type ProductListOptions = {
@@ -21,4 +22,23 @@ export type CatalogService = {
   getBundleBySlug(slug: string): Promise<Bundle | null>;
   listBundlesContainingProduct(productId: string): Promise<Bundle[]>;
   listRelatedProducts(product: Product, limit?: number): Promise<Product[]>;
+};
+
+export type AdminTranslationCopy = {
+  locale: AppLocale;
+  status: "draft" | "ready" | "published";
+  name: string;
+  slug: string;
+  shortDescription: string;
+  description: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  canonicalOverride?: string | null;
+  imageAlt?: string;
+  indexable: boolean;
+  storageGuidance?: string;
+  selectionGuidance?: string;
+  typicalUses?: string;
 };

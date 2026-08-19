@@ -1,3 +1,4 @@
+import { requireAdmin } from "@/lib/auth/guards";
 import { getCatalog } from "@/services/catalog";
 
 export const metadata = {
@@ -5,6 +6,7 @@ export const metadata = {
 };
 
 export default async function AdminCollectionsPage() {
+  await requireAdmin();
   const catalog = await getCatalog();
   const collections = await catalog.listCollections({ includeNonIndexable: true });
 

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { PriceDisplay } from "@/components/commerce/price-display";
-import { paths } from "@/lib/routes";
+import { createPaths } from "@/lib/i18n/paths";
+import { getMessages, interpolate } from "@/lib/i18n/messages";
 import type { Bundle } from "@/types/catalog";
 
 export function BundleCard({
@@ -12,6 +13,8 @@ export function BundleCard({
   headingLevel?: "h2" | "h3";
 }) {
   const Heading = headingLevel;
+  const paths = createPaths(bundle.locale);
+  const messages = getMessages(bundle.locale);
   return (
     <article className="card-surface overflow-hidden">
       <Link href={paths.bundle(bundle.slug)} className="block text-ink hover:text-ink">
@@ -21,9 +24,9 @@ export function BundleCard({
         <div className="space-y-2 p-5">
           <Heading className="font-heading text-card-title">{bundle.name}</Heading>
           <p className="text-sm text-muted">{bundle.shortDescription}</p>
-          <PriceDisplay price={bundle.price} compareAtPrice={bundle.compareAtPrice} />
+          <PriceDisplay price={bundle.price} compareAtPrice={bundle.compareAtPrice} locale={bundle.locale} unit="ea" />
           <span className="inline-block text-sm font-medium text-leaf">
-            View {bundle.name}
+            {interpolate(messages.viewBox, { name: bundle.name })}
           </span>
         </div>
       </Link>

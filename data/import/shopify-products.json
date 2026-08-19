@@ -1,0 +1,2518 @@
+{
+  "products": [
+    {
+      "id": 10242061173021,
+      "title": "Tomatoes",
+      "handle": "tomatoes",
+      "body_html": "<p>Fresh, vibrant tomatoes bursting with natural sweetness and rich flavour. Sourced from premium local growers, our tomatoes are hand-selected for quality and ripeness. Perfect for salads, cooking, sauces, and fresh meals. Packed with vitamins and antioxidants, these versatile fruits bring authentic taste to your kitchen. </p>",
+      "published_at": "2026-06-22T17:32:54+02:00",
+      "created_at": "2026-06-22T17:32:53+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51916907774237,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "0.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10242061173021,
+          "created_at": "2026-06-22T17:32:53+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890288374045,
+          "created_at": "2026-06-22T17:32:45+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:32:48+02:00",
+          "product_id": 10242061173021,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_2.png?v=1782142368",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213730582813,
+      "title": "Avos",
+      "handle": "avos",
+      "body_html": "<p>Creamy, nutrient-rich avocados sourced fresh from premium local farms. Perfect for salads, spreads, or enjoying on their own. </p>\n<p> </p>",
+      "published_at": "2026-06-01T11:47:01+02:00",
+      "created_at": "2026-06-01T11:47:00+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51697634345245,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "15.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213730582813,
+          "created_at": "2026-06-01T11:47:00+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890285326621,
+          "created_at": "2026-06-22T17:25:20+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:25:23+02:00",
+          "product_id": 10213730582813,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_1.png?v=1782141923",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213718196509,
+      "title": "Cherry Tomatoes",
+      "handle": "tamatoes",
+      "body_html": "<p>400g Fresh, tomatoes sourced from premium local farms. Bursting with natural sweetness and rich flavour, perfect for salads, cooking, or fresh consumption. </p>",
+      "published_at": "2026-06-01T11:40:53+02:00",
+      "created_at": "2026-06-01T11:40:52+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51697355260189,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "34.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213718196509,
+          "created_at": "2026-06-01T11:40:52+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890284179741,
+          "created_at": "2026-06-22T17:23:54+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:23:57+02:00",
+          "product_id": 10213718196509,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_27.png?v=1782141837",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213714297117,
+      "title": "Iceberg Lettuce",
+      "handle": "iceberg-lettuce",
+      "body_html": "<p>Crisp, iceberg lettuce. Perfect for salads, sandwiches, and wraps. Our premium produce is fresh, locally sourced, and delivers that satisfying crunch you're looking for. Store in the refrigerator to maintain freshness.</p>",
+      "published_at": "2026-06-01T11:38:54+02:00",
+      "created_at": "2026-06-01T11:38:52+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51697279828253,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "19.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213714297117,
+          "created_at": "2026-06-01T11:38:52+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890283557149,
+          "created_at": "2026-06-22T17:23:03+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:23:06+02:00",
+          "product_id": 10213714297117,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_10.png?v=1782141786",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213709250845,
+      "title": "Cos Lettuce",
+      "handle": "cos-lettuce",
+      "body_html": "<p>Refreshing cos lettuce with elongated leaves and a tender heart. Perfect for salads, wraps, and Caesar preparations. Fresh from our premium selection.</p>",
+      "published_at": "2026-06-01T11:36:39+02:00",
+      "created_at": "2026-06-01T11:36:38+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51697176838429,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "29.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213709250845,
+          "created_at": "2026-06-01T11:36:38+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890282737949,
+          "created_at": "2026-06-22T17:21:56+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:21:58+02:00",
+          "product_id": 10213709250845,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_11.png?v=1782141718",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213703876893,
+      "title": "Baby Spinach",
+      "handle": "baby-spinach",
+      "body_html": "<p>200g nutrient-rich baby spinach leaves perfect for fresh salads, smoothies, and light sautés.</p>",
+      "published_at": "2026-06-01T11:34:18+02:00",
+      "created_at": "2026-06-01T11:34:17+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51697053696285,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "34.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213703876893,
+          "created_at": "2026-06-01T11:34:17+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890282541341,
+          "created_at": "2026-06-22T17:21:01+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:21:03+02:00",
+          "product_id": 10213703876893,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_29.png?v=1782141663",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213699846429,
+      "title": "Spinach",
+      "handle": "spinach",
+      "body_html": "<p>Fresh 350g bundle, spinach packed with nutrients and natural goodness. Perfect for salads, smoothies, cooking, and everyday meals. </p>\n<p> </p>",
+      "published_at": "2026-06-01T11:32:05+02:00",
+      "created_at": "2026-06-01T11:32:03+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696954736925,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "24.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213699846429,
+          "created_at": "2026-06-01T11:32:03+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890279821597,
+          "created_at": "2026-06-22T17:18:02+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:18:04+02:00",
+          "product_id": 10213699846429,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_12_c078a1d5-8361-45e2-9afa-27099639a9d4.png?v=1782141484",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213694144797,
+      "title": "Cabbage",
+      "handle": "cabbage",
+      "body_html": "<p>Fresh, crisp cabbage packed with nutrients and versatility. Perfect for salads, slaws, stir-fries, and traditional dishes. Our premium cabbage is hand-selected for quality and firmness, delivering vibrant colour and excellent flavour. </p>",
+      "published_at": "2026-06-01T11:29:15+02:00",
+      "created_at": "2026-06-01T11:29:14+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696816587037,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "22.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213694144797,
+          "created_at": "2026-06-01T11:29:14+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890278969629,
+          "created_at": "2026-06-22T17:16:43+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T17:16:46+02:00",
+          "product_id": 10213694144797,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/g_341fe884-b92b-4df9-8e57-90d8b7ab0dcc.png?v=1782141406",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213690802461,
+      "title": "Beetroot",
+      "handle": "beetroot",
+      "body_html": "<p>2Kg Fresh, beetroot packed with natural sweetness and earthy flavour. Rich in nutrients and antioxidants, these firm roots are perfect for roasting, juicing, or adding to salads. Sourced locally for quality and freshness. Store in a cool place.</p>",
+      "published_at": "2026-06-01T11:27:36+02:00",
+      "created_at": "2026-06-01T11:27:35+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696728736029,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "44.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213690802461,
+          "created_at": "2026-06-01T11:27:35+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890226835741,
+          "created_at": "2026-06-22T16:58:22+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:58:24+02:00",
+          "product_id": 10213690802461,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/t_9b63d94d-cca7-42a1-8a1e-f8dffa243b30.png?v=1782140304",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213686968605,
+      "title": "Butternut",
+      "handle": "butternut",
+      "body_html": "<p>3Kg our premium butternuts are perfect for roasting, mashing, or adding to soups and curries. Rich in vitamins and fibre.</p>",
+      "published_at": "2026-06-01T11:25:53+02:00",
+      "created_at": "2026-06-01T11:25:51+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696645013789,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "44.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213686968605,
+          "created_at": "2026-06-01T11:25:51+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890224607517,
+          "created_at": "2026-06-22T16:54:43+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:54:46+02:00",
+          "product_id": 10213686968605,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_13.png?v=1782140086",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213678874909,
+      "title": "Sweetcorn",
+      "handle": "sweetcorn",
+      "body_html": "<p>Fresh, sweetcorn bursting with natural sweetness. Our premium sweetcorn delivers vibrant flavor whether grilled, boiled, or roasted. Available fresh from our local suppliers.</p>",
+      "published_at": "2026-06-01T11:22:35+02:00",
+      "created_at": "2026-06-01T11:22:34+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696512532765,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "34.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213678874909,
+          "created_at": "2026-06-01T11:22:34+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890224476445,
+          "created_at": "2026-06-22T16:54:03+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:54:06+02:00",
+          "product_id": 10213678874909,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/p_ed6fac12-fd8d-4c69-bbcb-d1372cdcdddd.png?v=1782140046",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213670813981,
+      "title": "Cauliflower",
+      "handle": "cauliflower",
+      "body_html": "<p>500g Fresh, cauliflower sourced for quality and taste. Perfect for roasting, steaming, or adding to your favourite curries and stir-fries. Rich in vitamins and fibre, this versatile vegetable brings nutrition and flavour to every meal. </p>",
+      "published_at": "2026-06-01T11:18:30+02:00",
+      "created_at": "2026-06-01T11:18:28+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696313041181,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "29.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213670813981,
+          "created_at": "2026-06-01T11:18:28+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890220019997,
+          "created_at": "2026-06-22T16:48:11+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:48:14+02:00",
+          "product_id": 10213670813981,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_25.png?v=1782139694",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213661737245,
+      "title": "Red Onion",
+      "handle": "red-onion",
+      "body_html": "<p>1Kg Rich, deep red onions. Perfect for raw salads, grilling, or caramelising to bring out their subtle sweetness. These vibrant onions add colour and depth to any dish while offering excellent storage longevity.</p>",
+      "published_at": "2026-06-01T11:13:54+02:00",
+      "created_at": "2026-06-01T11:13:53+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51696088088861,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "39.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213661737245,
+          "created_at": "2026-06-01T11:13:53+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890219364637,
+          "created_at": "2026-06-22T16:47:32+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:47:36+02:00",
+          "product_id": 10213661737245,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_14.png?v=1782139656",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213642469661,
+      "title": "Brown Onion",
+      "handle": "brown-onion",
+      "body_html": "<p>2Kg Brown onions . Their papery golden-brown skin protects the firm, making them ideal for soups, stews, curries, and caramelising. </p>",
+      "published_at": "2026-06-01T11:03:19+02:00",
+      "created_at": "2026-06-01T11:03:17+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51695846064413,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "44.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213642469661,
+          "created_at": "2026-06-01T11:03:17+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890219135261,
+          "created_at": "2026-06-22T16:47:04+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:47:06+02:00",
+          "product_id": 10213642469661,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_15_fbc52571-87b5-4993-b515-5176738a7216.png?v=1782139626",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213632442653,
+      "title": "Sweet Potatoes",
+      "handle": "sweet-potatoes",
+      "body_html": "<p>2Kg Nutrient-rich sweet potatoes with a naturally sweet flavour and creamy texture. Perfect for roasting, mashing, or adding to curries and stews. Rich in vitamins A and C, fibre, and antioxidants. Our premium selection ensures firm, unblemished tubers that store well. </p>",
+      "published_at": "2026-06-01T10:58:17+02:00",
+      "created_at": "2026-06-01T10:58:16+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51695602598173,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "44.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213632442653,
+          "created_at": "2026-06-01T10:58:16+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890219069725,
+          "created_at": "2026-06-22T16:46:32+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:46:36+02:00",
+          "product_id": 10213632442653,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_16_970ed884-6921-4a01-b252-c62eb63aad68.png?v=1782139596",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213626380573,
+      "title": "Green Beans",
+      "handle": "green-beans",
+      "body_html": "<p>500g Fresh, crisp green beans. Best enjoyed fresh store in the refrigerator and use within a few days for optimal taste and texture.</p>",
+      "published_at": "2026-06-01T10:54:58+02:00",
+      "created_at": "2026-06-01T10:54:57+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51695441641757,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "29.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213626380573,
+          "created_at": "2026-06-01T10:54:57+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890218774813,
+          "created_at": "2026-06-22T16:45:45+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:45:50+02:00",
+          "product_id": 10213626380573,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_17.png?v=1782139550",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213621924125,
+      "title": "Baby Patatos",
+      "handle": "baby-patatos",
+      "body_html": "<p>Tender, baby potatoes perfect for roasting, boiling, or mashing. Fresh from our premium selection, delivering quality produce straight to your table.</p>",
+      "published_at": "2026-06-01T10:51:46+02:00",
+      "created_at": "2026-06-01T10:51:45+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51695282356509,
+          "title": "2Kg",
+          "option1": "2Kg",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "34.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213621924125,
+          "created_at": "2026-06-01T10:51:45+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890218217757,
+          "created_at": "2026-06-22T16:45:06+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:45:09+02:00",
+          "product_id": 10213621924125,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_23_670531bf-0c45-4c71-ad77-9f4033645681.png?v=1782139509",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Weight",
+          "position": 1,
+          "values": [
+            "2Kg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213613699357,
+      "title": "Patatos",
+      "handle": "patatos",
+      "body_html": "<p>Fresh, quality potatoes. Perfect for roasting, mashing, boiling, or frying. Versatile and reliable, our potatoes deliver consistent taste and texture for all your favourite dishes. </p>",
+      "published_at": "2026-06-01T10:45:43+02:00",
+      "created_at": "2026-06-01T10:45:42+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51695020114205,
+          "title": "2Kg",
+          "option1": "2Kg",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "33.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213613699357,
+          "created_at": "2026-06-01T10:45:42+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51695020146973,
+          "title": "10Kg",
+          "option1": "10Kg",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "150.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 10213613699357,
+          "created_at": "2026-06-01T10:45:42+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890217693469,
+          "created_at": "2026-06-22T16:44:38+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:44:41+02:00",
+          "product_id": 10213613699357,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_24_da5841d9-d4e1-4259-889a-f9ebb7a85d6b.png?v=1782139481",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "2Kg",
+            "10Kg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213609079069,
+      "title": "Carrots",
+      "handle": "carrots",
+      "body_html": "<p>Fresh, carrots packed with natural sweetness and nutrition. Our premium carrots are hand-selected for quality and crispness. Available in convenient 1kg and 500g sizes to suit your household needs. Rich in beta-carotene and vitamins.</p>",
+      "published_at": "2026-06-01T10:42:32+02:00",
+      "created_at": "2026-06-01T10:42:31+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51694868693277,
+          "title": "500g",
+          "option1": "500g",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "9.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213609079069,
+          "created_at": "2026-06-01T10:42:31+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51694868726045,
+          "title": "1Kg",
+          "option1": "1Kg",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "17.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 10213609079069,
+          "created_at": "2026-06-01T10:42:31+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890217562397,
+          "created_at": "2026-06-22T16:43:51+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:43:54+02:00",
+          "product_id": 10213609079069,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_22_f8ae0a4b-667f-4e57-8a94-759ff128c857.png?v=1782139434",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Size",
+          "position": 1,
+          "values": [
+            "500g",
+            "1Kg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213602689309,
+      "title": "Broccoli",
+      "handle": "broccoli",
+      "body_html": "<p>330g Fresh, broccoli packed with nutrients and natural goodness. Our premium broccoli is hand-selected for quality and crispness. Rich in vitamins C and K, fibre, and antioxidants, it's ideal for steaming, roasting, or adding to your favourite stir-fries. <br><br><br></p>",
+      "published_at": "2026-06-01T10:38:04+02:00",
+      "created_at": "2026-06-01T10:38:03+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51694667399453,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "29.99",
+          "grams": 330000,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213602689309,
+          "created_at": "2026-06-01T10:38:03+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890216513821,
+          "created_at": "2026-06-22T16:43:23+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:43:27+02:00",
+          "product_id": 10213602689309,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_21_cda1ee88-55a1-4778-bc5b-aa1554d3e3c8.png?v=1782139407",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213597315357,
+      "title": "Bell Pepper",
+      "handle": "bell-pepper",
+      "body_html": "<p>Crisp bell peppers. Perfect for salads, stir-fries, roasting, or fresh snacking. Rich in vitamin C and antioxidants, these premium peppers are hand-selected for quality and flavour. Available in red, yellow, and green varieties. </p>",
+      "published_at": "2026-06-01T10:34:00+02:00",
+      "created_at": "2026-06-01T10:33:58+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51694505165085,
+          "title": "Red",
+          "option1": "Red",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 64890212155677,
+            "product_id": 10213597315357,
+            "position": 1,
+            "created_at": "2026-06-22T16:41:05+02:00",
+            "updated_at": "2026-06-22T16:41:07+02:00",
+            "alt": null,
+            "width": 2384,
+            "height": 2555,
+            "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_20.png?v=1782139267",
+            "variant_ids": [
+              51694505165085
+            ]
+          },
+          "available": false,
+          "price": "18.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213597315357,
+          "created_at": "2026-06-01T10:33:58+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51694505197853,
+          "title": "Green",
+          "option1": "Green",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 64890212843805,
+            "product_id": 10213597315357,
+            "position": 2,
+            "created_at": "2026-06-22T16:42:38+02:00",
+            "updated_at": "2026-06-22T16:42:40+02:00",
+            "alt": null,
+            "width": 2384,
+            "height": 2554,
+            "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/w_29_4af0fe96-8ebe-44b2-a73f-3baf5f574b81.png?v=1782139360",
+            "variant_ids": [
+              51694505197853
+            ]
+          },
+          "available": false,
+          "price": "15.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 10213597315357,
+          "created_at": "2026-06-01T10:33:58+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51694505230621,
+          "title": "Yellow",
+          "option1": "Yellow",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 64890212286749,
+            "product_id": 10213597315357,
+            "position": 3,
+            "created_at": "2026-06-22T16:41:26+02:00",
+            "updated_at": "2026-06-22T16:41:29+02:00",
+            "alt": null,
+            "width": 2384,
+            "height": 2555,
+            "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_19.png?v=1782139289",
+            "variant_ids": [
+              51694505230621
+            ]
+          },
+          "available": false,
+          "price": "18.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 10213597315357,
+          "created_at": "2026-06-01T10:33:58+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890212155677,
+          "created_at": "2026-06-22T16:41:05+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:41:07+02:00",
+          "product_id": 10213597315357,
+          "variant_ids": [
+            51694505165085
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_20.png?v=1782139267",
+          "width": 2384,
+          "height": 2555
+        },
+        {
+          "id": 64890212843805,
+          "created_at": "2026-06-22T16:42:38+02:00",
+          "position": 2,
+          "updated_at": "2026-06-22T16:42:40+02:00",
+          "product_id": 10213597315357,
+          "variant_ids": [
+            51694505197853
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/w_29_4af0fe96-8ebe-44b2-a73f-3baf5f574b81.png?v=1782139360",
+          "width": 2384,
+          "height": 2554
+        },
+        {
+          "id": 64890212286749,
+          "created_at": "2026-06-22T16:41:26+02:00",
+          "position": 3,
+          "updated_at": "2026-06-22T16:41:29+02:00",
+          "product_id": 10213597315357,
+          "variant_ids": [
+            51694505230621
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_19.png?v=1782139289",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Colour",
+          "position": 1,
+          "values": [
+            "Red",
+            "Green",
+            "Yellow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10213579194653,
+      "title": "Cucumber",
+      "handle": "cucumber",
+      "body_html": "<p>Fresh, crisp cucumbers. Grown locally to ensure quality and flavor. These hydrating vegetables are ideal for refreshing meals and healthy snacking. Available fresh at M &amp; M Premium Produce.</p>",
+      "published_at": "2026-06-01T10:21:34+02:00",
+      "created_at": "2026-06-01T10:21:33+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51693913047325,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "19.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10213579194653,
+          "created_at": "2026-06-01T10:21:33+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64890211926301,
+          "created_at": "2026-06-22T16:40:19+02:00",
+          "position": 1,
+          "updated_at": "2026-06-22T16:40:21+02:00",
+          "product_id": 10213579194653,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_18_454c5d32-50ac-4e51-827a-5913c479181a.png?v=1782139221",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177603502365,
+      "title": "Pears",
+      "handle": "pears-1-5-kg",
+      "body_html": "<p>1.5 Kg<br><br><br>Fresh, crisp pears packed with natural sweetness and juicy flavour. Our premium selection offers perfectly ripened fruit ideal for snacking, salads, or desserts. Rich in fibre and vitamins, these pears deliver wholesome nutrition in every bite. Choose quality — choose M &amp; M Premium Produce.</p>",
+      "published_at": "2026-04-27T14:41:10+02:00",
+      "created_at": "2026-04-27T14:41:09+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214795145501,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "39.99",
+          "grams": 1500,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177603502365,
+          "created_at": "2026-04-27T14:41:09+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549467095325,
+          "created_at": "2026-05-05T16:01:16+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T16:01:19+02:00",
+          "product_id": 10177603502365,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/p.png?v=1777989679",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177599668509,
+      "title": "Dragon Fruit",
+      "handle": "dragon-fruit",
+      "body_html": "<p>This tropical delicacy offers a mild, subtly sweet flavour and refreshing texture perfect for fresh eating, smoothie bowls, or desserts. Rich in vitamin C, fibre, and antioxidants. Select fruit that yields slightly to gentle pressure. Store in the refrigerator for up to two weeks.</p>",
+      "published_at": "2026-04-27T14:32:44+02:00",
+      "created_at": "2026-04-27T14:32:43+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214780399901,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "39.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177599668509,
+          "created_at": "2026-04-27T14:32:43+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549368168733,
+          "created_at": "2026-05-05T15:11:48+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:11:51+02:00",
+          "product_id": 10177599668509,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_12.png?v=1777986711",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177598587165,
+      "title": "Grapes 500g",
+      "handle": "grapes-500g",
+      "body_html": "<p>Fresh, juicy grapes bursting with natural sweetness. Perfect for snacking straight from the bunch or adding to your favourite dishes. Rich in antioxidants and vitamins, these premium grapes deliver crisp texture and vibrant flavour in every bite. </p>",
+      "published_at": "2026-04-27T14:29:46+02:00",
+      "created_at": "2026-04-27T14:29:45+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214772633885,
+          "title": "Black Grapes 500g",
+          "option1": "Black Grapes 500g",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 64549365154077,
+            "product_id": 10177598587165,
+            "position": 1,
+            "created_at": "2026-05-05T15:07:36+02:00",
+            "updated_at": "2026-05-05T15:07:38+02:00",
+            "alt": null,
+            "width": 2384,
+            "height": 2554,
+            "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_27.png?v=1777986458",
+            "variant_ids": [
+              51214772633885
+            ]
+          },
+          "available": false,
+          "price": "49.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177598587165,
+          "created_at": "2026-04-27T14:29:45+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51214772666653,
+          "title": "Red Grapes 500g",
+          "option1": "Red Grapes 500g",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 64549365907741,
+            "product_id": 10177598587165,
+            "position": 2,
+            "created_at": "2026-05-05T15:08:56+02:00",
+            "updated_at": "2026-05-05T15:08:58+02:00",
+            "alt": null,
+            "width": 2384,
+            "height": 2554,
+            "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_26.png?v=1777986538",
+            "variant_ids": [
+              51214772666653
+            ]
+          },
+          "available": false,
+          "price": "49.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 10177598587165,
+          "created_at": "2026-04-27T14:29:45+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51214772699421,
+          "title": "White Grapes 500g",
+          "option1": "White Grapes 500g",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": {
+            "id": 64549366268189,
+            "product_id": 10177598587165,
+            "position": 3,
+            "created_at": "2026-05-05T15:09:51+02:00",
+            "updated_at": "2026-05-05T15:09:53+02:00",
+            "alt": null,
+            "width": 2384,
+            "height": 2554,
+            "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_25_77bdfd82-255b-4aa7-b1bc-b4b9a437f825.png?v=1777986593",
+            "variant_ids": [
+              51214772699421
+            ]
+          },
+          "available": false,
+          "price": "49.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 10177598587165,
+          "created_at": "2026-04-27T14:29:45+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51214772732189,
+          "title": "Cotton candy Grapes 500g",
+          "option1": "Cotton candy Grapes 500g",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "64.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 4,
+          "product_id": 10177598587165,
+          "created_at": "2026-04-27T14:29:45+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549365154077,
+          "created_at": "2026-05-05T15:07:36+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:07:38+02:00",
+          "product_id": 10177598587165,
+          "variant_ids": [
+            51214772633885
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_27.png?v=1777986458",
+          "width": 2384,
+          "height": 2554
+        },
+        {
+          "id": 64549365907741,
+          "created_at": "2026-05-05T15:08:56+02:00",
+          "position": 2,
+          "updated_at": "2026-05-05T15:08:58+02:00",
+          "product_id": 10177598587165,
+          "variant_ids": [
+            51214772666653
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_26.png?v=1777986538",
+          "width": 2384,
+          "height": 2554
+        },
+        {
+          "id": 64549366268189,
+          "created_at": "2026-05-05T15:09:51+02:00",
+          "position": 3,
+          "updated_at": "2026-05-05T15:09:53+02:00",
+          "product_id": 10177598587165,
+          "variant_ids": [
+            51214772699421
+          ],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_25_77bdfd82-255b-4aa7-b1bc-b4b9a437f825.png?v=1777986593",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Grapes",
+          "position": 1,
+          "values": [
+            "Black Grapes 500g",
+            "Red Grapes 500g",
+            "White Grapes 500g",
+            "Cotton candy Grapes 500g"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177593442589,
+      "title": "Watermelon",
+      "handle": "watermelon",
+      "body_html": "<p>Refreshing and juicy watermelon, perfect for hot summer days. Packed with natural sweetness and hydration, this vibrant fruit is ideal for slicing fresh, blending into smoothies, or enjoying at your next gathering. Rich in vitamins and minerals, our watermelons are hand-selected for quality and ripeness. </p>",
+      "published_at": "2026-04-27T14:16:09+02:00",
+      "created_at": "2026-04-27T14:16:08+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214755758365,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "99.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177593442589,
+          "created_at": "2026-04-27T14:16:09+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549464867101,
+          "created_at": "2026-05-05T15:59:42+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:59:44+02:00",
+          "product_id": 10177593442589,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/w_29.png?v=1777989584",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177591738653,
+      "title": "Blueberries",
+      "handle": "blueberries",
+      "body_html": "<p>Fresh, blueberries bursting with natural sweetness. Perfect for breakfast bowls, baking, or enjoying straight from the punnet. Rich in antioxidants and packed with flavour, these premium berries are hand-selected for quality and ripeness. Enjoy them fresh or freeze for later use.</p>",
+      "published_at": "2026-04-27T14:14:44+02:00",
+      "created_at": "2026-04-27T14:14:43+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214747959581,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "99.99",
+          "grams": 375,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177591738653,
+          "created_at": "2026-04-27T14:14:43+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549363548445,
+          "created_at": "2026-05-05T15:06:18+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:06:21+02:00",
+          "product_id": 10177591738653,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_16.png?v=1777986381",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177588560157,
+      "title": "Gauvas",
+      "handle": "gauvas",
+      "body_html": "<p>Fresh, guavas bursting with tropical flavour. Rich in vitamin C and fibre, these nutrient-dense fruits are perfect for eating fresh, blending into smoothies, or making jam. Sourced locally to ensure peak ripeness and quality.</p>",
+      "published_at": "2026-04-27T14:12:25+02:00",
+      "created_at": "2026-04-27T14:12:23+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214732624157,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "99.99",
+          "grams": 2000,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177588560157,
+          "created_at": "2026-04-27T14:12:24+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549362729245,
+          "created_at": "2026-05-05T15:05:08+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:05:11+02:00",
+          "product_id": 10177588560157,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_22.png?v=1777986311",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177587249437,
+      "title": "Granadillas",
+      "handle": "granadillas-pack-of-6",
+      "body_html": "<p>Pack of 6 delicious granadillas bursting with sweet, tangy flavour. These exotic passion fruits feature a smooth. Perfect for eating fresh, adding to desserts, or blending into smoothies and juices. Rich in vitamin C and fibre, granadillas make a nutritious tropical treat. Pack of 6 fresh, premium quality fruits ready to enjoy.</p>",
+      "published_at": "2026-04-27T14:10:56+02:00",
+      "created_at": "2026-04-27T14:10:55+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214725021981,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "59.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177587249437,
+          "created_at": "2026-04-27T14:10:55+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549463458077,
+          "created_at": "2026-05-05T15:58:35+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:58:37+02:00",
+          "product_id": 10177587249437,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/g.png?v=1777989517",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177583776029,
+      "title": "Grapefruit",
+      "handle": "grapefruit-pack-of-6",
+      "body_html": "Enjoy a half-dozen of nature's finest citrus with our Grapefruit Pack of 6. Each fruit is carefully selected for sweetness and juiciness, delivering bright, refreshing flavour in every bite. Packed with vitamin C and fibre, grapefruits make an excellent addition to your daily nutrition. Perfect for breakfast, smoothies, or snacking throughout the week. Premium quality, farm-fresh goodness delivered to your door.",
+      "published_at": "2026-04-27T14:07:51+02:00",
+      "created_at": "2026-04-27T14:07:50+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214703788317,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "49.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177583776029,
+          "created_at": "2026-04-27T14:07:50+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549361418525,
+          "created_at": "2026-05-05T15:03:34+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:03:37+02:00",
+          "product_id": 10177583776029,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_24.png?v=1777986217",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177580990749,
+      "title": "Melon",
+      "handle": "cantaloupe",
+      "body_html": "<p>Our Hand-selected melon's with peak ripeness, each cantaloupe delivers juicy, refreshing flavor perfect for breakfast, desserts, or fresh fruit platters. Rich in vitamins A and C, naturally hydrating, and ideal for warm South African days. Choose quality, choose freshness.</p>",
+      "published_at": "2026-04-27T14:05:23+02:00",
+      "created_at": "2026-04-27T14:05:23+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214690844957,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "49.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177580990749,
+          "created_at": "2026-04-27T14:05:23+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549360402717,
+          "created_at": "2026-05-05T15:02:11+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:02:14+02:00",
+          "product_id": 10177580990749,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_21.png?v=1777986134",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177577877789,
+      "title": "Oranges",
+      "handle": "oranges",
+      "body_html": "Fresh, vibrant oranges bursting with natural sweetness and vitamin C. Hand-selected for quality and ripeness, these citrus fruits deliver bright, juicy flavor perfect for fresh juice, snacking, or adding to your favorite recipes. Rich in nutrients and full of zest, our premium oranges bring sunshine to your table.",
+      "published_at": "2026-04-27T14:02:25+02:00",
+      "created_at": "2026-04-27T14:02:23+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214672691485,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "29.99",
+          "grams": 2000,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177577877789,
+          "created_at": "2026-04-27T14:02:23+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549356863773,
+          "created_at": "2026-05-05T14:58:07+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T14:58:10+02:00",
+          "product_id": 10177577877789,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_18.png?v=1777985890",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177575944477,
+      "title": "Paw Paw",
+      "handle": "paw-paw",
+      "body_html": "Ripe and creamy paw paw, bursting with natural sweetness. Rich in vitamin C and papain enzyme, this tropical fruit supports digestion and boosts immunity. Perfect for fresh eating, smoothies, or desserts. Select fruit that yields slightly to gentle pressure for optimal ripeness and flavour.",
+      "published_at": "2026-04-27T14:00:17+02:00",
+      "created_at": "2026-04-27T14:00:16+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214661779741,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "34.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177575944477,
+          "created_at": "2026-04-27T14:00:16+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549358305565,
+          "created_at": "2026-05-05T15:00:12+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:00:14+02:00",
+          "product_id": 10177575944477,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_15.png?v=1777986014",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177571979549,
+      "title": "Tangerines",
+      "handle": "tangerines",
+      "body_html": "<p>2kg <br><br>Vibrant tangerines with a naturally sweet, refreshing taste. Easy to peel and seedless, these citrus gems are ideal for snacking straight from the fruit bowl or squeezing into fresh juice. Loaded with vitamin C and antioxidants, they support your immune system while delivering authentic citrus flavour. Sourced from premium growers and picked at peak ripeness for maximum taste and nutrition.</p>",
+      "published_at": "2026-04-27T13:57:15+02:00",
+      "created_at": "2026-04-27T13:57:14+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214641463581,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "29.99",
+          "grams": 2000,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177571979549,
+          "created_at": "2026-04-27T13:57:14+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549461655837,
+          "created_at": "2026-05-05T15:57:10+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:57:12+02:00",
+          "product_id": 10177571979549,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/t.png?v=1777989432",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177567588637,
+      "title": "Lemons",
+      "handle": "lemons",
+      "body_html": "Fresh, vibrant lemons bursting with natural citrus flavour. Perfect for cooking, baking, beverages, or adding a zesty kick to your favourite dishes. Rich in vitamin C and versatile in the kitchen, these quality lemons bring brightness to every meal. Hand-selected for peak ripeness and flavour.",
+      "published_at": "2026-04-27T13:53:02+02:00",
+      "created_at": "2026-04-27T13:53:01+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214615544093,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "29.99",
+          "grams": 2000,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177567588637,
+          "created_at": "2026-04-27T13:53:01+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549359157533,
+          "created_at": "2026-05-05T15:01:16+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T15:01:18+02:00",
+          "product_id": 10177567588637,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_23.png?v=1777986078",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10177543471389,
+      "title": "Queen Pineapple",
+      "handle": "pineapple",
+      "body_html": "<p>Golden, sweet pineapple bursting with tropical flavour. Hand-selected for peak ripeness and quality. Perfect for fresh eating, smoothies, or grilling. Rich in vitamin C and natural enzymes. A vibrant addition to any fruit bowl or kitchen.</p>",
+      "published_at": "2026-04-27T13:31:20+02:00",
+      "created_at": "2026-04-27T13:31:19+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214463009053,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": false,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "23.99",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10177543471389,
+          "created_at": "2026-04-27T13:31:19+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64549352472861,
+          "created_at": "2026-05-05T14:55:46+02:00",
+          "position": 1,
+          "updated_at": "2026-05-05T14:55:50+02:00",
+          "product_id": 10177543471389,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard1_20.png?v=1777985750",
+          "width": 2384,
+          "height": 2555
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10143624593693,
+      "title": "Strawberries",
+      "handle": "strawberries",
+      "body_html": "<p>Bright red, glossy berries with a delicate sweetness and refreshing taste. Packed with vitamin C and natural goodness, perfect for breakfast, baking, or enjoying fresh. Keep refrigerated and consume within a few days for best results.</p>",
+      "published_at": "2026-03-26T22:43:58+02:00",
+      "created_at": "2026-03-26T22:43:57+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51090811650333,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "49.99",
+          "grams": 250,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10143624593693,
+          "created_at": "2026-03-26T22:43:57+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64329598468381,
+          "created_at": "2026-03-26T22:54:55+02:00",
+          "position": 1,
+          "updated_at": "2026-03-26T22:54:58+02:00",
+          "product_id": 10143624593693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_4.png?v=1774558498",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10143623938333,
+      "title": "Kiwi's",
+      "handle": "kiwis",
+      "body_html": "Vibrant green kiwis bursting with natural sweetness and tangy flavour. Rich in vitamin C and antioxidants, these nutrient-dense fruits offer a refreshing taste perfect for breakfast, smoothies, or desserts. Hand-selected for premium quality and optimal ripeness, each kiwi delivers a smooth, creamy texture with tiny edible seeds. A delicious and wholesome addition to any fruit bowl.",
+      "published_at": "2026-03-26T22:40:20+02:00",
+      "created_at": "2026-03-26T22:40:19+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51090807095581,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "20.00",
+          "grams": 500,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10143623938333,
+          "created_at": "2026-03-26T22:40:20+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64329598632221,
+          "created_at": "2026-03-26T22:54:56+02:00",
+          "position": 1,
+          "updated_at": "2026-03-26T22:54:59+02:00",
+          "product_id": 10143623938333,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_2.png?v=1774558499",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10143619547421,
+      "title": "Bananas",
+      "handle": "banana",
+      "body_html": "Golden-yellow bananas bursting with natural sweetness and creamy texture. Hand-selected for peak ripeness, our premium bananas are packed with potassium and essential nutrients. Perfect for fresh eating, smoothies, or baking. Store at room temperature and enjoy within days for optimal flavour and freshness.",
+      "published_at": "2026-03-26T22:31:10+02:00",
+      "created_at": "2026-03-26T22:31:09+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51090791399709,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "49.99",
+          "grams": 1200,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10143619547421,
+          "created_at": "2026-03-26T22:31:09+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64329598501149,
+          "created_at": "2026-03-26T22:54:56+02:00",
+          "position": 1,
+          "updated_at": "2026-03-26T22:54:58+02:00",
+          "product_id": 10143619547421,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_3.png?v=1774558498",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10143618924829,
+      "title": "Appels",
+      "handle": "appels",
+      "body_html": "<p>Crisp, juicy apples bursting with natural sweetness. Hand-selected for premium quality and exceptional flavour, each apple delivers a satisfying crunch and refreshing taste. Perfect for fresh eating, baking, or juicing. Rich in fibre and nutrients.</p>",
+      "published_at": "2026-03-26T22:27:24+02:00",
+      "created_at": "2026-03-26T22:27:22+02:00",
+      "updated_at": "2026-08-19T06:44:58+02:00",
+      "vendor": "M & M Premium Produce",
+      "product_type": "",
+      "tags": [],
+      "variants": [
+        {
+          "id": 51214788133149,
+          "title": "Granny Smith",
+          "option1": "Granny Smith",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "39.99",
+          "grams": 1500,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10143618924829,
+          "created_at": "2026-04-27T14:36:16+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51214788165917,
+          "title": "Fugi",
+          "option1": "Fugi",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "39.99",
+          "grams": 1500,
+          "compare_at_price": null,
+          "position": 2,
+          "product_id": 10143618924829,
+          "created_at": "2026-04-27T14:36:16+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        },
+        {
+          "id": 51214788198685,
+          "title": "Crisp Pink",
+          "option1": "Crisp Pink",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "39.99",
+          "grams": 1500,
+          "compare_at_price": null,
+          "position": 3,
+          "product_id": 10143618924829,
+          "created_at": "2026-04-27T14:36:16+02:00",
+          "updated_at": "2026-08-19T06:44:58+02:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 64329598599453,
+          "created_at": "2026-03-26T22:54:56+02:00",
+          "position": 1,
+          "updated_at": "2026-03-26T22:55:02+02:00",
+          "product_id": 10143618924829,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0986/2096/5149/files/Artboard_1_5.png?v=1774558502",
+          "width": 2384,
+          "height": 2554
+        }
+      ],
+      "options": [
+        {
+          "name": "Apples 1.5Kg",
+          "position": 1,
+          "values": [
+            "Granny Smith",
+            "Fugi",
+            "Crisp Pink"
+          ]
+        }
+      ]
+    }
+  ]
+}

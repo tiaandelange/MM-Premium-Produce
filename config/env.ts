@@ -21,7 +21,9 @@ export function getSiteUrl(): string {
  * Local, preview and unverified deployments stay noindex.
  */
 export function isIndexingEnabled(): boolean {
-  return process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true";
+  if (process.env.NEXT_PUBLIC_ALLOW_INDEXING !== "true") return false;
+  if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== "production") return false;
+  return true;
 }
 
 export function isProductionDeployment(): boolean {

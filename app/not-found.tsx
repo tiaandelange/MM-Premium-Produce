@@ -1,31 +1,26 @@
 import { SiteShell } from "@/components/layout/site-shell";
-import { paths } from "@/lib/routes";
-import { buildMetadata } from "@/lib/seo/metadata";
+import { getMessages } from "@/lib/i18n/messages";
+import { createPaths } from "@/lib/i18n/paths";
+import { getRequestLocale } from "@/lib/i18n/request";
+import { buildNotFoundMetadata } from "@/lib/seo/indexation";
 import Link from "next/link";
 
-export const metadata = buildMetadata({
-  title: "Page not found",
-  description: "This page is not in the M & M Premium Produce catalogue.",
-  path: "/404",
-  indexable: false,
-  absoluteTitle: true,
-});
+export const generateMetadata = buildNotFoundMetadata;
 
-export default function NotFound() {
+export default async function NotFound() {
+  const locale = await getRequestLocale();
+  const messages = getMessages(locale);
+  const paths = createPaths(locale);
   return (
-    <SiteShell>
+    <SiteShell locale={locale}>
       <div className="site-container py-20">
-        <h1 className="text-page-title">Page not found</h1>
-        <p className="mt-4 max-w-xl text-lg text-muted">
-          That address is not a product, category or page in this catalogue. Use the
-          links below to continue shopping.
-        </p>
+        <h1 className="text-page-title">{messages.pageNotFound}</h1>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href={paths.home} className="btn-primary">
-            Back to the homepage
+            {messages.backHome}
           </Link>
           <Link href={paths.shop} className="btn-secondary">
-            Open the fresh produce shop
+            {messages.openShop}
           </Link>
         </div>
       </div>
