@@ -39,7 +39,7 @@ export type HydratedCartLine = {
   maxQuantity: number;
   unitPrice: Money | null;
   lineTotal: Money | null;
-  priceUnit: "ea" | "kg" | "g";
+  priceUnit: "ea" | "kg" | "100g";
   availability: AvailabilityStatus;
   image: CatalogImage;
   errorKey?: CommerceErrorKey;

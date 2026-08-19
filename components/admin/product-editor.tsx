@@ -2,7 +2,7 @@ import { saveProductAction } from "@/app/admin/actions";
 import { Checkbox, Field, TextInput } from "@/components/admin/fields";
 import { LocaleTabs } from "@/components/admin/locale-tabs";
 import type { Category, Collection, Product } from "@/types/catalog";
-import { parsePriceUnit, resolvePriceUnit } from "@/lib/catalog/price-unit";
+import { resolvePriceUnit } from "@/lib/catalog/price-unit";
 
 export function ProductEditor({
   product,
@@ -107,17 +107,17 @@ export function ProductEditor({
         <Field
           label="Price unit"
           name="unit"
-          hint="How the listed price is sold. Does not change the amount. ea = head, punnet or packed bag; /kg or /g only when the price itself is per kilogram or gram."
+          hint="How this produce is sold. Does not change the listed amount. ea = head or piece; /kg = weighed; /100g = salad packs, berries and cherry tomatoes."
         >
           <select
             id="unit"
             name="unit"
-            defaultValue={parsePriceUnit(product?.unit) ?? resolvePriceUnit({ unit: product?.unit, packSize: product?.packSize, productId: product?.id })}
+            defaultValue={resolvePriceUnit({ unit: product?.unit, packSize: product?.packSize, productId: product?.id })}
             className="w-full rounded-control border border-line bg-surface px-3 py-2 text-sm"
           >
             <option value="ea">ea — each</option>
             <option value="kg">/kg — per kilogram</option>
-            <option value="g">/g — per gram</option>
+            <option value="100g">/100g — per 100 grams</option>
           </select>
         </Field>
         <Field label="Compare-at price" name="compareAtPrice">

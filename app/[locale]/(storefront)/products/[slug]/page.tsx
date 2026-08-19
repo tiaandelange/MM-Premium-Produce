@@ -13,7 +13,7 @@ import { createPaths } from "@/lib/i18n/paths";
 import { getRequestPathname } from "@/lib/i18n/request";
 import { buildMetadata, fallbackSeoDescription } from "@/lib/seo/metadata";
 import { followStoredRedirect } from "@/lib/seo/redirects";
-import { resolvePriceUnit } from "@/lib/catalog/price-unit";
+import { packQuantityLabel, priceUnitLabel, resolvePriceUnit } from "@/lib/catalog/price-unit";
 import { redirectIfTranslatedSlugExists } from "@/lib/i18n/entity-redirect";
 import { buildBreadcrumbStructuredData, buildProductStructuredData } from "@/lib/seo/structured-data";
 import { getCatalog } from "@/services/catalog";
@@ -80,6 +80,8 @@ export default async function ProductPage({
     ...(category ? [{ name: category.name, path: paths.category(category.slug) }] : []),
     { name: product.name, path: paths.product(product.slug) },
   ];
+  const sellingUnit = resolvePriceUnit({ unit: product.unit, packSize: product.packSize, productId: product.id });
+  const packLabel = packQuantityLabel(product);
 
   return (
     <div className="site-container space-y-12 py-12">
@@ -97,16 +99,13 @@ export default async function ProductPage({
             price={product.price}
             compareAtPrice={product.compareAtPrice}
             locale={locale}
-            unit={resolvePriceUnit({ unit: product.unit, packSize: product.packSize, productId: product.id })}
+            unit={sellingUnit}
           />
           <AvailabilityDisplay status={product.availability} locale={locale} />
-          {product.packSize || product.unit ? (
-            <p className="text-sm text-muted">
-              {product.packSize ? `${messages.packSize}: ${product.packSize}` : null}
-              {product.packSize && product.unit ? " · " : null}
-              {product.unit ? `${messages.unit}: ${product.unit}` : null}
-            </p>
-          ) : null}
+          <p className="text-sm text-muted">
+            {packLabel ? `${messages.packSize}: ${packLabel} · ` : null}
+            {messages.unit}: {priceUnitLabel(sellingUnit, locale)}
+          </p>
           <ProductOptions product={product} />
           {category ? (
             <p>

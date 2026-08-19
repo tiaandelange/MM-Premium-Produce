@@ -1,56 +1,65 @@
 import type { AppLocale } from "@/lib/i18n/config";
 import { getMessages } from "@/lib/i18n/messages";
 
-export const PRICE_UNITS = ["ea", "kg", "g"] as const;
+export const PRICE_UNITS = ["ea", "kg", "100g"] as const;
 export type PriceUnit = (typeof PRICE_UNITS)[number];
 
 /**
- * How the listed catalogue price is sold.
- * National fresh-produce markets mostly quote R/kg (and 10 kg pockets for
- * potatoes/onions). Retail greengrocers still sell heads, punnets and packed
- * bags as each, so the suffix must match the listed amount — never convert it.
+ * Selling unit for the listed SKU price (amounts are not converted).
+ *
+ * Sources:
+ * - This catalogue’s pack copy (heads, punnets, 100g–400g bags, kg bags)
+ * - SA greengrocer practice: loose roots/fruit per kg; salad punnets and
+ *   berries per 100g; lettuce, peppers, avocados and similar per piece
+ * - Shopper examples: carrots /kg, baby spinach /100g, cherry tomatoes /100g,
+ *   lettuce ea
  */
 const PRODUCT_PRICE_UNITS: Record<string, PriceUnit> = {
+  // Loose / bagged by weight — national markets quote these in R/kg
   prod_tomatoes: "kg",
+  prod_carrots: "kg",
+  prod_red_onion: "kg",
+  prod_brown_onion: "kg",
+  prod_potatoes: "kg",
+  prod_baby_potatoes: "kg",
+  prod_sweet_potatoes: "kg",
+  prod_beetroot: "kg",
+  prod_butternut: "kg",
+  prod_green_beans: "kg",
+  prod_apples: "kg",
+  prod_bananas: "kg",
+  prod_oranges: "kg",
+  prod_lemons: "kg",
+  prod_pears: "kg",
+  prod_tangerines: "kg",
+  prod_guavas: "kg",
+
+  // Small salad packs, berries and cherry tomatoes — retailed per 100g
+  prod_baby_spinach: "100g",
+  prod_spinach: "100g",
+  prod_cherry_tomatoes: "100g",
+  prod_blueberries: "100g",
+  prod_strawberries: "100g",
+  prod_grapes: "100g",
+
+  // Sold as a head, fruit, cob, pepper or counted pack
   prod_avocados: "ea",
-  prod_cherry_tomatoes: "ea",
   prod_iceberg_lettuce: "ea",
   prod_cos_lettuce: "ea",
-  prod_baby_spinach: "ea",
-  prod_spinach: "ea",
   prod_cabbage: "ea",
-  prod_beetroot: "ea",
-  prod_butternut: "ea",
-  prod_sweetcorn: "ea",
   prod_cauliflower: "ea",
-  prod_red_onion: "kg",
-  prod_brown_onion: "ea",
-  prod_sweet_potatoes: "ea",
-  prod_green_beans: "ea",
-  prod_baby_potatoes: "ea",
-  prod_potatoes: "ea",
-  prod_carrots: "ea",
   prod_broccoli: "ea",
-  prod_bell_pepper: "ea",
   prod_cucumber: "ea",
-  prod_pears: "ea",
+  prod_bell_pepper: "ea",
+  prod_sweetcorn: "ea",
   prod_dragon_fruit: "ea",
-  prod_grapes: "ea",
   prod_watermelon: "ea",
-  prod_blueberries: "ea",
-  prod_guavas: "ea",
+  prod_melon: "ea",
+  prod_paw_paw: "ea",
+  prod_queen_pineapple: "ea",
   prod_granadillas: "ea",
   prod_grapefruit: "ea",
-  prod_melon: "ea",
-  prod_oranges: "kg",
-  prod_paw_paw: "ea",
-  prod_tangerines: "ea",
-  prod_lemons: "kg",
-  prod_queen_pineapple: "ea",
-  prod_strawberries: "ea",
   prod_kiwis: "ea",
-  prod_bananas: "kg",
-  prod_apples: "kg",
 };
 
 function normalizePack(value?: string | null): string {
@@ -62,17 +71,29 @@ export function parsePriceUnit(value?: string | null): PriceUnit | null {
   if (!raw) return null;
   if (raw === "ea" || raw === "each" || raw === "elk" || raw === "stuk") return "ea";
   if (raw === "kg" || raw === "per kg" || raw === "kilogram") return "kg";
-  if (raw === "g" || raw === "per g" || raw === "gram" || raw === "grams") return "g";
+  if (
+    raw === "100g" ||
+    raw === "100 g" ||
+    raw === "per 100g" ||
+    raw === "per 100 g" ||
+    raw === "g" ||
+    raw === "per g" ||
+    raw === "gram" ||
+    raw === "grams"
+  ) {
+    return "100g";
+  }
   return null;
 }
 
 function unitFromPackSize(packSize?: string | null): PriceUnit | null {
   const pack = normalizePack(packSize);
   if (!pack) return null;
-  if (/pack of|punnet|bunch|head/.test(pack)) return "ea";
-  if (/^(1|1\.0)\s*kg$/.test(pack) || pack === "1000 g") return "kg";
-  if (/^\d+(\.\d+)?\s*(kg|g)$/.test(pack)) return "ea";
-  return "ea";
+  if (/pack of|bunch|head/.test(pack)) return "ea";
+  if (/^100\s*g$/.test(pack)) return "100g";
+  if (/punnet/.test(pack)) return "100g";
+  if (/\d+(\.\d+)?\s*kg$/.test(pack) || pack === "1000 g") return "kg";
+  return null;
 }
 
 export function resolvePriceUnit(input: {
@@ -80,12 +101,23 @@ export function resolvePriceUnit(input: {
   packSize?: string | null;
   productId?: string;
 }): PriceUnit {
-  return parsePriceUnit(input.unit) ?? unitFromPackSize(input.packSize) ?? PRODUCT_PRICE_UNITS[input.productId ?? ""] ?? "ea";
+  const fromCatalogue = input.productId ? PRODUCT_PRICE_UNITS[input.productId] : undefined;
+  if (fromCatalogue) return fromCatalogue;
+  return parsePriceUnit(input.unit) ?? unitFromPackSize(input.packSize) ?? "ea";
 }
 
 export function priceUnitLabel(unit: PriceUnit, locale: AppLocale): string {
   const messages = getMessages(locale);
   if (unit === "kg") return messages.priceUnitKg;
-  if (unit === "g") return messages.priceUnitG;
+  if (unit === "100g") return messages.priceUnit100g;
   return messages.priceUnitEach;
+}
+
+export function packQuantityLabel(product: { packSize?: string | null; variants?: Array<{ packSize?: string | null }> | null }): string | null {
+  const pack = product.packSize?.trim();
+  if (pack) return pack;
+  const packs = [...new Set((product.variants ?? []).map((variant) => variant.packSize?.trim()).filter(Boolean))] as string[];
+  if (packs.length === 1) return packs[0];
+  if (packs.length > 1) return packs.join(" · ");
+  return null;
 }

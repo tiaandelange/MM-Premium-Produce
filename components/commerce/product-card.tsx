@@ -3,7 +3,7 @@ import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { PriceDisplay } from "@/components/commerce/price-display";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
-import { resolvePriceUnit } from "@/lib/catalog/price-unit";
+import { packQuantityLabel, resolvePriceUnit } from "@/lib/catalog/price-unit";
 import type { Product } from "@/types/catalog";
 
 export function ProductCard({
@@ -17,6 +17,7 @@ export function ProductCard({
   const paths = createPaths(product.locale);
   const messages = getMessages(product.locale);
   const soldOut = product.availability === "out_of_stock";
+  const packLabel = packQuantityLabel(product);
 
   return (
     <article className="product-card">
@@ -27,6 +28,7 @@ export function ProductCard({
         </div>
         <div className="product-card-body">
           <Heading className="font-heading text-card-title">{product.name}</Heading>
+          {packLabel ? <p className="text-xs text-muted">{packLabel}</p> : null}
           <PriceDisplay
             price={product.price}
             compareAtPrice={product.compareAtPrice}

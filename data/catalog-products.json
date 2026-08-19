@@ -41,7 +41,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_avocados",
@@ -88,7 +89,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_cherry_tomatoes",
@@ -138,7 +140,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "100g"
   },
   {
     "id": "prod_iceberg_lettuce",
@@ -187,7 +190,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_cos_lettuce",
@@ -234,7 +238,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_baby_spinach",
@@ -284,7 +289,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "100g"
   },
   {
     "id": "prod_spinach",
@@ -332,7 +338,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "100g"
   },
   {
     "id": "prod_cabbage",
@@ -379,7 +386,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_beetroot",
@@ -427,7 +435,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_butternut",
@@ -475,7 +484,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_sweetcorn",
@@ -522,7 +532,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_cauliflower",
@@ -570,7 +581,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_red_onion",
@@ -618,7 +630,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_brown_onion",
@@ -666,7 +679,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_sweet_potatoes",
@@ -714,7 +728,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_green_beans",
@@ -762,7 +777,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_baby_potatoes",
@@ -810,7 +826,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_potatoes",
@@ -881,7 +898,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_carrots",
@@ -954,7 +972,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_broccoli",
@@ -1002,7 +1021,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_bell_pepper",
@@ -1111,7 +1131,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_cucumber",
@@ -1160,7 +1181,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Vegetables",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_pears",
@@ -1208,7 +1230,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_dragon_fruit",
@@ -1255,7 +1278,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_grapes",
@@ -1374,7 +1398,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "100g"
   },
   {
     "id": "prod_watermelon",
@@ -1421,7 +1446,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_blueberries",
@@ -1468,7 +1494,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "100g"
   },
   {
     "id": "prod_guavas",
@@ -1515,7 +1542,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_granadillas",
@@ -1563,7 +1591,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_grapefruit",
@@ -1611,7 +1640,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_melon",
@@ -1658,7 +1688,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_oranges",
@@ -1705,7 +1736,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_paw_paw",
@@ -1752,7 +1784,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_tangerines",
@@ -1800,7 +1833,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_lemons",
@@ -1847,7 +1881,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_queen_pineapple",
@@ -1894,7 +1929,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_strawberries",
@@ -1941,7 +1977,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "100g"
   },
   {
     "id": "prod_kiwis",
@@ -1988,7 +2025,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "ea"
   },
   {
     "id": "prod_bananas",
@@ -2035,7 +2073,8 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   },
   {
     "id": "prod_apples",
@@ -2116,6 +2155,7 @@
     "updatedAt": "2026-08-18T20:52:47+02:00",
     "productType": "Fruit",
     "gtin": null,
-    "mpn": null
+    "mpn": null,
+    "unit": "kg"
   }
 ]
