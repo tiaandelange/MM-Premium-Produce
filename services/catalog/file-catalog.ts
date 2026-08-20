@@ -32,10 +32,18 @@ function localizeProduct(product: Product, locale: AppLocale): Product {
       }
     : product.guidance;
 
+  const enSlug = product.slug;
+  const afSlug = afProductCopy[product.id]?.slug ?? product.slug;
+  const alternates = [
+    { locale: "en" as const, slug: enSlug, status: "published" as const },
+    { locale: "af" as const, slug: afSlug, status: "published" as const },
+  ];
+
   return {
     ...product,
     locale,
     translationStatus: "published",
+    alternates,
     name: af?.name ?? product.name,
     slug: af?.slug ?? product.slug,
     shortDescription: af?.shortDescription ?? product.shortDescription,

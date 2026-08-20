@@ -6,13 +6,7 @@ export type PriceUnit = (typeof PRICE_UNITS)[number];
 
 /**
  * Selling unit for the listed SKU price (amounts are not converted).
- *
- * Sources:
- * - This catalogue’s pack copy (heads, punnets, 100g–400g bags, kg bags)
- * - SA greengrocer practice: loose roots/fruit per kg; salad punnets and
- *   berries per 100g; lettuce, peppers, avocados and similar per piece
- * - Shopper examples: carrots /kg, baby spinach /100g, cherry tomatoes /100g,
- *   lettuce ea
+ * Pack-sized SKUs must use "ea" — never label a pack selling price as /100g.
  */
 const PRODUCT_PRICE_UNITS: Record<string, PriceUnit> = {
   // Loose / bagged by weight — national markets quote these in R/kg
@@ -34,13 +28,13 @@ const PRODUCT_PRICE_UNITS: Record<string, PriceUnit> = {
   prod_tangerines: "kg",
   prod_guavas: "kg",
 
-  // Small salad packs, berries and cherry tomatoes — retailed per 100g
-  prod_baby_spinach: "100g",
-  prod_spinach: "100g",
-  prod_cherry_tomatoes: "100g",
-  prod_blueberries: "100g",
-  prod_strawberries: "100g",
-  prod_grapes: "100g",
+  // Fixed packs — listed price is for the pack (show pack size separately)
+  prod_baby_spinach: "ea",
+  prod_spinach: "ea",
+  prod_cherry_tomatoes: "ea",
+  prod_blueberries: "ea",
+  prod_strawberries: "ea",
+  prod_grapes: "ea",
 
   // Sold as a head, fruit, cob, pepper or counted pack
   prod_avocados: "ea",
@@ -89,10 +83,12 @@ export function parsePriceUnit(value?: string | null): PriceUnit | null {
 function unitFromPackSize(packSize?: string | null): PriceUnit | null {
   const pack = normalizePack(packSize);
   if (!pack) return null;
-  if (/pack of|bunch|head/.test(pack)) return "ea";
+  // Exact 1 kg packs are sold as a kg rate (price matches the bag).
+  if (/^1(\.0+)?\s*kg$/.test(pack) || pack === "1000 g") return "kg";
+  // Exact 100 g packs may use a /100g rate.
   if (/^100\s*g$/.test(pack)) return "100g";
-  if (/punnet/.test(pack)) return "100g";
-  if (/\d+(\.\d+)?\s*kg$/.test(pack) || pack === "1000 g") return "kg";
+  // Any other stated pack (200 g, 400 g, 2 kg, head, punnet...) is a pack selling price.
+  if (/\d/.test(pack) || /pack of|bunch|head|punnet/.test(pack)) return "ea";
   return null;
 }
 
@@ -101,9 +97,12 @@ export function resolvePriceUnit(input: {
   packSize?: string | null;
   productId?: string;
 }): PriceUnit {
+  // Pack size wins over a stale unit field (e.g. "100g" on a 400 g pack).
+  const fromPack = unitFromPackSize(input.packSize);
+  if (fromPack) return fromPack;
   const fromCatalogue = input.productId ? PRODUCT_PRICE_UNITS[input.productId] : undefined;
   if (fromCatalogue) return fromCatalogue;
-  return parsePriceUnit(input.unit) ?? unitFromPackSize(input.packSize) ?? "ea";
+  return parsePriceUnit(input.unit) ?? "ea";
 }
 
 export function priceUnitLabel(unit: PriceUnit, locale: AppLocale): string {

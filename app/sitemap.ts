@@ -101,7 +101,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   for (const product of enProducts.filter((item) => item.indexable && item.status === "active")) {
-    const afSlug = product.alternates.find((item) => item.locale === "af" && item.status === "published")?.slug;
+    const afSlug = (product.alternates ?? []).find((item) => item.locale === "af" && item.status === "published")?.slug;
     const afProduct = afProducts.find((item) => item.id === product.id);
     const afPath = afSlug && afProduct?.indexable ? af.product(afSlug) : undefined;
     entries.push(...sitemapUrls(en.product(product.slug), afPath, product.updatedAt));

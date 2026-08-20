@@ -41,8 +41,9 @@ export async function generateMetadata({
     await redirectIfTranslatedSlugExists(locale, "product", slug);
     notFound();
   }
-  const enSlug = product.alternates.find((item) => item.locale === "en" && item.status === "published")?.slug;
-  const afSlug = product.alternates.find((item) => item.locale === "af" && item.status === "published")?.slug;
+  const alternates = product.alternates ?? [];
+  const enSlug = alternates.find((item) => item.locale === "en" && item.status === "published")?.slug;
+  const afSlug = alternates.find((item) => item.locale === "af" && item.status === "published")?.slug;
   const paths = createPaths(locale);
   return buildMetadata({
     title: product.seoTitle ?? product.name,

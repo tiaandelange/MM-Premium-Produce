@@ -141,7 +141,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "100g",
+    "unit": "ea",
     "guidance": {
       "storage": "Keep at cool room temperature if underripe; refrigerate once fully ripe and use soon.",
       "selection": "Bright, intact fruit; avoid leaking punnets.",
@@ -305,7 +305,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "100g",
+    "unit": "ea",
     "guidance": {
       "storage": "Keep refrigerated and use within a few days of opening.",
       "selection": "Leaves should look fresh, dry and not slimy or yellowed.",
@@ -359,7 +359,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "100g",
+    "unit": "ea",
     "guidance": {
       "storage": "Refrigerate and use within a few days. Wash just before cooking.",
       "selection": "Choose bunches with crisp stems and deep green leaves.",
@@ -461,7 +461,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_butternut",
@@ -510,7 +510,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_sweetcorn",
@@ -710,7 +710,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "kg",
+    "unit": "ea",
     "guidance": {
       "storage": "Cool, dry and dark. Do not store in plastic while sweating.",
       "selection": "Firm bulbs with dry skins and no soft necks.",
@@ -764,7 +764,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_green_beans",
@@ -813,7 +813,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_baby_potatoes",
@@ -862,7 +862,7 @@
     "productType": "Vegetables",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_potatoes",
@@ -1281,7 +1281,7 @@
     "productType": "Fruit",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_dragon_fruit",
@@ -1449,7 +1449,7 @@
     "productType": "Fruit",
     "gtin": null,
     "mpn": null,
-    "unit": "100g"
+    "unit": "ea"
   },
   {
     "id": "prod_watermelon",
@@ -1545,7 +1545,7 @@
     "productType": "Fruit",
     "gtin": null,
     "mpn": null,
-    "unit": "100g"
+    "unit": "ea"
   },
   {
     "id": "prod_guavas",
@@ -1884,7 +1884,7 @@
     "productType": "Fruit",
     "gtin": null,
     "mpn": null,
-    "unit": "kg"
+    "unit": "ea"
   },
   {
     "id": "prod_lemons",
@@ -2028,7 +2028,7 @@
     "productType": "Fruit",
     "gtin": null,
     "mpn": null,
-    "unit": "100g"
+    "unit": "ea"
   },
   {
     "id": "prod_kiwis",

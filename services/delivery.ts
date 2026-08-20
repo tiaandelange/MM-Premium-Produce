@@ -33,13 +33,21 @@ function normalizePostal(value?: string | null): string {
 }
 
 export async function listPublishedDeliveryRules(): Promise<DeliveryRule[]> {
-  const db = getDb();
-  const rows = await db
-    .select()
-    .from(deliveryRules)
-    .where(eq(deliveryRules.published, true))
-    .orderBy(asc(deliveryRules.sortOrder), asc(deliveryRules.name));
-  return rows.map(mapRule);
+  // Delivery rules live in Postgres. When DATABASE_URL is missing (misconfigured
+  // host), return an empty list so the page can still render honest "not published yet" copy.
+  if (!process.env.DATABASE_URL?.trim()) return [];
+  try {
+    const db = getDb();
+    const rows = await db
+      .select()
+      .from(deliveryRules)
+      .where(eq(deliveryRules.published, true))
+      .orderBy(asc(deliveryRules.sortOrder), asc(deliveryRules.name));
+    return rows.map(mapRule);
+  } catch (error) {
+    console.error("Failed to load published delivery rules.", error);
+    return [];
+  }
 }
 
 export async function listDeliveryRules(): Promise<DeliveryRule[]> {
