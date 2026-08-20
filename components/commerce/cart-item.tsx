@@ -2,10 +2,9 @@ import Link from "next/link";
 import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { PriceDisplay } from "@/components/commerce/price-display";
 import { QuantitySelector } from "@/components/commerce/quantity-selector";
+import { RemoveFromCartForm } from "@/components/commerce/remove-from-cart-form";
 import { createPaths } from "@/lib/i18n/paths";
 import { commerceErrorText } from "@/lib/commerce/errors";
-import { analyticsEvents } from "@/lib/analytics/events";
-import { trackEvent } from "@/lib/analytics/client";
 import { analyticsItemFromCartLine } from "@/lib/analytics/items";
 import { getMessages } from "@/lib/i18n/messages";
 import { formatMoney } from "@/lib/utils/format";
@@ -48,25 +47,16 @@ export function CartItem({ item, locale }: { item: HydratedCartLine; locale: App
               {messages.update}
             </button>
           </form>
-                <form
-                  action="/api/cart"
-                  method="post"
-                  onSubmit={() => {
-                    trackEvent(analyticsEvents.removeFromCart, {
-                      currency: item.unitPrice?.currency ?? "ZAR",
-                      value: item.lineTotal?.amount,
-                      items: [analyticsItemFromCartLine(item)],
-                    });
-                  }}
-                >
-                  <input type="hidden" name="intent" value="remove" />
-            <input type="hidden" name="locale" value={locale} />
-            <input type="hidden" name="productId" value={item.productId} />
-            <input type="hidden" name="variantId" value={item.variantId ?? ""} />
-            <button type="submit" className="text-sm text-danger focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-danger">
-              {messages.remove}
-            </button>
-          </form>
+          <RemoveFromCartForm
+            locale={locale}
+            productId={item.productId}
+            variantId={item.variantId}
+            label={messages.remove}
+            currency={item.unitPrice?.currency ?? "ZAR"}
+            value={item.lineTotal?.amount}
+            item={analyticsItemFromCartLine(item)}
+          />
+
         </div>
       </div>
       <div className="text-right">

@@ -28,7 +28,7 @@ export async function SiteFooter({ locale }: { locale: AppLocale }) {
   ].filter((item): item is { href: typeof paths.shop; label: string } => Boolean(item));
 
   return (
-    <footer className="band-ink mt-auto">
+    <footer className="site-footer band-ink mt-auto">
       <div className="site-container grid gap-10 py-14 md:grid-cols-3">
         <div>
           <Wordmark inverse />

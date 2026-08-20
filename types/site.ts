@@ -34,6 +34,8 @@ export type SiteConfig = {
   email: ConfigurableField<string>;
   phone: ConfigurableField<string>;
   address: ConfigurableField<SiteAddress>;
+  /** Confirmed service scope (nationwide), separate from unpublished zone/fee detail. */
+  deliveryScope: ConfigurableField<"nationwide">;
   deliveryAreas: ConfigurableField<string[]>;
   socialProfiles: ConfigurableField<string[]>;
   logoPath: string;

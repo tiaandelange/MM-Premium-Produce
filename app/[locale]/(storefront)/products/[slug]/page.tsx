@@ -90,7 +90,7 @@ export default async function ProductPage({
   const viewItem = analyticsItemFromProduct(product, product.variants?.[0]);
 
   return (
-    <div className="site-container space-y-12 py-12">
+    <div className="product-detail-page">
       <JsonLd data={buildProductStructuredData(product)} />
       <TrackViewItem
         items={[viewItem]}
@@ -98,8 +98,9 @@ export default async function ProductPage({
         currency={product.price?.currency ?? "ZAR"}
       />
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
-      <Breadcrumbs items={breadcrumbItems} />
-      <article className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+      <section className="product-detail-hero site-container">
+        <Breadcrumbs items={breadcrumbItems} />
+        <article className="mt-8 grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <ProductGallery images={product.images} productName={product.name} />
         <div className="space-y-5">
           <header>
@@ -139,10 +140,13 @@ export default async function ProductPage({
           <CartNotice locale={locale} />
           <AddToCartForm product={product} />
         </div>
-      </article>
-      <section className="max-w-3xl">
+        </article>
+      </section>
+      <section className="product-detail-body">
+        <div className="site-container max-w-3xl">
         <h2 className="text-section-title">{messages.productDetails}</h2>
         <p className="mt-4 text-muted">{product.description}</p>
+        </div>
       </section>
       {product.guidance?.storage ||
       product.guidance?.selection ||
@@ -151,7 +155,8 @@ export default async function ProductPage({
       product.guidance?.origin ||
       guides.length ||
       recipes.length ? (
-        <section className="max-w-3xl space-y-4">
+        <section className="product-detail-body">
+          <div className="site-container max-w-3xl space-y-4">
           <h2 className="text-section-title">{messages.howToUse}</h2>
           {product.guidance?.origin ? (
             <p className="text-muted">
@@ -200,15 +205,18 @@ export default async function ProductPage({
               <strong>{messages.typicalUses}:</strong> {product.guidance.typicalUses}
             </p>
           ) : null}
+          </div>
         </section>
       ) : null}
       {related.length ? (
-        <section>
+        <section className="related-products">
+          <div className="site-container">
           <h2 className="text-section-title">{messages.relatedProducts}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((item) => (
               <ProductCard key={item.id} product={item} />
             ))}
+          </div>
           </div>
         </section>
       ) : null}

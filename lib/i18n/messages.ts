@@ -2,6 +2,7 @@ import type { AppLocale } from "@/lib/i18n/config";
 
 const en = {
   skipToContent: "Skip to main content",
+  backToHero: "Back to top",
   menu: "Menu",
   home: "Home",
   shop: "Shop",
@@ -185,6 +186,7 @@ export type Messages = typeof en;
 
 const af: Messages = {
   skipToContent: "Slaan oor na die hoofinhoud",
+  backToHero: "Terug na bo",
   menu: "Kieslys",
   home: "Tuis",
   shop: "Winkel",

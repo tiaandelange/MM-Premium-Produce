@@ -1,5 +1,6 @@
 import { CartContents } from "@/components/commerce/cart-contents";
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { requireLocale } from "@/lib/i18n/locale";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
@@ -46,16 +47,20 @@ export default async function CartPage({
   const added = query.added === "1";
 
   return (
-    <div className="site-container space-y-8 py-12">
-      <PageHeader title={messages.yourCart} />
-      <TrackViewCart
-        items={analyticsItemsFromCart(cart)}
-        value={analyticsValue(analyticsItemsFromCart(cart))}
-        currency={cart.currency}
-      />
-      {added ? <p className="text-sm text-leaf">{messages.addedToCart}</p> : null}
-      {error ? <p className="text-sm text-danger">{error}</p> : null}
-      <CartContents cart={cart} locale={locale} />
+    <div className="commerce-page">
+      <PageIntro>
+        <PageHeader title={messages.yourCart} />
+      </PageIntro>
+      <PageSection>
+        <TrackViewCart
+          items={analyticsItemsFromCart(cart)}
+          value={analyticsValue(analyticsItemsFromCart(cart))}
+          currency={cart.currency}
+        />
+        {added ? <p className="mb-4 text-sm text-leaf">{messages.addedToCart}</p> : null}
+        {error ? <p className="mb-4 text-sm text-danger">{error}</p> : null}
+        <CartContents cart={cart} locale={locale} />
+      </PageSection>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { CategoryCard } from "@/components/commerce/category-card";
 import { ProductCard } from "@/components/commerce/product-card";
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro } from "@/components/layout/page-intro";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { pageCopy } from "@/lib/i18n/pages";
@@ -43,7 +44,7 @@ export default async function ShopPage({ params }: PageProps<"/[locale]/shop">) 
   ];
 
   return (
-    <div className="site-container space-y-10 py-12">
+    <>
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
       <JsonLd
         data={buildItemListStructuredData(
@@ -51,33 +52,34 @@ export default async function ShopPage({ params }: PageProps<"/[locale]/shop">) 
           products.map((product) => ({ name: product.name, path: paths.product(product.slug) })),
         )}
       />
-      <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={copy.h1} description={copy.intro} />
-      <section>
-        <h2 className="text-section-title">{messages.shopByCategory}</h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
+      <PageIntro>
+        <Breadcrumbs items={breadcrumbItems} />
+        <PageHeader title={copy.h1} description={copy.intro} />
+      </PageIntro>
+      <section className="catalogue-category-bridge">
+        <div className="site-container">
+          <h2 className="text-section-title">{messages.shopByCategory}</h2>
+          <div className="catalogue-category-bridge-grid mt-6">
+            {categories.map((category) => (
+              <CategoryCard key={category.id} category={category} />
+            ))}
+          </div>
         </div>
       </section>
-      <section>
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 className="text-section-title">{messages.allProducts}</h2>
-          <Link href={paths.bundles} className="text-sm font-medium">
-            {messages.viewProduceBoxes}
-          </Link>
-        </div>
-        <p className="mt-2 max-w-3xl text-muted">{copy.sections[0].body[0]}</p>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              listId="shop"
-              listName={copy.h1}
-            />
-          ))}
+      <section className="catalogue-products">
+        <div className="site-container">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-section-title">{messages.allProducts}</h2>
+            <Link href={paths.bundles} className="text-sm font-medium">
+              {messages.viewProduceBoxes}
+            </Link>
+          </div>
+          <p className="mt-2 max-w-3xl text-muted">{copy.sections[0].body[0]}</p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {products.map((product) => (
+              <ProductCard key={product.id} product={product} listId="shop" listName={copy.h1} />
+            ))}
+          </div>
         </div>
       </section>
       <TrackItemList
@@ -85,6 +87,6 @@ export default async function ShopPage({ params }: PageProps<"/[locale]/shop">) 
         listName={copy.h1}
         items={products.map((product) => analyticsItemFromProduct(product))}
       />
-    </div>
+    </>
   );
 }

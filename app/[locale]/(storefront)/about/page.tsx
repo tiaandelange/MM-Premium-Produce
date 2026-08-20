@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { pageCopy } from "@/lib/i18n/pages";
@@ -10,6 +11,8 @@ import { buildBreadcrumbStructuredData, buildOrganizationStructuredData } from "
 import { getSiteConfig } from "@/config/site";
 import { getCatalog } from "@/services/catalog";
 import Link from "next/link";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">) {
   const locale = requireLocale((await params).locale);
@@ -41,34 +44,45 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
   ];
 
   return (
-    <div className="site-container space-y-10 py-12">
+    <>
       <JsonLd data={buildOrganizationStructuredData(locale)} />
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
-      <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={copy.h1} description={copy.intro} />
-      {copy.sections.map((section) => (
-        <section key={section.heading} className="max-w-3xl space-y-4 text-muted">
-          <h2 className="text-section-title text-ink">{section.heading}</h2>
-          {section.body.map((paragraph) => (
-            <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+      <PageIntro>
+        <Breadcrumbs items={breadcrumbItems} />
+        <PageHeader title={copy.h1} description={copy.intro} />
+      </PageIntro>
+      <PageSection>
+        <div className="about-story-grid">
+          {copy.sections.map((section, index) => (
+            <section
+              key={section.heading}
+              className={index === 0 ? "about-story-primary" : "about-story-secondary"}
+            >
+              <h2 className="text-section-title text-ink">{section.heading}</h2>
+              {section.body.map((paragraph) => (
+                <p key={paragraph.slice(0, 40)} className="mt-4 text-muted">
+                  {paragraph}
+                </p>
+              ))}
+            </section>
           ))}
-        </section>
-      ))}
-      <p className="max-w-3xl text-muted">
-        <Link href={paths.shop}>{messages.shop}</Link>
-        {vegetables ? (
-          <>
-            , <Link href={paths.category(vegetables.slug)}>{vegetables.name}</Link>
-          </>
-        ) : null}
-        {fruit ? (
-          <>
-            , <Link href={paths.category(fruit.slug)}>{fruit.name}</Link>
-          </>
-        ) : null}
-        , <Link href={paths.bundles}>{messages.produceBoxes}</Link>,{" "}
-        <Link href={paths.delivery}>{messages.delivery}</Link>. {businessName}.
-      </p>
-    </div>
+        </div>
+        <p className="mt-10 max-w-prose">
+          <Link href={paths.shop}>{messages.shop}</Link>
+          {vegetables ? (
+            <>
+              , <Link href={paths.category(vegetables.slug)}>{vegetables.name}</Link>
+            </>
+          ) : null}
+          {fruit ? (
+            <>
+              , <Link href={paths.category(fruit.slug)}>{fruit.name}</Link>
+            </>
+          ) : null}
+          , <Link href={paths.bundles}>{messages.produceBoxes}</Link>,{" "}
+          <Link href={paths.delivery}>{messages.delivery}</Link>. {businessName}.
+        </p>
+      </PageSection>
+    </>
   );
 }

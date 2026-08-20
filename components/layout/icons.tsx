@@ -42,6 +42,21 @@ export function DeliveryVanIcon() {
   );
 }
 
+export function BackToHeroIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="back-to-hero-icon">
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+        d="M12 19V6M6.5 11.5 12 6l5.5 5.5"
+      />
+    </svg>
+  );
+}
+
 export function PreferencesIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="icon-md">

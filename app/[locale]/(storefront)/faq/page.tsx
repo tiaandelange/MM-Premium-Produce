@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { pageCopy } from "@/lib/i18n/pages";
@@ -8,6 +9,8 @@ import { createPaths } from "@/lib/i18n/paths";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbStructuredData } from "@/lib/seo/structured-data";
 import Link from "next/link";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/faq">) {
   const locale = requireLocale((await params).locale);
@@ -34,27 +37,31 @@ export default async function FaqPage({ params }: PageProps<"/[locale]/faq">) {
   ];
 
   return (
-    <div className="site-container space-y-10 py-12">
+    <>
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
-      <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={copy.h1} description={copy.intro} />
-      <div className="max-w-3xl space-y-8">
-        {copy.sections.map((item) => (
-          <section key={item.heading}>
-            <h2 className="text-section-title">{item.heading}</h2>
-            <div className="mt-3 text-muted">
-              {item.body.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-              <p className="mt-3">
-                <Link href={paths.shop}>{messages.shop}</Link> ·{" "}
-                <Link href={paths.guides}>{messages.guides}</Link> ·{" "}
-                <Link href={paths.delivery}>{messages.delivery}</Link>
-              </p>
-            </div>
-          </section>
-        ))}
-      </div>
-    </div>
+      <PageIntro>
+        <Breadcrumbs items={breadcrumbItems} />
+        <PageHeader title={copy.h1} description={copy.intro} />
+      </PageIntro>
+      <PageSection muted>
+        <div className="faq-list">
+          {copy.sections.map((item) => (
+            <section key={item.heading} className="faq-item">
+              <h2 className="text-section-title">{item.heading}</h2>
+              <div className="mt-3 text-muted">
+                {item.body.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                <p className="mt-3">
+                  <Link href={paths.shop}>{messages.shop}</Link> ·{" "}
+                  <Link href={paths.guides}>{messages.guides}</Link> ·{" "}
+                  <Link href={paths.delivery}>{messages.delivery}</Link>
+                </p>
+              </div>
+            </section>
+          ))}
+        </div>
+      </PageSection>
+    </>
   );
 }

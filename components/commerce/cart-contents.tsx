@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CartItem } from "@/components/commerce/cart-item";
 import { CartSummary } from "@/components/commerce/cart-summary";
+import { EditorialEmptyState } from "@/components/layout/editorial-empty-state";
 import { createPaths } from "@/lib/i18n/paths";
 import { getMessages } from "@/lib/i18n/messages";
 import type { AppLocale } from "@/lib/i18n/config";
@@ -19,12 +20,16 @@ export function CartContents({
   const paths = createPaths(locale);
   if (!cart.items.length) {
     return (
-      <div className="space-y-4">
-        <p className="text-muted">{messages.emptyCart}</p>
-        <Link href={paths.shop} className="btn-primary">
-          {messages.continueShopping}
-        </Link>
-      </div>
+      <EditorialEmptyState
+        title={messages.yourCart}
+        action={
+          <Link href={paths.shop} className="btn-primary">
+            {messages.continueShopping}
+          </Link>
+        }
+      >
+        <p>{messages.emptyCart}</p>
+      </EditorialEmptyState>
     );
   }
 

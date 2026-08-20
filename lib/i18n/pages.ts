@@ -35,7 +35,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     home: {
       title: "M & M Premium Produce | Personally Handpicked Fruit & Vegetables",
       description:
-        "Personally handpicked fruit and vegetables from M & M Premium Produce. Shop the catalogue, then open vegetables, fruit or a named product. We deliver across South Africa.",
+        "Personally handpicked fruit and vegetables from M & M Premium Produce. Shop the catalogue, then open vegetables, fruit or a named product. Fresh produce delivered across South Africa.",
       h1: "Premium Fresh Fruit, Vegetables & Produce",
       heroLines: [
         { text: "Premium Fresh", tone: "primary" },
@@ -81,7 +81,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Shop fresh produce online",
           body: [
-            "Open the full catalogue, or go straight into vegetables or fruit, then choose a named product. We deliver across South Africa; areas, time slots and fees are listed on the delivery page when they are published.",
+            "Open the full catalogue, or go straight into vegetables or fruit, then choose a named product. We offer nationwide delivery across South Africa; areas, time slots and fees are listed on the delivery page when they are published.",
             "Guides on storing staples and using leftovers sit in the produce guides. They are written to be useful in the kitchen, not as a content farm.",
           ],
         },
@@ -137,23 +137,23 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "What you can shop for",
           body: [
-            "Browse the full catalogue, vegetables or fruit. Produce boxes will appear under bundles when a box is confirmed. Delivery is nationwide; areas, time slots and fees are published on the delivery page when they are confirmed.",
+            "Browse the full catalogue, vegetables or fruit. Produce boxes will appear under bundles when a box is confirmed. We offer nationwide delivery across South Africa; areas, time slots and fees are published on the delivery page when they are confirmed.",
           ],
         },
       ],
     },
     delivery: {
-      title: "Nationwide Produce Delivery",
+      title: "Nationwide Delivery",
       description:
-        "M & M Premium Produce delivers fresh produce across South Africa. Specific areas, time slots, fees and collection options will be listed here when they are published.",
-      h1: "Nationwide delivery",
+        "M & M Premium Produce offers delivery across South Africa. Detailed delivery areas, fees and delivery timing will be published once confirmed.",
+      h1: "Nationwide Delivery",
       intro:
-        "We deliver across South Africa. Suburbs, time slots, fees and collection options are not published yet — this page is where they will appear.",
+        "Fresh produce delivered across South Africa. Detailed delivery areas, fees and delivery timing will be published once confirmed.",
       sections: [
         {
           heading: "Current status",
           body: [
-            "Nationwide delivery is confirmed. We have not published a suburb list, time slots, fees or collection options, so those details are not shown here. Shop fruit and vegetables in the meantime.",
+            "M & M Premium Produce offers delivery across South Africa. Detailed delivery areas, fees and delivery timing will be published once confirmed. Shop fruit and vegetables in the meantime.",
           ],
         },
       ],
@@ -189,7 +189,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Do you deliver?",
           body: [
-            "Yes — nationwide across South Africa. Areas, time slots and fees are not published yet. The delivery page is the place for those details when they are confirmed.",
+            "Yes — we offer nationwide delivery across South Africa. Areas, time slots and fees are not published yet. The delivery page is the place for those details when they are confirmed.",
           ],
         },
         {
@@ -243,7 +243,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     home: {
       title: "M & M Premium Produce | Persoonlik uitgesoekte vrugte en groente",
       description:
-        "Persoonlik uitgesoekte vrugte en groente by M & M Premium Produce. Blaai die katalogus, of begin by groente of vrugte. Ons lewer regoor Suid-Afrika.",
+        "Persoonlik uitgesoekte vrugte en groente by M & M Premium Produce. Blaai die katalogus, of begin by groente of vrugte. Vars produkte word regoor Suid-Afrika afgelewer.",
       h1: "Vars Vrugte, Groente & Produkte",
       heroLines: [
         { text: "Vars Vrugte,", tone: "primary" },
@@ -289,7 +289,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Koop vars produkte aanlyn",
           body: [
-            "Maak die volle katalogus oop, of gaan direk na groente of vrugte, en kies dan ’n genoemde produk. Ons lewer regoor Suid-Afrika; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit gepubliseer is.",
+            "Maak die volle katalogus oop, of gaan direk na groente of vrugte, en kies dan ’n genoemde produk. Ons bied landswye aflewering regoor Suid-Afrika; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit gepubliseer is.",
             "Gidse oor die berg van stapels en die gebruik van oorskiet sit by die produk-gidse. Hulle is vir die kombuis geskryf, nie as ’n inhoudsplaas nie.",
           ],
         },
@@ -345,23 +345,23 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Waarvoor jy kan koop",
           body: [
-            "Blaai die volle katalogus, groente of vrugte. Produkbokse verskyn onder bokse wanneer ’n boks bevestig is. Aflewering is landswyd; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit bevestig is.",
+            "Blaai die volle katalogus, groente of vrugte. Produkbokse verskyn onder bokse wanneer ’n boks bevestig is. Ons bied landswye aflewering regoor Suid-Afrika; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit bevestig is.",
           ],
         },
       ],
     },
     delivery: {
-      title: "Landswye aflewering",
+      title: "Landswye Aflewering",
       description:
-        "M & M Premium Produce lewer vars produkte regoor Suid-Afrika. Spesifieke areas, tydgleuwe, fooie en afhaalopsies word hier gelys wanneer dit gepubliseer is.",
-      h1: "Landswye aflewering",
+        "M & M Premium Produce bied aflewering regoor Suid-Afrika. Besonderhede oor afleweringsgebiede, fooie en afleweringstye sal gepubliseer word sodra dit bevestig is.",
+      h1: "Landswye Aflewering",
       intro:
-        "Ons lewer regoor Suid-Afrika. Voorstede, tydgleuwe, fooie en afhaalopsies is nog nie gepubliseer nie — hierdie blad is waar dit sal verskyn.",
+        "Vars produkte word regoor Suid-Afrika afgelewer. Besonderhede oor afleweringsgebiede, fooie en afleweringstye sal gepubliseer word sodra dit bevestig is.",
       sections: [
         {
           heading: "Huidige status",
           body: [
-            "Landswye aflewering is bevestig. Ons het nog nie ’n voorstedelys, tydgleuwe, fooie of afhaalopsies gepubliseer nie, daarom word dit nie hier gewys nie. Koop intussen vrugte en groente.",
+            "M & M Premium Produce bied aflewering regoor Suid-Afrika. Besonderhede oor afleweringsgebiede, fooie en afleweringstye sal gepubliseer word sodra dit bevestig is. Koop intussen vrugte en groente.",
           ],
         },
       ],
@@ -397,7 +397,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Lewer julle af?",
           body: [
-            "Ja — landswyd in Suid-Afrika. Areas, tydgleuwe en fooie is nog nie gepubliseer nie. Die afleweringsblad is die plek vir daardie besonderhede wanneer dit bevestig is.",
+            "Ja — ons bied landswye aflewering regoor Suid-Afrika. Areas, tydgleuwe en fooie is nog nie gepubliseer nie. Die afleweringsblad is die plek vir daardie besonderhede wanneer dit bevestig is.",
           ],
         },
         {

@@ -1,6 +1,7 @@
 import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { ProductCard } from "@/components/commerce/product-card";
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { requireLocale } from "@/lib/i18n/locale";
@@ -82,7 +83,7 @@ export default async function CategoryPage({
   ];
 
   return (
-    <div className="site-container space-y-10 py-12">
+    <>
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
       <JsonLd
         data={buildItemListStructuredData(
@@ -90,23 +91,20 @@ export default async function CategoryPage({
           products.map((product) => ({ name: product.name, path: paths.product(product.slug) })),
         )}
       />
-      <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={category.seoTitle ?? category.name} description={category.shortDescription} />
-      <div className="relative aspect-[21/9] max-h-80 overflow-hidden rounded-card border border-line bg-sand">
-        <CatalogMedia image={category.image} priority sizes="100vw" />
-      </div>
-      <section>
+      <PageIntro>
+        <Breadcrumbs items={breadcrumbItems} />
+        <PageHeader title={category.seoTitle ?? category.name} description={category.shortDescription} />
+        <div className="relative mt-2 aspect-[21/9] max-h-80 overflow-hidden rounded-card border border-line bg-sand">
+          <CatalogMedia image={category.image} priority sizes="100vw" />
+        </div>
+      </PageIntro>
+      <PageSection muted>
         <h2 className="text-section-title">
           {interpolate(messages.shopCategory, { name: category.name.toLowerCase() })}
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              listId={category.id}
-              listName={category.name}
-            />
+            <ProductCard key={product.id} product={product} listId={category.id} listName={category.name} />
           ))}
         </div>
         <TrackItemList
@@ -114,43 +112,45 @@ export default async function CategoryPage({
           listName={category.name}
           items={products.map((product) => analyticsItemFromProduct(product))}
         />
-      </section>
-      <section className="max-w-3xl">
-        <h2 className="text-section-title">{messages.aboutThisRange}</h2>
-        <p className="mt-4 text-muted">{category.description}</p>
-        <p className="mt-4">
-          <Link href={paths.shop}>{messages.openFullShop}</Link>
-          {" · "}
-          <Link href={paths.guides}>{messages.guides}</Link>
-          {" · "}
-          <Link href={paths.delivery}>{messages.delivery}</Link>
-        </p>
-        {relatedGuides.length ? (
-          <p className="mt-4 text-muted">
-            {messages.relatedGuides}:{" "}
-            {relatedGuides.map((guide, index) => (
-              <span key={guide.id}>
-                {index ? " · " : null}
-                <Link href={paths.guide(guide.slug)}>{guide.title}</Link>
-              </span>
-            ))}
+      </PageSection>
+      <PageSection>
+        <div className="max-w-3xl">
+          <h2 className="text-section-title">{messages.aboutThisRange}</h2>
+          <p className="mt-4 text-muted">{category.description}</p>
+          <p className="mt-4">
+            <Link href={paths.shop}>{messages.openFullShop}</Link>
+            {" · "}
+            <Link href={paths.guides}>{messages.guides}</Link>
+            {" · "}
+            <Link href={paths.delivery}>{messages.delivery}</Link>
           </p>
+          {relatedGuides.length ? (
+            <p className="mt-4 text-muted">
+              {messages.relatedGuides}:{" "}
+              {relatedGuides.map((guide, index) => (
+                <span key={guide.id}>
+                  {index ? " · " : null}
+                  <Link href={paths.guide(guide.slug)}>{guide.title}</Link>
+                </span>
+              ))}
+            </p>
+          ) : null}
+        </div>
+        {relatedCategories.length ? (
+          <section className="mt-10">
+            <h2 className="text-section-title">{messages.relatedCategories}</h2>
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {relatedCategories.map((item) => (
+                <li key={item.id}>
+                  <Link href={paths.category(item.slug)} className="btn-secondary">
+                    {interpolate(messages.shopCategory, { name: item.name.toLowerCase() })}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         ) : null}
-      </section>
-      {relatedCategories.length ? (
-        <section>
-          <h2 className="text-section-title">{messages.relatedCategories}</h2>
-          <ul className="mt-4 flex flex-wrap gap-3">
-            {relatedCategories.map((item) => (
-              <li key={item.id}>
-                <Link href={paths.category(item.slug)} className="btn-secondary">
-                  {interpolate(messages.shopCategory, { name: item.name.toLowerCase() })}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-    </div>
+      </PageSection>
+    </>
   );
 }

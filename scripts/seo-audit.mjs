@@ -1,6 +1,6 @@
 import { writeFileSync } from "node:fs";
 
-const base = "http://localhost:3006";
+const base = process.env.AUDIT_BASE || "http://localhost:3006";
 
 function decode(html) {
   return html

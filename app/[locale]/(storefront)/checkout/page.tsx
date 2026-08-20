@@ -4,6 +4,8 @@ import { CheckoutAnalytics } from "@/components/analytics/checkout-analytics";
 import { TrackBeginCheckout } from "@/components/analytics/track-event";
 import { analyticsItemsFromCart, analyticsValue } from "@/lib/analytics/items";
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
+import { EditorialEmptyState } from "@/components/layout/editorial-empty-state";
 import { requireLocale } from "@/lib/i18n/locale";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
@@ -84,20 +86,34 @@ export default async function CheckoutPage({
 
   if (!cart.items.length) {
     return (
-      <div className="site-container space-y-6 py-12">
-        <PageHeader title={messages.checkout} />
-        <p className="text-muted">{messages.emptyCart}</p>
-        <Link href={paths.cart} className="btn-primary">
-          {messages.cart}
-        </Link>
+      <div className="commerce-page">
+        <PageIntro>
+          <PageHeader title={messages.checkout} />
+        </PageIntro>
+        <PageSection>
+          <EditorialEmptyState
+            title={messages.checkout}
+            action={
+              <Link href={paths.cart} className="btn-primary">
+                {messages.cart}
+              </Link>
+            }
+          >
+            <p>{messages.emptyCart}</p>
+          </EditorialEmptyState>
+        </PageSection>
       </div>
     );
   }
 
   return (
-    <div className="site-container grid gap-10 py-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-      <div className="space-y-8">
+    <div className="commerce-page">
+      <PageIntro>
         <PageHeader title={messages.checkout} />
+      </PageIntro>
+      <PageSection>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+      <div className="space-y-8">
         {error ? <p className="text-sm text-danger">{error}</p> : null}
         <TrackBeginCheckout items={checkoutItems} value={checkoutValue} currency={cart.currency} />
         <CheckoutAnalytics items={checkoutItems} value={checkoutValue} currency={cart.currency}>
@@ -165,7 +181,7 @@ export default async function CheckoutPage({
           <PlaceOrderButton label={messages.placeOrder} pendingLabel={messages.placingOrder} />
         </CheckoutAnalytics>
       </div>
-      <aside className="card-surface h-fit space-y-4 p-5">
+      <aside className="commerce-panel h-fit space-y-4">
         <h2 className="font-heading text-card-title text-ink">{messages.orderSummary}</h2>
         <ul className="space-y-2 text-sm">
           {cart.items.map((item) => (
@@ -198,6 +214,8 @@ export default async function CheckoutPage({
         </p>
         <p className="text-sm text-muted">{messages.paymentNotConfigured}</p>
       </aside>
+        </div>
+      </PageSection>
     </div>
   );
 }

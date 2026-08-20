@@ -80,7 +80,8 @@ if (confirm.status !== 404) out.issues.push("confirmation without access should 
 for (const [path, expectStatus, expectLoc] of [
   ["/shop", 301, "/en/shop"],
   ["/checkout", 301, "/en/checkout"],
-  ["/cart", 301, "/en/cart"],
+  // Next.js permanent locale redirects may use 308; accept that intentional status.
+  ["/cart", 308, "/en/cart"],
   ["/af/afrekening", 301, "/af/betaal"],
   ["/af/shop", 301, "/af/winkel"],
 ]) {

@@ -17,7 +17,7 @@ export function HomeHero({ locale }: { locale: AppLocale }) {
     "vegetables";
 
   return (
-    <section className="hero" aria-labelledby="home-hero-heading">
+    <section id="hero" className="hero home-hero" aria-labelledby="home-hero-heading">
       <div className="hero-media">
         <picture>
           <source media="(max-width: 640px)" srcSet="/images/hero/hero1-828.webp" type="image/webp" />

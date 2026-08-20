@@ -1,6 +1,7 @@
 import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { ProductCard } from "@/components/commerce/product-card";
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { requireLocale } from "@/lib/i18n/locale";
@@ -76,70 +77,84 @@ export default async function GuidePage({
   ];
 
   return (
-    <div className="site-container space-y-10 py-12">
+    <>
       <JsonLd data={buildArticleStructuredData(guide)} />
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
-      <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={guide.title} description={guide.lede} />
-      <figure className="max-w-3xl">
-        <div className="relative aspect-[16/9] overflow-hidden rounded-card border border-line bg-sand">
-          <CatalogMedia image={guide.image} sizes="(min-width: 768px) 48rem, 100vw" />
-        </div>
-        <figcaption className="mt-2 text-sm text-muted">{messages.imageCaptionShop}</figcaption>
-      </figure>
-      {guide.sections.map((section) => (
-        <section key={section.heading} className="max-w-3xl space-y-3 text-muted">
-          <h2 className="text-section-title text-ink">{section.heading}</h2>
-          {section.body.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-          ))}
-        </section>
+      <PageIntro>
+        <Breadcrumbs items={breadcrumbItems} />
+        <PageHeader title={guide.title} description={guide.lede} />
+      </PageIntro>
+      <PageSection>
+        <figure className="content-block max-w-3xl">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-card border border-line bg-sand">
+            <CatalogMedia image={guide.image} sizes="(min-width: 768px) 48rem, 100vw" />
+          </div>
+          <figcaption className="mt-2 text-sm text-muted">{messages.imageCaptionShop}</figcaption>
+        </figure>
+      </PageSection>
+      {guide.sections.map((section, index) => (
+        <PageSection key={section.heading} muted={index % 2 === 1}>
+          <div className="content-block">
+            <h2 className="text-section-title text-ink">{section.heading}</h2>
+            {section.body.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)} className="mt-3 text-muted">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </PageSection>
       ))}
       {relatedProducts.length ? (
-        <section>
+        <PageSection muted>
           <h2 className="text-section-title">{messages.shopThisGuide}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </section>
+        </PageSection>
       ) : null}
-      {relatedCategories.length ? (
-        <p className="max-w-3xl">
-          {messages.relatedCategories}:{" "}
-          {relatedCategories.map((category, index) => (
-            <span key={category.id}>
-              {index ? " · " : null}
-              <Link href={paths.category(category.slug)}>{category.name}</Link>
-            </span>
-          ))}
-        </p>
+      {relatedCategories.length || relatedRecipes.length || otherGuides.length ? (
+        <PageSection>
+          <div className="content-block space-y-6">
+            {relatedCategories.length ? (
+              <p>
+                {messages.relatedCategories}:{" "}
+                {relatedCategories.map((category, index) => (
+                  <span key={category.id}>
+                    {index ? " · " : null}
+                    <Link href={paths.category(category.slug)}>{category.name}</Link>
+                  </span>
+                ))}
+              </p>
+            ) : null}
+            {relatedRecipes.length ? (
+              <section>
+                <h2 className="text-section-title">{messages.relatedRecipes}</h2>
+                <ul className="mt-4 space-y-2">
+                  {relatedRecipes.map((recipe) => (
+                    <li key={recipe.id}>
+                      <Link href={paths.recipe(recipe.slug)}>{recipe.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+            {otherGuides.length ? (
+              <section>
+                <h2 className="text-section-title">{messages.moreGuides}</h2>
+                <ul className="mt-4 space-y-2">
+                  {otherGuides.map((item) => (
+                    <li key={item.id}>
+                      <Link href={paths.guide(item.slug)}>{item.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+          </div>
+        </PageSection>
       ) : null}
-      {relatedRecipes.length ? (
-        <section className="max-w-3xl">
-          <h2 className="text-section-title">{messages.relatedRecipes}</h2>
-          <ul className="mt-4 space-y-2">
-            {relatedRecipes.map((recipe) => (
-              <li key={recipe.id}>
-                <Link href={paths.recipe(recipe.slug)}>{recipe.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-      {otherGuides.length ? (
-        <section className="max-w-3xl">
-          <h2 className="text-section-title">{messages.moreGuides}</h2>
-          <ul className="mt-4 space-y-2">
-            {otherGuides.map((item) => (
-              <li key={item.id}>
-                <Link href={paths.guide(item.slug)}>{item.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-    </div>
+    </>
   );
 }

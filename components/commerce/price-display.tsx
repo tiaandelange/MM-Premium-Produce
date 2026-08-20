@@ -19,13 +19,14 @@ export function PriceDisplay({
 }) {
   const messages = getMessages(locale);
   if (!price) {
-    return <p className="text-muted">{messages.priceToConfirm}</p>;
+    return <span className="text-muted">{messages.priceToConfirm}</span>;
   }
 
   const suffix = unit ? priceUnitLabel(unit, locale) : null;
 
+  // Use span (not p) so PriceDisplay can safely nest inside summary paragraphs.
   return (
-    <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+    <span className="inline-flex flex-wrap items-baseline gap-x-3 gap-y-1">
       <span className={`${compact ? "text-base" : "text-xl"} font-semibold text-ink`}>
         {formatMoney(price, locale)}
         {suffix ? (
@@ -35,6 +36,6 @@ export function PriceDisplay({
       {compareAtPrice ? (
         <span className="text-muted line-through">{formatMoney(compareAtPrice, locale)}</span>
       ) : null}
-    </p>
+    </span>
   );
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import { EditorialEmptyState } from "@/components/layout/editorial-empty-state";
+
 export default function LocaleError({
   reset,
 }: {
@@ -8,11 +10,16 @@ export default function LocaleError({
 }) {
   return (
     <div className="site-container py-20">
-      <h1 className="text-page-title">Something went wrong</h1>
-      <p className="mt-4 max-w-xl text-muted">Please refresh the page or try again.</p>
-      <button type="button" className="btn-primary mt-8" onClick={() => reset()}>
-        Try again
-      </button>
+      <EditorialEmptyState
+        title="Something went wrong"
+        action={
+          <button type="button" className="btn-primary" onClick={() => reset()}>
+            Try again
+          </button>
+        }
+      >
+        <p>Please refresh the page or try again.</p>
+      </EditorialEmptyState>
     </div>
   );
 }

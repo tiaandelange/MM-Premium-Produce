@@ -1,10 +1,7 @@
 import { SiteShell } from "@/components/layout/site-shell";
 import { requireLocale } from "@/lib/i18n/locale";
-import { locales } from "@/lib/i18n/config";
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function LocaleLayout({
   children,

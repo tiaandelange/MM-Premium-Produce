@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { SiteFooter } from "@/components/layout/footer";
 import { SiteHeader } from "@/components/layout/header";
+import { BackToHero } from "@/components/layout/back-to-hero";
 import { SkipLink } from "@/components/layout/skip-link";
 import { AnalyticsRoot } from "@/components/analytics/analytics-root";
 import { ANALYTICS_CONSENT_COOKIE } from "@/lib/analytics/events";
@@ -24,6 +25,7 @@ export async function SiteShell({
         {children}
       </main>
       <SiteFooter locale={locale} />
+      <BackToHero locale={locale} />
       <AnalyticsRoot locale={locale} consent={consent} />
     </>
   );

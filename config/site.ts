@@ -23,6 +23,7 @@ export function getSiteConfig(): SiteConfig {
     email: todo("Confirm a public contact email before displaying it."),
     phone: todo("Confirm a public phone number before displaying it."),
     address: todo("Confirm a public address before using LocalBusiness schema or map copy."),
+    deliveryScope: confirmed("nationwide", "Nationwide delivery across South Africa is confirmed."),
     deliveryAreas: todo("Confirm delivery or collection areas before publishing them."),
     socialProfiles: todo("Confirm official social profile URLs before adding sameAs markup."),
     logoPath: "/brand/mm-premium-produce-logo.png",

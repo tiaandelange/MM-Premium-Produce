@@ -1,6 +1,7 @@
 import { CatalogMedia } from "@/components/commerce/catalog-media";
 import { ProductCard } from "@/components/commerce/product-card";
 import { PageHeader } from "@/components/layout/page-header";
+import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { requireLocale } from "@/lib/i18n/locale";
@@ -72,58 +73,68 @@ export default async function RecipePage({
   ];
 
   return (
-    <div className="site-container space-y-10 py-12">
+    <>
       <JsonLd data={buildRecipeStructuredData(recipe)} />
       <JsonLd data={buildBreadcrumbStructuredData(breadcrumbItems)} />
-      <Breadcrumbs items={breadcrumbItems} />
-      <PageHeader title={recipe.title} description={recipe.lede} />
-      <figure className="max-w-3xl">
-        <div className="relative aspect-[16/9] overflow-hidden rounded-card border border-line bg-sand">
-          <CatalogMedia image={recipe.image} sizes="(min-width: 768px) 48rem, 100vw" />
+      <PageIntro>
+        <Breadcrumbs items={breadcrumbItems} />
+        <PageHeader title={recipe.title} description={recipe.lede} />
+      </PageIntro>
+      <PageSection>
+        <figure className="content-block max-w-3xl">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-card border border-line bg-sand">
+            <CatalogMedia image={recipe.image} sizes="(min-width: 768px) 48rem, 100vw" />
+          </div>
+          <figcaption className="mt-2 text-sm text-muted">{messages.imageCaptionShop}</figcaption>
+        </figure>
+      </PageSection>
+      <PageSection muted>
+        <div className="content-block">
+          <h2 className="text-section-title">{messages.ingredients}</h2>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-muted">
+            {recipe.ingredients.map((item) => (
+              <li key={item.name}>
+                {item.name}
+                {item.quantity ? ` — ${item.quantity}` : null}
+              </li>
+            ))}
+          </ul>
         </div>
-        <figcaption className="mt-2 text-sm text-muted">{messages.imageCaptionShop}</figcaption>
-      </figure>
-      <section className="max-w-3xl">
-        <h2 className="text-section-title">{messages.ingredients}</h2>
-        <ul className="mt-4 list-disc space-y-2 pl-5 text-muted">
-          {recipe.ingredients.map((item) => (
-            <li key={item.name}>
-              {item.name}
-              {item.quantity ? ` — ${item.quantity}` : null}
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section className="max-w-3xl">
-        <h2 className="text-section-title">{messages.method}</h2>
-        <ol className="mt-4 list-decimal space-y-3 pl-5 text-muted">
-          {recipe.steps.map((step) => (
-            <li key={step.slice(0, 48)}>{step}</li>
-          ))}
-        </ol>
-      </section>
+      </PageSection>
+      <PageSection>
+        <div className="content-block">
+          <h2 className="text-section-title">{messages.method}</h2>
+          <ol className="mt-4 list-decimal space-y-3 pl-5 text-muted">
+            {recipe.steps.map((step) => (
+              <li key={step.slice(0, 48)}>{step}</li>
+            ))}
+          </ol>
+        </div>
+      </PageSection>
       {relatedProducts.length ? (
-        <section>
+        <PageSection muted>
           <h2 className="text-section-title">{messages.shopThisGuide}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </section>
+        </PageSection>
       ) : null}
       {relatedGuides.length ? (
-        <section className="max-w-3xl">
-          <h2 className="text-section-title">{messages.relatedGuides}</h2>
-          <ul className="mt-4 space-y-2">
-            {relatedGuides.map((guide) => (
-              <li key={guide.id}>
-                <Link href={paths.guide(guide.slug)}>{guide.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <PageSection>
+          <div className="content-block">
+            <h2 className="text-section-title">{messages.relatedGuides}</h2>
+            <ul className="mt-4 space-y-2">
+              {relatedGuides.map((guide) => (
+                <li key={guide.id}>
+                  <Link href={paths.guide(guide.slug)}>{guide.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </PageSection>
       ) : null}
-    </div>
+    </>
   );
 }
