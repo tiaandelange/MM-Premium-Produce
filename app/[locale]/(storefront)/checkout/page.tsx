@@ -6,6 +6,7 @@ import { analyticsItemsFromCart, analyticsValue } from "@/lib/analytics/items";
 import { PageHeader } from "@/components/layout/page-header";
 import { PageIntro, PageSection } from "@/components/layout/page-intro";
 import { EditorialEmptyState } from "@/components/layout/editorial-empty-state";
+import { confirmedValue, getSiteConfig } from "@/config/site";
 import { requireLocale } from "@/lib/i18n/locale";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
@@ -77,12 +78,21 @@ export default async function CheckoutPage({
   const query = await searchParams;
   const messages = getMessages(locale);
   const paths = createPaths(locale);
+  const deliveryPolicy = confirmedValue(getSiteConfig().deliveryPolicy);
   const [cart, rules] = await Promise.all([getHydratedCart(locale), listPublishedDeliveryRules()]);
   const error = resolveCommerceNotice(locale, typeof query.error === "string" ? query.error : null);
   const provinces = saProvinceOptions(locale);
   const idempotencyKey = crypto.randomUUID();
   const checkoutItems = analyticsItemsFromCart(cart);
   const checkoutValue = analyticsValue(checkoutItems);
+  const subtotal = cart.subtotal?.amount ?? 0;
+  const policyFee =
+    !rules.length && deliveryPolicy
+      ? deliveryPolicy.freeDeliveryThresholdZar != null && subtotal >= deliveryPolicy.freeDeliveryThresholdZar
+        ? 0
+        : deliveryPolicy.feeZar
+      : null;
+  const estimatedTotal = policyFee != null ? subtotal + policyFee : null;
 
   if (!cart.items.length) {
     return (
@@ -143,6 +153,7 @@ export default async function CheckoutPage({
                   name="deliveryProvince"
                   list="sa-provinces"
                   autoComplete="address-level1"
+                  defaultValue={provinces.length === 1 ? provinces[0] : undefined}
                   className="field-control w-full"
                 />
                 <datalist id="sa-provinces">
@@ -201,7 +212,9 @@ export default async function CheckoutPage({
         <p className="flex justify-between text-sm">
           <span>{messages.deliveryFee}</span>
           <span>
-            {rules.length ? messages.deliveryFeePending : formatMoney({ amount: 0, currency: cart.currency }, locale)}
+            {rules.length
+              ? messages.deliveryFeePending
+              : formatMoney({ amount: policyFee ?? 0, currency: cart.currency }, locale)}
           </span>
         </p>
         <p className="flex justify-between font-medium">
@@ -209,7 +222,7 @@ export default async function CheckoutPage({
           <span>
             {rules.length
               ? messages.totalConfirmedOnOrder
-              : formatMoney({ amount: cart.subtotal?.amount ?? 0, currency: cart.currency }, locale)}
+              : formatMoney({ amount: estimatedTotal ?? subtotal, currency: cart.currency }, locale)}
           </span>
         </p>
         <p className="text-sm text-muted">{messages.paymentNotConfigured}</p>

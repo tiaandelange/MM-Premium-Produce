@@ -1,4 +1,5 @@
 import { desc, eq } from "drizzle-orm";
+import { confirmedValue, getSiteConfig } from "@/config/site";
 import { getDb } from "@/db/client";
 import { customers, orderItems, orders, payments } from "@/db/schema";
 import { getHydratedCart, clearCart } from "@/services/cart";
@@ -7,15 +8,24 @@ import { getDeliveryRule, listPublishedDeliveryRules, matchDeliveryDestination, 
 import { getPaymentAdapter } from "@/lib/payments";
 import { createPaths } from "@/lib/i18n/paths";
 import { getMessages } from "@/lib/i18n/messages";
+import { isAllowedDeliveryProvince } from "@/lib/commerce/provinces";
 import { localeTagFromAppLocale, appLocaleFromTag } from "@/lib/commerce/locale-tag";
 import { grantOrderAccess } from "@/lib/commerce/order-access";
 import type { CommerceErrorKey } from "@/lib/commerce/status";
 import type { CheckoutInput, OrderRecord } from "@/types/commerce";
 import type { AppLocale } from "@/lib/i18n/config";
+import type { DeliveryPolicy } from "@/types/site";
 
 function money(value: string | number | null | undefined): number {
   if (value === null || value === undefined || value === "") return 0;
   return typeof value === "number" ? value : Number(value);
+}
+
+function quoteSiteDeliveryFee(subtotal: number, policy: DeliveryPolicy): number {
+  if (policy.freeDeliveryThresholdZar != null && subtotal >= policy.freeDeliveryThresholdZar) {
+    return 0;
+  }
+  return policy.feeZar;
 }
 
 function mapOrder(
@@ -90,6 +100,13 @@ export async function createOrderFromCart(
   let deliveryFee = 0;
   let deliveryWindow: string | null = null;
   let matchedRuleId: string | null = null;
+  const site = getSiteConfig();
+  const deliveryPolicy = confirmedValue(site.deliveryPolicy);
+  const deliveryScope = confirmedValue(site.deliveryScope);
+
+  if (!isAllowedDeliveryProvince(input.deliveryProvince, input.locale, deliveryScope)) {
+    return { ok: false, errorKey: "destinationNotSupported" };
+  }
 
   if (publishedRules.length) {
     const selected = input.deliveryRuleId ? await getDeliveryRule(input.deliveryRuleId) : null;
@@ -125,6 +142,9 @@ export async function createOrderFromCart(
         ? `${matched.estimatedMinDays}-${matched.estimatedMaxDays}`
         : null);
     matchedRuleId = matched.id;
+  } else if (deliveryPolicy) {
+    deliveryFee = quoteSiteDeliveryFee(cart.subtotal?.amount ?? 0, deliveryPolicy);
+    deliveryWindow = deliveryPolicy.timeframe;
   }
 
   const currency = cart.currency;
@@ -191,7 +211,7 @@ export async function createOrderFromCart(
       deliveryNotes: input.deliveryNotes?.trim() || null,
       deliveryRuleId: matchedRuleId,
       deliveryFeeAmount: deliveryFee.toFixed(2),
-      deliveryWindowSnapshot: publishedRules.length ? deliveryWindow : "unconfigured",
+      deliveryWindowSnapshot: deliveryWindow ?? (publishedRules.length ? null : "unconfigured"),
       subtotalAmount: subtotal.toFixed(2),
       discountAmount: discount.toFixed(2),
       taxAmount: tax.toFixed(2),

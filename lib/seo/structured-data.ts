@@ -29,7 +29,9 @@ export function buildOrganizationStructuredData(locale: AppLocale = "en"): JsonL
   const email = confirmedValue(site.email);
   const phone = confirmedValue(site.phone);
   const sameAs = confirmedValue(site.socialProfiles);
-  const address = confirmedValue(site.address);
+  const address = site.publishPublicAddress ? confirmedValue(site.address) : null;
+  const deliveryScope = confirmedValue(site.deliveryScope);
+  const deliveryPolicy = confirmedValue(site.deliveryPolicy);
   const paths = createPaths(locale);
 
   const data: JsonLd = {
@@ -38,10 +40,16 @@ export function buildOrganizationStructuredData(locale: AppLocale = "en"): JsonL
     name: site.businessName,
     url: buildCanonicalUrl(paths.home),
     logo: buildCanonicalUrl(site.logoPath),
-    areaServed: {
-      "@type": "Country",
-      name: "South Africa",
-    },
+    areaServed:
+      deliveryScope === "gauteng"
+        ? {
+            "@type": "AdministrativeArea",
+            name: deliveryPolicy?.coverage ?? "Gauteng",
+          }
+        : {
+            "@type": "Country",
+            name: "South Africa",
+          },
   };
 
   if (email) data.email = email;

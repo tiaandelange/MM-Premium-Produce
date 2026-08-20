@@ -28,6 +28,11 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/contact"
   });
 }
 
+function whatsappHref(number: string): string {
+  const digits = number.replace(/\D/g, "");
+  return `https://wa.me/${digits}`;
+}
+
 export default async function ContactPage({ params }: PageProps<"/[locale]/contact">) {
   const locale = requireLocale((await params).locale);
   const site = getSiteConfig();
@@ -37,11 +42,13 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
   const email = confirmedValue(site.email);
   const phone = confirmedValue(site.phone);
   const whatsapp = confirmedValue(site.whatsapp);
-  const address = confirmedValue(site.address);
+  const address = site.publishPublicAddress ? confirmedValue(site.address) : null;
   const supportHours = confirmedValue(site.supportHours);
   const tradingName = confirmedValue(site.tradingName) ?? site.businessName;
-  const deliveryScope = confirmedValue(site.deliveryScope);
-  const hasPublicDetails = Boolean(email || phone || whatsapp || address || supportHours);
+  const legalName = confirmedValue(site.legalName);
+  const founders = confirmedValue(site.founders);
+  const deliveryPolicy = confirmedValue(site.deliveryPolicy);
+  const hasPublicDetails = Boolean(email || phone || whatsapp || address || supportHours || legalName);
   const breadcrumbItems = [
     { name: messages.home, path: paths.home },
     { name: messages.contact, path: paths.contact },
@@ -64,6 +71,18 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
                   <dt className="font-medium text-ink">{messages.tradingName}</dt>
                   <dd>{tradingName}</dd>
                 </div>
+                {legalName ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.legalEntity}</dt>
+                    <dd>{legalName}</dd>
+                  </div>
+                ) : null}
+                {founders ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.owners}</dt>
+                    <dd>{founders}</dd>
+                  </div>
+                ) : null}
                 {email ? (
                   <div>
                     <dt className="font-medium text-ink">{messages.email}</dt>
@@ -75,13 +94,19 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
                 {phone ? (
                   <div>
                     <dt className="font-medium text-ink">{messages.phone}</dt>
-                    <dd>{phone}</dd>
+                    <dd>
+                      <a href={`tel:${phone.replace(/\s+/g, "")}`}>{phone}</a>
+                    </dd>
                   </div>
                 ) : null}
                 {whatsapp ? (
                   <div>
                     <dt className="font-medium text-ink">{messages.whatsapp}</dt>
-                    <dd>{whatsapp}</dd>
+                    <dd>
+                      <a href={whatsappHref(whatsapp)} rel="noopener noreferrer" target="_blank">
+                        {whatsapp}
+                      </a>
+                    </dd>
                   </div>
                 ) : null}
                 {address ? (
@@ -98,10 +123,12 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
                     <dd>{supportHours}</dd>
                   </div>
                 ) : null}
-                {deliveryScope ? (
+                {deliveryPolicy ? (
                   <div>
                     <dt className="font-medium text-ink">{messages.serviceArea}</dt>
-                    <dd>{messages.nationwideDeliveryShort}</dd>
+                    <dd>
+                      {deliveryPolicy.coverage} · {deliveryPolicy.method} · {deliveryPolicy.timeframe}
+                    </dd>
                   </div>
                 ) : null}
               </dl>
@@ -110,11 +137,6 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
             <>
               <h2 className="text-section-title text-ink">{messages.contactUnavailableTitle}</h2>
               <p className="mt-4 text-muted">{messages.contactUnavailableBody}</p>
-              {deliveryScope ? (
-                <p className="mt-3 text-muted">
-                  {messages.serviceArea}: {messages.nationwideDeliveryShort}
-                </p>
-              ) : null}
             </>
           )}
           <p className="mt-6">

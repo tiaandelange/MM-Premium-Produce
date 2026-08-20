@@ -20,8 +20,8 @@ const routes = [
   { path: "/en/shop/fruit", expect: ["Fruit"] },
   { path: "/en/products/cherry-tomatoes", expect: ["Cherry Tomatoes", "400"] },
   { path: "/en/products/baby-spinach", expect: ["Baby Spinach", "200"] },
-  { path: "/en/delivery", expect: ["Delivery", "South Africa"] },
-  { path: "/af/aflewering", expect: ["Aflewering", "Suid-Afrika"] },
+  { path: "/en/delivery", expect: ["Delivery", "Gauteng"] },
+  { path: "/af/aflewering", expect: ["Aflewering", "Gauteng"] },
   { path: "/en/cart", expect: ["Cart", "cart"] },
   { path: "/en/checkout", expect: ["Checkout", "order"] },
   { path: "/af/betaal", expect: ["Betaal", "bestelling"] },
@@ -29,8 +29,9 @@ const routes = [
   { path: "/en/faq", expect: ["Frequently asked"] },
   { path: "/en/guides", expect: ["guides", "Guides"] },
   { path: "/en/recipes", expect: ["recipes", "Recipes"] },
-  { path: "/en/contact", expect: ["Contact"] },
+  { path: "/en/contact", expect: ["Contact", "hello@mmpp.co.za"] },
   { path: "/en/privacy", expect: ["Privacy"] },
+  { path: "/en/bundles", expect: ["Coming soon", "Produce"] },
   { path: "/en/products/this-product-does-not-exist-xyz", expect: null, status: 404 },
 ];
 

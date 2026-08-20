@@ -35,7 +35,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     home: {
       title: "M & M Premium Produce | Personally Handpicked Fruit & Vegetables",
       description:
-        "Personally handpicked fruit and vegetables from M & M Premium Produce. Shop the catalogue, then open vegetables, fruit or a named product. Fresh produce delivered across South Africa.",
+        "Personally handpicked fruit and vegetables from M & M Premium Produce. Shop the catalogue, then open vegetables, fruit or a named product. Owner delivery across Gauteng.",
       h1: "Premium Fresh Fruit, Vegetables & Produce",
       heroLines: [
         { text: "Premium Fresh", tone: "primary" },
@@ -51,8 +51,8 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         body: "We carefully select the fruit, vegetables and fresh produce we offer, with quality and freshness at the centre of every choice.",
         delivery: {
           eyebrow: "Delivery",
-          title: "Nationwide Delivery",
-          body: "Fresh produce delivered across South Africa.",
+          title: "Gauteng Delivery",
+          body: "Owner delivery across Gauteng within 1–3 business days.",
         },
         points: [
           {
@@ -76,14 +76,14 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
             "Every item is personally selected with care.",
             "Pack sizes and pricing are shown clearly on each product page.",
             "Availability is listed honestly — what you see is what we currently offer.",
-            "Fresh produce is delivered nationwide across South Africa.",
-            "When our contact details are published, we respond promptly to customer questions.",
+            "Fresh produce is delivered by us across Gauteng.",
+            "Email or WhatsApp us — we respond promptly to customer questions.",
           ],
         },
         {
           heading: "Shop fresh produce online",
           body: [
-            "Browse the full shop, or go straight into vegetables or fruit and choose a product. We deliver nationwide across South Africa; delivery areas, time slots and fees appear on the delivery page when published.",
+            "Browse the full shop, or go straight into vegetables or fruit and choose a product. We deliver ourselves across Gauteng; fees, timing and exclusions are on the delivery page.",
             "Practical guides on storing staples and using leftovers are in the produce guides — written for everyday kitchen use.",
           ],
         },
@@ -124,38 +124,38 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     about: {
       title: "About M & M Premium Produce",
       description:
-        "M & M Premium Produce is a couple-run fresh produce shop. Every item is personally handpicked. Quality does matter.",
+        "M & M Premium Produce is run by Meagan Pelzer and Marthinus Erasmus. Every item is personally handpicked. Quality does matter.",
       h1: "About M & M Premium Produce",
       intro: "Quality does matter.",
       sections: [
         {
           heading: "Our story",
           body: [
-            "M & M Premium Produce is more than a fresh produce business — it is our shared journey as a couple building a future together. We work to offer high-quality fruit and vegetables at prices meant to be accessible.",
+            "M & M Premium Produce is the shared journey of Meagan Pelzer and Marthinus Erasmus — a couple building a fresh-produce business while we save toward the future we are building together, including marriage. We work to offer high-quality fruit and vegetables at prices meant to be accessible.",
             "Every item is personally handpicked by us. That hands-on care is how we make sure customers receive freshness, flavour and value they can trust. Our belief is simple: quality does matter.",
-            "M & M Premium Produce is a family-run business built around careful selection, honest service and a shared future. We stay close to what customers need so the experience stays reliable and personal.",
+            "We trade as M&M Premium Produce under Beloofdeland Vervoer. We stay close to what customers need so the experience stays reliable and personal.",
           ],
         },
         {
           heading: "What you can shop for",
           body: [
-            "Browse the full catalogue, vegetables or fruit. Produce boxes will appear under bundles when a box is confirmed. We offer nationwide delivery across South Africa; areas, time slots and fees are published on the delivery page when they are confirmed.",
+            "Browse the full catalogue, vegetables or fruit. Produce boxes are coming soon. We deliver ourselves across Gauteng; areas, fees and timing are on the delivery page.",
           ],
         },
       ],
     },
     delivery: {
-      title: "Nationwide Delivery",
+      title: "Gauteng Delivery",
       description:
-        "M & M Premium Produce offers delivery across South Africa. Detailed delivery areas, fees and delivery timing will be published once confirmed.",
-      h1: "Nationwide Delivery",
+        "M & M Premium Produce delivers fresh produce across Gauteng by owner delivery within 1–3 business days. R35 delivery, free from R500.",
+      h1: "Gauteng Delivery",
       intro:
-        "Fresh produce delivered across South Africa. Detailed delivery areas, fees and delivery timing will be published once confirmed.",
+        "Owner delivery across Gauteng within 1–3 business days. Outside Gauteng and routes farther than 100 km are not covered.",
       sections: [
         {
           heading: "Current status",
           body: [
-            "M & M Premium Produce offers delivery across South Africa. Detailed delivery areas, fees and delivery timing will be published once confirmed. Shop fruit and vegetables in the meantime.",
+            "Standard delivery is R35, or free on orders of R500 or more. We deliver ourselves — confirm your suburb when you order.",
           ],
         },
       ],
@@ -163,15 +163,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     contact: {
       title: "Contact M & M Premium Produce",
       description:
-        "Reach M & M Premium Produce. Contact details will be listed here as soon as they are ready.",
+        "Email hello@mmpp.co.za or WhatsApp +27 82 603 8288. Owner delivery across Gauteng.",
       h1: "Contact",
       intro:
-        "We are putting our public contact details in place. In the meantime, you are welcome to browse the shop and read the FAQ.",
+        "Reach Meagan and Marthinus for orders and enquiries. We do not publish a street address.",
       sections: [
         {
           heading: "Public details",
           body: [
-            "Contact details for orders and enquiries will be published on this page shortly. Until then, explore our fresh produce and guides at your own pace.",
+            "Use the email, phone or WhatsApp details on this page. Trading as M&M Premium Produce under Beloofdeland Vervoer.",
           ],
         },
       ],
@@ -185,13 +185,25 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "What can I shop for?",
           body: [
-            "Browse vegetables, fruit, or the full shop. Produce boxes will appear when available. Each product has its own page with pack details.",
+            "Browse vegetables, fruit, or the full shop. Produce boxes are coming soon. Each product has its own page with pack details.",
           ],
         },
         {
           heading: "Do you deliver?",
           body: [
-            "Yes — we offer nationwide delivery across South Africa. Areas, time slots and fees are not published yet. The delivery page is the place for those details when they are confirmed.",
+            "Yes — we deliver ourselves across Gauteng within 1–3 business days. Delivery is R35, or free from R500. We do not deliver outside Gauteng or farther than 100 km.",
+          ],
+        },
+        {
+          heading: "How do I pay?",
+          body: [
+            "Orders are paid by manual EFT after we confirm them. Online card payments are planned for later.",
+          ],
+        },
+        {
+          heading: "Can I cancel or return an order?",
+          body: [
+            "You may cancel within 6 hours of placing an order. Damaged or incorrect produce should be reported promptly for a return or replacement. Wrong orders are remedied with a refund or replacement. Fresh produce that arrives in good condition is non-refundable because it is perishable.",
           ],
         },
         {
@@ -245,7 +257,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     home: {
       title: "M & M Premium Produce | Persoonlik uitgesoekte vrugte en groente",
       description:
-        "Persoonlik uitgesoekte vrugte en groente by M & M Premium Produce. Blaai die katalogus, of begin by groente of vrugte. Vars produkte word regoor Suid-Afrika afgelewer.",
+        "Persoonlik uitgesoekte vrugte en groente by M & M Premium Produce. Blaai die katalogus, of begin by groente of vrugte. Eienaar-aflewering regoor Gauteng.",
       h1: "Vars Vrugte, Groente & Produkte",
       heroLines: [
         { text: "Vars Vrugte,", tone: "primary" },
@@ -261,8 +273,8 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         body: "Ons kies die vrugte, groente en vars produkte wat ons bied met sorg, met kwaliteit en varsheid in die middel van elke keuse.",
         delivery: {
           eyebrow: "Aflewering",
-          title: "Landswye Aflewering",
-          body: "Vars produkte word regoor Suid-Afrika afgelewer.",
+          title: "Gauteng-aflewering",
+          body: "Eienaar-aflewering regoor Gauteng binne 1–3 werksdae.",
         },
         points: [
           {
@@ -286,14 +298,14 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
             "Elke item word persoonlik met sorg uitgesoek.",
             "Pakgroottes en pryse word duidelik op elke produkblad gewys.",
             "Beskikbaarheid word eerlik gelys — wat jy sien, is wat ons tans bied.",
-            "Vars produkte word landswyd regoor Suid-Afrika afgelewer.",
-            "Wanneer ons kontakbesonderhede gepubliseer is, reageer ons gou op kliëntevrae.",
+            "Vars produkte word deur ons regoor Gauteng afgelewer.",
+            "E-pos of WhatsApp ons — ons reageer gou op kliëntevrae.",
           ],
         },
         {
           heading: "Koop vars produkte aanlyn",
           body: [
-            "Blaai die volle winkel, of gaan direk na groente of vrugte en kies ’n produk. Ons lewer landswyd regoor Suid-Afrika af; afleweringsgebiede, tydgleuwe en fooie verskyn op die afleweringsblad wanneer dit gepubliseer is.",
+            "Blaai die volle winkel, of gaan direk na groente of vrugte en kies ’n produk. Ons lewer self regoor Gauteng af; fooie, tydsberekening en uitsluitings staan op die afleweringsblad.",
             "Praktiese gidse oor die berg van stapels en die gebruik van oorskiet is by die produk-gidse — geskryf vir alledaagse kombuisgebruik.",
           ],
         },
@@ -316,17 +328,17 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
       ],
     },
     bundles: {
-      title: "Produkbokse",
+      title: "Produktebokse",
       description:
-        "Produkbokse van M & M Premium Produce — binnekort beskikbaar. Koop intussen vrugte en groente as afsonderlike produkte.",
-      h1: "Produkbokse",
+        "Produktebokse van M & M Premium Produce — binnekort beskikbaar. Koop intussen vrugte en groente as afsonderlike produkte.",
+      h1: "Produktebokse",
       intro:
-        "Produkbokse kom binnekort. Elke boks sal die vrugte en groente daarin lys sodat jy presies weet wat jy kry.",
+        "Produktebokse kom binnekort. Elke boks sal die vrugte en groente daarin lys sodat jy presies weet wat jy kry.",
       sections: [
         {
           heading: "Huidige bokse",
           body: [
-            "Binnekort beskikbaar — geen produkbokse is nog te koop nie. Wanneer ’n boks gereed is, verskyn dit hier. Tot dan, koop vrugte en groente as afsonderlike produkte.",
+            "Binnekort beskikbaar — geen produktebokse is nog te koop nie. Wanneer ’n boks gereed is, verskyn dit hier. Tot dan, koop vrugte en groente as afsonderlike produkte.",
           ],
         },
       ],
@@ -334,38 +346,38 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     about: {
       title: "Oor M & M Premium Produce",
       description:
-        "M & M Premium Produce is ’n varsproduk-winkel wat deur ’n paartjie bestuur word. Elke item word persoonlik uitgesoek. Kwaliteit maak saak.",
+        "M & M Premium Produce word deur Meagan Pelzer en Marthinus Erasmus bestuur. Elke item word persoonlik uitgesoek. Kwaliteit maak saak.",
       h1: "Oor M & M Premium Produce",
       intro: "Kwaliteit maak saak.",
       sections: [
         {
           heading: "Ons storie",
           body: [
-            "M & M Premium Produce is meer as ’n varsprodukbesigheid — dit is ons gedeelde reis as ’n paartjie wat saam ’n toekoms bou. Ons werk om vrugte en groente van hoë gehalte teen toeganklike pryse te bied.",
+            "M & M Premium Produce is die gedeelde reis van Meagan Pelzer en Marthinus Erasmus — ’n paartjie wat ’n varsprodukbesigheid bou terwyl ons spaar vir die toekoms wat ons saam bou, insluitend die huwelik. Ons werk om vrugte en groente van hoë gehalte teen toeganklike pryse te bied.",
             "Elke item word persoonlik deur ons uitgesoek. Daardie hands-on sorg is hoe ons seker maak kliënte kry varsheid, geur en waarde waarop hulle kan staatmaak. Ons oortuiging is eenvoudig: kwaliteit maak saak.",
-            "M & M Premium Produce is ’n familiebesigheid gebou rondom sorgvuldige keuse, eerlike diens en ’n gedeelde toekoms. Ons bly naby aan wat kliënte nodig het sodat die ervaring betroubaar en persoonlik bly.",
+            "Ons handel as M&M Premium Produce onder Beloofdeland Vervoer. Ons bly naby aan wat kliënte nodig het sodat die ervaring betroubaar en persoonlik bly.",
           ],
         },
         {
           heading: "Waarvoor jy kan koop",
           body: [
-            "Blaai die volle katalogus, groente of vrugte. Produkbokse verskyn onder bokse wanneer ’n boks bevestig is. Ons bied landswye aflewering regoor Suid-Afrika; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit bevestig is.",
+            "Blaai die volle katalogus, groente of vrugte. Produkbokse kom binnekort. Ons lewer self regoor Gauteng af; areas, fooie en tydsberekening staan op die afleweringsblad.",
           ],
         },
       ],
     },
     delivery: {
-      title: "Landswye Aflewering",
+      title: "Gauteng-aflewering",
       description:
-        "M & M Premium Produce bied aflewering regoor Suid-Afrika. Besonderhede oor afleweringsgebiede, fooie en afleweringstye sal gepubliseer word sodra dit bevestig is.",
-      h1: "Landswye Aflewering",
+        "M & M Premium Produce lewer vars produkte regoor Gauteng per eienaar-aflewering binne 1–3 werksdae. R35-aflewering, gratis vanaf R500.",
+      h1: "Gauteng-aflewering",
       intro:
-        "Vars produkte word regoor Suid-Afrika afgelewer. Besonderhede oor afleweringsgebiede, fooie en afleweringstye sal gepubliseer word sodra dit bevestig is.",
+        "Eienaar-aflewering regoor Gauteng binne 1–3 werksdae. Buite Gauteng en roetes verder as 100 km word nie gedek nie.",
       sections: [
         {
           heading: "Huidige status",
           body: [
-            "M & M Premium Produce bied aflewering regoor Suid-Afrika. Besonderhede oor afleweringsgebiede, fooie en afleweringstye sal gepubliseer word sodra dit bevestig is. Koop intussen vrugte en groente.",
+            "Standaard-aflewering is R35, of gratis op bestellings van R500 of meer. Ons lewer self — bevestig jou voorstad wanneer jy bestel.",
           ],
         },
       ],
@@ -373,15 +385,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     contact: {
       title: "Kontak M & M Premium Produce",
       description:
-        "Kontak M & M Premium Produce. Kontakbesonderhede word hier gelys sodra dit gereed is.",
+        "E-pos hello@mmpp.co.za of WhatsApp +27 82 603 8288. Eienaar-aflewering regoor Gauteng.",
       h1: "Kontak",
       intro:
-        "Ons is besig om ons openbare kontakbesonderhede in plek te sit. Intussen is jy welkom om die winkel te bekyk en die gereelde vrae te lees.",
+        "Kontak Meagan en Marthinus vir bestellings en navrae. Ons publiseer nie ’n straatadres nie.",
       sections: [
         {
           heading: "Openbare besonderhede",
           body: [
-            "Kontakbesonderhede vir bestellings en navrae word binnekort op hierdie blad gepubliseer. Tot dan, verken ons vars produkte en gidse op jou eie tempo.",
+            "Gebruik die e-pos-, telefoon- of WhatsApp-besonderhede op hierdie blad. Handel as M&M Premium Produce onder Beloofdeland Vervoer.",
           ],
         },
       ],
@@ -395,13 +407,25 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Waarvoor kan ek koop?",
           body: [
-            "Blaai groente, vrugte of die volle winkel. Produkbokse verskyn wanneer beskikbaar. Elke produk het sy eie blad met pakbesonderhede.",
+            "Blaai groente, vrugte of die volle winkel. Produkbokse kom binnekort. Elke produk het sy eie blad met pakbesonderhede.",
           ],
         },
         {
           heading: "Lewer julle af?",
           body: [
-            "Ja — ons bied landswye aflewering regoor Suid-Afrika. Areas, tydgleuwe en fooie is nog nie gepubliseer nie. Die afleweringsblad is die plek vir daardie besonderhede wanneer dit bevestig is.",
+            "Ja — ons lewer self regoor Gauteng af binne 1–3 werksdae. Aflewering is R35, of gratis vanaf R500. Ons lewer nie buite Gauteng of verder as 100 km af nie.",
+          ],
+        },
+        {
+          heading: "Hoe betaal ek?",
+          body: [
+            "Bestellings word per handmatige EFT betaal nadat ons dit bevestig. Aanlyn kaartbetalings word later beplan.",
+          ],
+        },
+        {
+          heading: "Kan ek ’n bestelling kanselleer of terugstuur?",
+          body: [
+            "Jy mag binne 6 uur ná die bestelling kanselleer. Beskadigde of verkeerde produkte moet gou aangemeld word vir ’n terugsending of vervanging. Verkeerde bestellings word met ’n terugbetaling of vervanging reggestel. Vars produkte wat in goeie toestand aankom, is nie terugbetaalbaar nie omdat dit bederfbaar is.",
           ],
         },
         {

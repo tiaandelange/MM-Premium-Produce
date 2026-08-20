@@ -43,3 +43,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local QA artifacts (screenshots, lighthouse JSON dumps)
+scripts/qa/
+scripts/lighthouse/*.json
+scripts/lighthouse-home.json
+scripts/seo-audit-out.json

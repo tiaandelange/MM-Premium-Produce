@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/brand/wordmark";
+import { ComingSoonNavLink } from "@/components/layout/coming-soon-nav-link";
 import { HeaderUtilities, UtilityPanel } from "@/components/layout/header-utilities";
 import { MenuIcon } from "@/components/layout/icons";
 import { CartDrawer } from "@/components/commerce/cart-drawer";
@@ -13,6 +14,11 @@ import { getThemePreference } from "@/lib/theme-server";
 import { getCatalog } from "@/services/catalog";
 import { getHydratedCart } from "@/services/cart";
 import { analyticsItemsFromCart } from "@/lib/analytics/items";
+import type { Route } from "next";
+
+type NavItem =
+  | { href: Route; label: string; comingSoon?: undefined }
+  | { href: Route; label: string; comingSoon: string };
 
 export async function SiteHeader({ locale }: { locale: AppLocale }) {
   const theme = await getThemePreference();
@@ -25,13 +31,14 @@ export async function SiteHeader({ locale }: { locale: AppLocale }) {
   const fruit = categories.find((category) => category.id === "cat_fruit");
   const vegetables = categories.find((category) => category.id === "cat_vegetables");
 
-  const nav = [
+  const nav: Array<NavItem | null> = [
     { href: paths.shop, label: messages.shop },
     fruit ? { href: paths.category(fruit.slug), label: fruit.name } : null,
     vegetables ? { href: paths.category(vegetables.slug), label: vegetables.name } : null,
-    { href: paths.bundles, label: messages.produceBoxes },
+    { href: paths.bundles, label: messages.produceBoxes, comingSoon: messages.comingSoon },
     { href: paths.about, label: messages.ourStory },
-  ].filter((item): item is { href: typeof paths.shop; label: string } => Boolean(item));
+  ];
+  const primaryNav = nav.filter((item): item is NavItem => Boolean(item));
 
   const utilityProps = {
     locale,
@@ -62,6 +69,24 @@ export async function SiteHeader({ locale }: { locale: AppLocale }) {
     </CartDrawer>
   );
 
+  function renderNavLink(item: NavItem) {
+    if (item.comingSoon) {
+      return (
+        <ComingSoonNavLink
+          href={item.href}
+          label={item.label}
+          status={item.comingSoon}
+          current={pathname === item.href}
+        />
+      );
+    }
+    return (
+      <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
+        {item.label}
+      </Link>
+    );
+  }
+
   return (
     <header className="site-header">
       <div className="site-header-inner">
@@ -72,12 +97,8 @@ export async function SiteHeader({ locale }: { locale: AppLocale }) {
           <div className="mobile-nav-panel">
             <nav aria-label="Primary mobile">
               <ul>
-                {nav.map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
-                      {item.label}
-                    </Link>
-                  </li>
+                {primaryNav.map((item) => (
+                  <li key={item.href}>{renderNavLink(item)}</li>
                 ))}
                 <li>
                   <Link href={paths.delivery}>{messages.delivery}</Link>
@@ -99,12 +120,8 @@ export async function SiteHeader({ locale }: { locale: AppLocale }) {
 
         <nav aria-label="Primary" className="site-nav">
           <ul>
-            {nav.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href} aria-current={pathname === item.href ? "page" : undefined}>
-                  {item.label}
-                </Link>
-              </li>
+            {primaryNav.map((item) => (
+              <li key={item.href}>{renderNavLink(item)}</li>
             ))}
           </ul>
         </nav>
