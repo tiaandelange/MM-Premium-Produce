@@ -4,7 +4,7 @@ import { SelectItemLink } from "@/components/commerce/select-item-link";
 import { analyticsItemFromProduct } from "@/lib/analytics/items";
 import { getMessages } from "@/lib/i18n/messages";
 import { createPaths } from "@/lib/i18n/paths";
-import { packQuantityLabel, resolvePriceUnit } from "@/lib/catalog/price-unit";
+import { packQuantityLabel } from "@/lib/catalog/price-unit";
 import type { Product } from "@/types/catalog";
 
 export function ProductCard({
@@ -22,7 +22,14 @@ export function ProductCard({
   const paths = createPaths(product.locale);
   const messages = getMessages(product.locale);
   const soldOut = product.availability === "out_of_stock";
+  const comingSoon = product.availability === "preorder";
+  const unpriced = !product.price;
   const packLabel = packQuantityLabel(product);
+
+  let badge: string | null = null;
+  if (soldOut) badge = messages.soldOut;
+  else if (comingSoon) badge = messages.comingSoon;
+  else if (unpriced) badge = messages.priceToConfirm;
 
   return (
     <article className="product-card">
@@ -34,7 +41,7 @@ export function ProductCard({
       >
         <div className="product-card-media">
           <CatalogMedia image={product.primaryImage} className="object-cover" />
-          {soldOut ? <span className="product-card-badge">{messages.soldOut}</span> : null}
+          {badge ? <span className="product-card-badge">{badge}</span> : null}
         </div>
         <div className="product-card-body">
           <Heading className="font-heading text-card-title">{product.name}</Heading>
@@ -43,7 +50,10 @@ export function ProductCard({
             price={product.price}
             compareAtPrice={product.compareAtPrice}
             locale={product.locale}
-            unit={resolvePriceUnit({ unit: product.unit, packSize: product.packSize, productId: product.id })}
+            unit={product.unit}
+            packSize={product.packSize}
+            productId={product.id}
+            compact
           />
         </div>
       </SelectItemLink>

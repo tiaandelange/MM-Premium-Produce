@@ -99,7 +99,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <div className="home-bundles-preview-inner">
           <EditorialPanel>
             <h2 id="home-bundles-heading" className="text-section-title">
-              {messages.produceBoxes}
+              {messages.produceBoxes} · {messages.comingSoon}
             </h2>
             {bundles.length ? (
               <div className="mt-8 grid gap-6 lg:grid-cols-2">

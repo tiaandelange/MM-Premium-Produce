@@ -36,7 +36,12 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
   const paths = createPaths(locale);
   const email = confirmedValue(site.email);
   const phone = confirmedValue(site.phone);
+  const whatsapp = confirmedValue(site.whatsapp);
   const address = confirmedValue(site.address);
+  const supportHours = confirmedValue(site.supportHours);
+  const tradingName = confirmedValue(site.tradingName) ?? site.businessName;
+  const deliveryScope = confirmedValue(site.deliveryScope);
+  const hasPublicDetails = Boolean(email || phone || whatsapp || address || supportHours);
   const breadcrumbItems = [
     { name: messages.home, path: paths.home },
     { name: messages.contact, path: paths.contact },
@@ -51,27 +56,70 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
       </PageIntro>
       <PageSection>
         <EditorialPanel className="max-w-3xl">
-          <h2 className="text-section-title text-ink">{messages.publicDetails}</h2>
-          <dl className="mt-4 space-y-4 text-muted">
-            <div>
-              <dt className="font-medium text-ink">{messages.email}</dt>
-              <dd>{email ? <a href={`mailto:${email}`}>{email}</a> : messages.toBeConfirmed}</dd>
-            </div>
-            <div>
-              <dt className="font-medium text-ink">{messages.phone}</dt>
-              <dd>{phone ?? messages.toBeConfirmed}</dd>
-            </div>
-            <div>
-              <dt className="font-medium text-ink">{messages.address}</dt>
-              <dd>
-                {address
-                  ? `${address.streetAddress}, ${address.locality}, ${address.region} ${address.postalCode}, ${address.country}`
-                  : messages.toBeConfirmed}
-              </dd>
-            </div>
-          </dl>
+          {hasPublicDetails ? (
+            <>
+              <h2 className="text-section-title text-ink">{messages.publicDetails}</h2>
+              <dl className="mt-4 space-y-4 text-muted">
+                <div>
+                  <dt className="font-medium text-ink">{messages.tradingName}</dt>
+                  <dd>{tradingName}</dd>
+                </div>
+                {email ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.email}</dt>
+                    <dd>
+                      <a href={`mailto:${email}`}>{email}</a>
+                    </dd>
+                  </div>
+                ) : null}
+                {phone ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.phone}</dt>
+                    <dd>{phone}</dd>
+                  </div>
+                ) : null}
+                {whatsapp ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.whatsapp}</dt>
+                    <dd>{whatsapp}</dd>
+                  </div>
+                ) : null}
+                {address ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.address}</dt>
+                    <dd>
+                      {`${address.streetAddress}, ${address.locality}, ${address.region} ${address.postalCode}, ${address.country}`}
+                    </dd>
+                  </div>
+                ) : null}
+                {supportHours ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.supportHours}</dt>
+                    <dd>{supportHours}</dd>
+                  </div>
+                ) : null}
+                {deliveryScope ? (
+                  <div>
+                    <dt className="font-medium text-ink">{messages.serviceArea}</dt>
+                    <dd>{messages.nationwideDeliveryShort}</dd>
+                  </div>
+                ) : null}
+              </dl>
+            </>
+          ) : (
+            <>
+              <h2 className="text-section-title text-ink">{messages.contactUnavailableTitle}</h2>
+              <p className="mt-4 text-muted">{messages.contactUnavailableBody}</p>
+              {deliveryScope ? (
+                <p className="mt-3 text-muted">
+                  {messages.serviceArea}: {messages.nationwideDeliveryShort}
+                </p>
+              ) : null}
+            </>
+          )}
           <p className="mt-6">
-            <Link href={paths.shop}>{messages.shop}</Link> · <Link href={paths.faq}>{messages.faq}</Link>
+            <Link href={paths.shop}>{messages.shop}</Link> · <Link href={paths.faq}>{messages.faq}</Link> ·{" "}
+            <Link href={paths.delivery}>{messages.delivery}</Link>
           </p>
         </EditorialPanel>
       </PageSection>

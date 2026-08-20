@@ -73,16 +73,18 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Quality you can trust",
           body: [
-            "Every item is personally handpicked.",
-            "Fruit and vegetables are sold as individual products with their own pages.",
-            "Prices are shown in South African rand where a selling price is listed.",
+            "Every item is personally selected with care.",
+            "Pack sizes and pricing are shown clearly on each product page.",
+            "Availability is listed honestly — what you see is what we currently offer.",
+            "Fresh produce is delivered nationwide across South Africa.",
+            "When our contact details are published, we respond promptly to customer questions.",
           ],
         },
         {
           heading: "Shop fresh produce online",
           body: [
-            "Open the full catalogue, or go straight into vegetables or fruit, then choose a named product. We offer nationwide delivery across South Africa; areas, time slots and fees are listed on the delivery page when they are published.",
-            "Guides on storing staples and using leftovers sit in the produce guides. They are written to be useful in the kitchen, not as a content farm.",
+            "Browse the full shop, or go straight into vegetables or fruit and choose a product. We deliver nationwide across South Africa; delivery areas, time slots and fees appear on the delivery page when published.",
+            "Practical guides on storing staples and using leftovers are in the produce guides — written for everyday kitchen use.",
           ],
         },
       ],
@@ -93,12 +95,12 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         "The full M & M Premium Produce catalogue: every fruit and vegetable currently listed, each on its own page. Use Vegetables or Fruit when you want one aisle.",
       h1: "All produce",
       intro:
-        "This is the complete catalogue index — not a second vegetables page. Open Vegetables or Fruit to shop one aisle, or stay here to scan every listed item.",
+        "Browse our complete selection of personally chosen fruit and vegetables, or explore each fresh-produce aisle separately.",
       sections: [
         {
           heading: "All products",
           body: [
-            "Every product below has its own URL. Vegetables and fruit each have a separate aisle page so those searches do not compete with this catalogue index.",
+            "Every product below has its own page with pack details and pricing. Prefer one aisle? Open Vegetables or Fruit to browse just that selection.",
           ],
         },
       ],
@@ -106,15 +108,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     bundles: {
       title: "Produce Boxes & Bundles",
       description:
-        "Produce boxes from M & M Premium Produce will be listed here when a box is confirmed for sale. Until then, shop fruit and vegetables as individual products.",
+        "Produce boxes from M & M Premium Produce — coming soon. Shop fruit and vegetables as individual products in the meantime.",
       h1: "Produce Boxes & Bundles",
       intro:
-        "Produce boxes will be catalogue items in their own right, with links to the fruit and vegetables inside them.",
+        "Produce boxes are coming soon. Each box will list the fruit and vegetables inside so you know exactly what you are getting.",
       sections: [
         {
           heading: "Current boxes",
           body: [
-            "No produce boxes are listed for sale yet. When a box is confirmed, it will appear here with its own page. Until then, shop fruit and vegetables as individual products.",
+            "Coming soon — no produce boxes are listed for sale yet. When a box is ready, it will appear here. Until then, shop fruit and vegetables as individual products.",
           ],
         },
       ],
@@ -131,7 +133,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
           body: [
             "M & M Premium Produce is more than a fresh produce business — it is our shared journey as a couple building a future together. We work to offer high-quality fruit and vegetables at prices meant to be accessible.",
             "Every item is personally handpicked by us. That hands-on care is how we make sure customers receive freshness, flavour and value they can trust. Our belief is simple: quality does matter.",
-            "Each purchase supports the growth of this business and the life we are building together, including our wedding. We stay close to what customers need so the experience stays reliable and personal.",
+            "M & M Premium Produce is a family-run business built around careful selection, honest service and a shared future. We stay close to what customers need so the experience stays reliable and personal.",
           ],
         },
         {
@@ -161,15 +163,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     contact: {
       title: "Contact M & M Premium Produce",
       description:
-        "Public contact details for M & M Premium Produce will appear here once they are confirmed.",
+        "Reach M & M Premium Produce. Contact details will be listed here as soon as they are ready.",
       h1: "Contact",
       intro:
-        "Use this page for confirmed public contact details. A message form and order support will be added in a later phase.",
+        "We are putting our public contact details in place. In the meantime, you are welcome to browse the shop and read the FAQ.",
       sections: [
         {
           heading: "Public details",
           body: [
-            "While contact details are being confirmed, you can still browse fresh produce and read frequently asked questions.",
+            "Contact details for orders and enquiries will be published on this page shortly. Until then, explore our fresh produce and guides at your own pace.",
           ],
         },
       ],
@@ -183,7 +185,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "What can I shop for?",
           body: [
-            "The catalogue is organised into vegetables, fruit and the full shop index. Produce boxes will appear when a box is listed for sale. Each product has its own page.",
+            "Browse vegetables, fruit, or the full shop. Produce boxes will appear when available. Each product has its own page with pack details.",
           ],
         },
         {
@@ -195,7 +197,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "How is pricing shown?",
           body: [
-            "Prices are shown in South African rand where a selling price is listed. If a product has no selling price yet, the page says so instead of inventing a figure. Availability is taken from the current catalogue.",
+            "Where a price is set, it is shown clearly in South African rand. If a product is not yet priced, the page says so. Availability reflects what we currently offer.",
           ],
         },
         {
@@ -212,12 +214,12 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         "Household guides for storing and choosing fresh produce from the M & M Premium Produce shop. Written to be useful in the kitchen.",
       h1: "Produce guides",
       intro:
-        "These pages cover storage, choosing between similar packs, and using leftovers. They are not a magazine, a farm tour, or medical advice.",
+        "Practical household guidance on storing produce, choosing between similar packs, and making the most of leftovers.",
       sections: [
         {
           heading: "What is here",
           body: [
-            "Each guide links to the shop products it is about. If you only need the pack in front of you, open the product page instead.",
+            "Each guide links to the shop products it covers, so you can go straight from advice to the pack you need.",
           ],
         },
       ],
@@ -225,15 +227,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     recipes: {
       title: "Household Recipes",
       description:
-        "A small set of household recipes that use produce from the M & M Premium Produce shop. Cook by doneness, not invented timers.",
+        "A small set of household recipes that use produce from the M & M Premium Produce shop. Cook by doneness for reliable results at home.",
       h1: "Household recipes",
       intro:
-        "Two weekday methods only: roast potatoes with onion, and a pan of carrots and onions. This is not a recipe magazine.",
+        "Simple weekday methods using produce from the shop: roast potatoes with onion, and a pan of carrots and onions.",
       sections: [
         {
           heading: "What is here",
           body: [
-            "Ingredients and steps are written for a home kitchen. There are no fabricated ratings, nutrition panels or cook times.",
+            "Ingredients and steps are written for a home kitchen — clear, practical, and easy to follow.",
           ],
         },
       ],
@@ -281,16 +283,18 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Kwaliteit waarop jy kan staatmaak",
           body: [
-            "Elke item word persoonlik deur ons uitgesoek.",
-            "Vrugte en groente word as afsonderlike produkte met eie bladsye verkoop.",
-            "Pryse word in Suid-Afrikaanse rand gewys waar ’n verkoopprys gelys is.",
+            "Elke item word persoonlik met sorg uitgesoek.",
+            "Pakgroottes en pryse word duidelik op elke produkblad gewys.",
+            "Beskikbaarheid word eerlik gelys — wat jy sien, is wat ons tans bied.",
+            "Vars produkte word landswyd regoor Suid-Afrika afgelewer.",
+            "Wanneer ons kontakbesonderhede gepubliseer is, reageer ons gou op kliëntevrae.",
           ],
         },
         {
           heading: "Koop vars produkte aanlyn",
           body: [
-            "Maak die volle katalogus oop, of gaan direk na groente of vrugte, en kies dan ’n genoemde produk. Ons bied landswye aflewering regoor Suid-Afrika; areas, tydgleuwe en fooie staan op die afleweringsblad wanneer dit gepubliseer is.",
-            "Gidse oor die berg van stapels en die gebruik van oorskiet sit by die produk-gidse. Hulle is vir die kombuis geskryf, nie as ’n inhoudsplaas nie.",
+            "Blaai die volle winkel, of gaan direk na groente of vrugte en kies ’n produk. Ons lewer landswyd regoor Suid-Afrika af; afleweringsgebiede, tydgleuwe en fooie verskyn op die afleweringsblad wanneer dit gepubliseer is.",
+            "Praktiese gidse oor die berg van stapels en die gebruik van oorskiet is by die produk-gidse — geskryf vir alledaagse kombuisgebruik.",
           ],
         },
       ],
@@ -301,12 +305,12 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         "Die volle M & M Premium Produce-katalogus: elke vrug en groente wat tans gelys is, elkeen op sy eie blad. Gebruik Groente of Vrugte as jy een gang wil hê.",
       h1: "Alle produkte",
       intro:
-        "Hierdie is die volledige katalogusindeks — nie ’n tweede groenteblad nie. Maak Groente of Vrugte oop vir een gang, of bly hier om elke gelyste item te sien.",
+        "Blaai ons volledige keuse van persoonlik uitgesoekte vrugte en groente, of verken elke varsproduk-gang afsonderlik.",
       sections: [
         {
           heading: "Alle produkte",
           body: [
-            "Elke produk hieronder het sy eie URL. Groente en vrugte het elk ’n aparte gangblad sodat daardie soektogte nie met hierdie katalogusindeks kompeteer nie.",
+            "Elke produk hieronder het sy eie blad met pakbesonderhede en pryse. Wil jy net een gang? Maak Groente of Vrugte oop om net daardie keuse te bekyk.",
           ],
         },
       ],
@@ -314,15 +318,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     bundles: {
       title: "Produkbokse",
       description:
-        "Produkbokse van M & M Premium Produce word hier gelys wanneer ’n boks vir verkoop bevestig is. Tot dan, koop vrugte en groente as afsonderlike produkte.",
+        "Produkbokse van M & M Premium Produce — binnekort beskikbaar. Koop intussen vrugte en groente as afsonderlike produkte.",
       h1: "Produkbokse",
       intro:
-        "Produkbokse sal katalogusitems in eie reg wees, met skakels na die vrugte en groente daarin.",
+        "Produkbokse kom binnekort. Elke boks sal die vrugte en groente daarin lys sodat jy presies weet wat jy kry.",
       sections: [
         {
           heading: "Huidige bokse",
           body: [
-            "Geen produkbokse is nog te koop nie. Wanneer ’n boks bevestig is, verskyn dit hier met sy eie blad. Tot dan, koop vrugte en groente as afsonderlike produkte.",
+            "Binnekort beskikbaar — geen produkbokse is nog te koop nie. Wanneer ’n boks gereed is, verskyn dit hier. Tot dan, koop vrugte en groente as afsonderlike produkte.",
           ],
         },
       ],
@@ -339,7 +343,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
           body: [
             "M & M Premium Produce is meer as ’n varsprodukbesigheid — dit is ons gedeelde reis as ’n paartjie wat saam ’n toekoms bou. Ons werk om vrugte en groente van hoë gehalte teen toeganklike pryse te bied.",
             "Elke item word persoonlik deur ons uitgesoek. Daardie hands-on sorg is hoe ons seker maak kliënte kry varsheid, geur en waarde waarop hulle kan staatmaak. Ons oortuiging is eenvoudig: kwaliteit maak saak.",
-            "Elke aankoop ondersteun die groei van hierdie besigheid en die lewe wat ons saam bou, insluitend ons troue. Ons bly naby aan wat kliënte nodig het sodat die ervaring betroubaar en persoonlik bly.",
+            "M & M Premium Produce is ’n familiebesigheid gebou rondom sorgvuldige keuse, eerlike diens en ’n gedeelde toekoms. Ons bly naby aan wat kliënte nodig het sodat die ervaring betroubaar en persoonlik bly.",
           ],
         },
         {
@@ -369,15 +373,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     contact: {
       title: "Kontak M & M Premium Produce",
       description:
-        "Openbare kontakbesonderhede vir M & M Premium Produce verskyn hier sodra dit bevestig is.",
+        "Kontak M & M Premium Produce. Kontakbesonderhede word hier gelys sodra dit gereed is.",
       h1: "Kontak",
       intro:
-        "Gebruik hierdie blad vir bevestigde openbare kontakbesonderhede. ’n Boodskapvorm en bestellingsondersteuning kom in ’n later fase.",
+        "Ons is besig om ons openbare kontakbesonderhede in plek te sit. Intussen is jy welkom om die winkel te bekyk en die gereelde vrae te lees.",
       sections: [
         {
           heading: "Openbare besonderhede",
           body: [
-            "Terwyl kontakbesonderhede bevestig word, kan jy steeds vars produkte bekyk en gereelde vrae lees.",
+            "Kontakbesonderhede vir bestellings en navrae word binnekort op hierdie blad gepubliseer. Tot dan, verken ons vars produkte en gidse op jou eie tempo.",
           ],
         },
       ],
@@ -391,7 +395,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Waarvoor kan ek koop?",
           body: [
-            "Die katalogus is ingedeel in groente, vrugte en die volle winkelindeks. Produkbokse verskyn wanneer ’n boks te koop gelys is. Elke produk het sy eie blad.",
+            "Blaai groente, vrugte of die volle winkel. Produkbokse verskyn wanneer beskikbaar. Elke produk het sy eie blad met pakbesonderhede.",
           ],
         },
         {
@@ -403,7 +407,7 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         {
           heading: "Hoe word pryse gewys?",
           body: [
-            "Pryse word in Suid-Afrikaanse rand gewys waar ’n verkoopprys gelys is. As ’n produk nog nie ’n verkoopprys het nie, sê die blad so — ons maak nie ’n syfer op nie. Beskikbaarheid kom uit die huidige katalogus.",
+            "Waar ’n prys gestel is, word dit duidelik in Suid-Afrikaanse rand gewys. As ’n produk nog nie geprys is nie, sê die blad so. Beskikbaarheid weerspieël wat ons tans bied.",
           ],
         },
         {
@@ -420,12 +424,12 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
         "Huishoudelike gidse vir die berg en kies van vars produkte uit die M & M Premium Produce-winkel. Geskryf om in die kombuis nuttig te wees.",
       h1: "Produk-gidse",
       intro:
-        "Hierdie bladsye dek berging, die keuse tussen soortgelyke pakke, en die gebruik van oorskiet. Dit is nie ’n tydskrif, ’n plaastoer of mediese raad nie.",
+        "Praktiese huishoudelike leiding oor die berg van produkte, die keuse tussen soortgelyke pakke, en die beste gebruik van oorskiet.",
       sections: [
         {
           heading: "Wat is hier",
           body: [
-            "Elke gids skakel na die winkelprodukte waaroor dit gaan. As jy net die pak voor jou nodig het, maak liewer die produkblad oop.",
+            "Elke gids skakel na die winkelprodukte wat dit dek, sodat jy direk van raad na die pak kan gaan wat jy nodig het.",
           ],
         },
       ],
@@ -433,15 +437,15 @@ export const pageCopy: Record<AppLocale, Record<PageKey, PageCopy>> = {
     recipes: {
       title: "Huishoudelike resepte",
       description:
-        "’n Klein stel huishoudelike resepte wat produkte uit die M & M Premium Produce-winkel gebruik. Kook tot gaar, nie volgens verdigte timers nie.",
+        "’n Klein stel huishoudelike resepte wat produkte uit die M & M Premium Produce-winkel gebruik. Kook tot gaar vir betroubare resultate by die huis.",
       h1: "Huishoudelike resepte",
       intro:
-        "Net twee weeksdae-metodes: gebraaide aartappels met ui, en ’n pan wortels en uie. Dit is nie ’n resepte-tydskrif nie.",
+        "Eenvoudige weeksdae-metodes met produkte uit die winkel: gebraaide aartappels met ui, en ’n pan wortels en uie.",
       sections: [
         {
           heading: "Wat is hier",
           body: [
-            "Bestanddele en stappe is vir ’n huiskombuis geskryf. Daar is geen verdigte graderings, voedingstabelle of kooktye nie.",
+            "Bestanddele en stappe is vir ’n huiskombuis geskryf — duidelik, prakties en maklik om te volg.",
           ],
         },
       ],

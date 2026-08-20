@@ -52,7 +52,11 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
         <PageHeader title={copy.h1} description={copy.intro} />
       </PageIntro>
       <PageSection>
-        <div className="about-story-grid">
+        <figure className="about-pullquote">
+          <blockquote>“{copy.intro}”</blockquote>
+          <figcaption>{businessName}</figcaption>
+        </figure>
+        <div className="about-story-grid mt-10">
           {copy.sections.map((section, index) => (
             <section
               key={section.heading}

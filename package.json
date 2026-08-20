@@ -17,7 +17,8 @@
     "db:editorial": "tsx --env-file=.env.local scripts/seed-editorial.ts",
     "seo:phase4b": "tsx --env-file=.env.local scripts/apply-phase4b-seo.ts",
     "seo:monthly": "tsx scripts/seo/monthly-growth.ts",
-    "qa:smoke": "node scripts/qa-smoke-deploy.mjs"
+    "qa:smoke": "node scripts/qa-smoke-deploy.mjs",
+    "test:pricing": "tsx --test scripts/test-price-units.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

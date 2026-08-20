@@ -20,7 +20,7 @@ export function HomeCatalogue({
           <h2 id="home-catalogue-heading" className="text-section-title">
             {heading}
           </h2>
-          <Link href={shopHref} className="home-catalogue-shop-link text-sm font-medium">
+          <Link href={shopHref} className="home-catalogue-shop-link home-featured-link text-sm">
             {shopLabel}
           </Link>
         </div>

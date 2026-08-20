@@ -18,13 +18,16 @@ export async function SiteFooter({ locale }: { locale: AppLocale }) {
     { href: paths.shop, label: messages.shop },
     fruit ? { href: paths.category(fruit.slug), label: fruit.name } : null,
     vegetables ? { href: paths.category(vegetables.slug), label: vegetables.name } : null,
-    { href: paths.bundles, label: messages.produceBoxes },
+    { href: paths.bundles, label: `${messages.produceBoxes} · ${messages.comingSoon}` },
     { href: paths.about, label: messages.about },
     { href: paths.delivery, label: messages.delivery },
     { href: paths.faq, label: messages.faq },
     { href: paths.guides, label: messages.guides },
     { href: paths.recipes, label: messages.recipes },
     { href: paths.contact, label: messages.contact },
+    { href: paths.privacy, label: messages.privacy },
+    { href: paths.terms, label: messages.termsOfSale },
+    { href: paths.returns, label: messages.deliveryAndReturns },
   ].filter((item): item is { href: typeof paths.shop; label: string } => Boolean(item));
 
   return (

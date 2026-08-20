@@ -15,6 +15,9 @@ export const routeKeys = [
   "cart",
   "checkout",
   "orderConfirmation",
+  "privacy",
+  "terms",
+  "returns",
 ] as const;
 
 export type RouteKey = (typeof routeKeys)[number];
@@ -33,6 +36,9 @@ export const routeSegments: Record<AppLocale, Record<Exclude<RouteKey, "home">, 
     cart: "cart",
     checkout: "checkout",
     orderConfirmation: "order-confirmation",
+    privacy: "privacy",
+    terms: "terms",
+    returns: "delivery-and-returns",
   },
   af: {
     shop: "winkel",
@@ -47,6 +53,9 @@ export const routeSegments: Record<AppLocale, Record<Exclude<RouteKey, "home">, 
     cart: "mandjie",
     checkout: "betaal",
     orderConfirmation: "bestelling-bevestig",
+    privacy: "privaatheid",
+    terms: "verkoopvoorwaardes",
+    returns: "aflewering-en-terugsendings",
   },
 };
 
@@ -74,6 +83,9 @@ export function createPaths(locale: AppLocale) {
     cart: `${prefix}/${segment.cart}` as Route,
     checkout: `${prefix}/${segment.checkout}` as Route,
     orderConfirmation: (id: string) => `${prefix}/${segment.orderConfirmation}/${id}` as Route,
+    privacy: `${prefix}/${segment.privacy}` as Route,
+    terms: `${prefix}/${segment.terms}` as Route,
+    returns: `${prefix}/${segment.returns}` as Route,
   };
 }
 
@@ -127,4 +139,7 @@ export const unprefixedStorefrontPrefixes = [
   "/cart",
   "/checkout",
   "/order-confirmation",
+  "/privacy",
+  "/terms",
+  "/delivery-and-returns",
 ] as const;

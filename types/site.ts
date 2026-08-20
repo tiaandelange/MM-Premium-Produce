@@ -25,6 +25,7 @@ export type SiteAddress = {
 export type SiteConfig = {
   businessName: string;
   legalName: ConfigurableField<string>;
+  tradingName: ConfigurableField<string>;
   siteUrl: string;
   defaultTitle: string;
   defaultDescription: string;
@@ -33,7 +34,9 @@ export type SiteConfig = {
   currency: ConfigurableField<string>;
   email: ConfigurableField<string>;
   phone: ConfigurableField<string>;
+  whatsapp: ConfigurableField<string>;
   address: ConfigurableField<SiteAddress>;
+  supportHours: ConfigurableField<string>;
   /** Confirmed service scope (nationwide), separate from unpublished zone/fee detail. */
   deliveryScope: ConfigurableField<"nationwide">;
   deliveryAreas: ConfigurableField<string[]>;

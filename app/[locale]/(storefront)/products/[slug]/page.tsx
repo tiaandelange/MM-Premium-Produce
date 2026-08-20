@@ -13,7 +13,7 @@ import { createPaths } from "@/lib/i18n/paths";
 import { getRequestPathname } from "@/lib/i18n/request";
 import { buildMetadata, fallbackSeoDescription } from "@/lib/seo/metadata";
 import { followStoredRedirect } from "@/lib/seo/redirects";
-import { packQuantityLabel, priceUnitLabel, resolvePriceUnit } from "@/lib/catalog/price-unit";
+import { packQuantityLabel } from "@/lib/catalog/price-unit";
 import { redirectIfTranslatedSlugExists } from "@/lib/i18n/entity-redirect";
 import { buildBreadcrumbStructuredData, buildProductStructuredData } from "@/lib/seo/structured-data";
 import { TrackViewItem } from "@/components/analytics/track-event";
@@ -86,7 +86,6 @@ export default async function ProductPage({
     ...(category ? [{ name: category.name, path: paths.category(category.slug) }] : []),
     { name: product.name, path: paths.product(product.slug) },
   ];
-  const sellingUnit = resolvePriceUnit({ unit: product.unit, packSize: product.packSize, productId: product.id });
   const packLabel = packQuantityLabel(product);
   const viewItem = analyticsItemFromProduct(product, product.variants?.[0]);
 
@@ -112,13 +111,16 @@ export default async function ProductPage({
             price={product.price}
             compareAtPrice={product.compareAtPrice}
             locale={locale}
-            unit={sellingUnit}
+            unit={product.unit}
+            packSize={product.packSize}
+            productId={product.id}
           />
           <AvailabilityDisplay status={product.availability} locale={locale} />
-          <p className="text-sm text-muted">
-            {packLabel ? `${messages.packSize}: ${packLabel} · ` : null}
-            {messages.unit}: {priceUnitLabel(sellingUnit, locale)}
-          </p>
+          {packLabel ? (
+            <p className="text-sm text-muted">
+              {messages.packSize}: {packLabel}
+            </p>
+          ) : null}
           <ProductOptions product={product} />
           {category ? (
             <p>

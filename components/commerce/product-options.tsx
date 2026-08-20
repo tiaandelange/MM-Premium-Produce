@@ -1,7 +1,6 @@
 import { AvailabilityDisplay } from "@/components/commerce/availability-display";
 import { PriceDisplay } from "@/components/commerce/price-display";
 import { getMessages } from "@/lib/i18n/messages";
-import { resolvePriceUnit } from "@/lib/catalog/price-unit";
 import type { Product } from "@/types/catalog";
 
 export function ProductOptions({ product }: { product: Product }) {
@@ -29,11 +28,10 @@ export function ProductOptions({ product }: { product: Product }) {
                 price={variant.price}
                 compact
                 locale={product.locale}
-                unit={resolvePriceUnit({
-                  unit: product.unit,
-                  packSize: variant.packSize ?? product.packSize,
-                  productId: product.id,
-                })}
+                unit={product.unit}
+                packSize={variant.packSize ?? product.packSize}
+                productId={product.id}
+                showComparison={false}
               />
               <AvailabilityDisplay status={variant.availability} locale={product.locale} />
             </div>
